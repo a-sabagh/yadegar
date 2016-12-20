@@ -1,0 +1,235 @@
+body{
+    font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+}
+/********************************************
+MENU
+********************************************/
+main nav#main-menu{
+    background: #cc262c;
+    transition: all 1.5s;
+    position: fixed;
+    height: 100%;
+    width: 63px;
+    overflow: hidden;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+}
+main nav#main-menu:hover{
+    width: 250px;
+}
+main nav#main-menu #nav-logo {
+    background: white;
+    padding: 20px 0px 10px 10px
+}
+main nav#main-menu #nav-search{
+    border-bottom: 1px solid #b62525;
+    height: 38px;
+    overflow: hidden;
+    position: relative;
+}
+main nav#main-menu #nav-search span{
+    margin: 0px 15px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 62px;
+    cursor: pointer;
+}
+main nav#main-menu #nav-search .s-search{
+    width: 40px;
+    height: 34px;
+}
+main nav#main-menu #nav-search:hover{
+    background: white;
+}
+main nav#main-menu #nav-search form{
+    float: right;
+}
+main nav#main-menu #nav-search form input{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0px;
+    border: none;
+    height: 38px;
+    font-size: 15px;
+    white-space: normal;
+    transition: width 1.5s , padding-left 2s;
+    background: transparent;
+    color: #ccc;
+}
+main nav#main-menu:hover #nav-search form input{
+    padding-left: 7px;
+    width: 185px;
+}
+main nav#main-menu:hover #nav-search form input:active{
+    font-weight: bold;
+    background: white;
+    font-weight: bold;
+
+}
+main nav#main-menu ul li{
+    height: 42px;
+    border-bottom: 1px solid #b62525;
+}
+main nav#main-menu ul li a{
+    padding-top: 7px;
+    display: block;
+    white-space: nowrap;
+    height: 100%;
+}
+main nav#main-menu ul li:hover{
+    background-color: white;
+}
+main nav#main-menu ul li a i{
+    vertical-align: bottom;
+    margin: 0px 15px;
+}
+main nav#main-menu ul li a span.menu-name{
+    display: inline-block;
+    vertical-align: bottom;
+    height: 26px;
+    color: white;
+}
+main nav#main-menu ul li a:hover span.menu-name{
+    color: #cc262c;
+}
+/********************************************
+HEADER
+********************************************/
+main #content{
+    margin-left: 63px;
+}
+main #content header{
+    position: relative;
+}
+main #content header #top-menu{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+main #content header ul#top-menu > li{
+    float: left;
+    text-align: center;
+    width: 33%;
+    margin-top: 15px;
+    position: relative;
+}
+main #content header ul#top-menu > li > a{
+    transition: all .3s;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 10% 0 8%;
+}
+main #content header ul#top-menu > li > a:hover{
+    color: #b72228;
+}
+main #content header ul#top-menu > li > ul{
+    display: none;
+    visibility: hidden;
+    z-index: 9999;
+    width: 180px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+main #content header ul#top-menu > li:hover > ul{
+    display: block;
+    visibility: visible;
+}
+main #content header ul#top-menu > li > ul li:first-child::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #cc262c;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+main #content header ul#top-menu > li > ul li:first-child:hover::before{
+    border-bottom: 10px solid white;
+}
+main #content header ul#top-menu > li > ul > li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: #cc262c;
+    transition: all .2s;
+}
+main #content header ul#top-menu > li > ul li a:hover{
+    background: white;
+    color: #cc262c;
+}
+main #content header ul#top-menu > li > ul li{
+    overflow: hidden;
+    line-height: 42px;
+    border-bottom: 1px solid #b62525;
+
+}
+main #content header ul#top-menu > li > ul li a span.sub-menu-text{
+    display: inline-block;
+}
+main #content header ul#top-menu > li > ul li a .sub-menu-img{
+    float: left;
+    width: 42px;
+    height: 42px;
+}
+/*
+#icon-button
+*/
+main #content header #icon-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 175px;
+}
+main #content header #icon-button ul > li{
+    float: left;
+    width: 50%;
+}
+main #content header #icon-button ul > li > a{
+    display: block;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+main #content header #icon-button ul li a .top-menu-text{
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    transition: all .3s;
+}
+main #content header #icon-button ul li a:hover .top-menu-text{
+    color: #b72228;
+}
+main #content header #icon-button ul li a i.w-icon-people{
+    display: block;
+    width: 40px;
+    height: 30px;
+    margin: auto;
+}
+main #content header #icon-button ul li a i.w-icon-map{
+    display: block;
+    width: 20px;
+    height: 30px;
+    margin: auto;
+}
