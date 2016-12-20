@@ -1,0 +1,145 @@
+
+/********************************** I C O N - A N I M A L S **********************************/
+.icon-animals{
+    background: transparent url(../img/ico-nav-animals.png);
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+}
+.w-deer{
+    background-position: 120px 0px;
+}
+.c-deer{
+    background-position: 80px 0px;
+}
+.r-deer{
+    background-position: 40px 0px;
+}
+.w-pig{
+    background-position: 120px -40px;
+}
+.c-pig{
+    background-position: 80px -40px;
+}
+.r-pig{
+    background-position: 40px -40px;
+}
+.w-mouse{
+    background-position: 120px -80px;
+}
+.c-mouse{
+    background-position: 80px -80px;
+}
+.r-mouse{
+    background-position: 40px -80px;
+}
+.w-certificate{
+    background-position: 120px -120px;
+}
+.c-certificate{
+    background-position: 80px -120px;
+}
+.r-certificate{
+    background-position: 40px -120px;
+}
+.w-rabbit{
+    background-position: 120px -160px;
+}
+.c-rabbit{
+    background-position: 80px -160px;
+}
+.r-rabbit{
+    background-position: 40px -160px;
+}
+.w-cock{
+    background-position: 120px -200px;
+}
+.c-cock{
+    background-position: 80px -200px;
+}
+.r-cock{
+    background-position: 40px -200px;
+}
+.w-horse{
+    background-position: 120px -240px;
+}
+.c-horse{
+    background-position: 80px -240px;
+}
+.r-horse{
+    background-position: 40px -240px;
+}
+.w-goat{
+    background-position: 120px -280px;
+}
+.c-goat{
+    background-position: 80px -280px;
+}
+.r-goat{
+    background-position: 40px -280px;
+}
+.w-fish{
+    background-position: 120px -320px;
+}
+.c-fish{
+    background-position: 80px -320px;
+}
+.r-fish{
+    background-position: 40px -320px;
+}
+.w-rhinoceros{
+    background-position: 120px -360px;
+}
+.c-rhinoceros{
+    background-position: 80px -360px;
+}
+.r-rhinoceros{
+    background-position: 40px -360px;
+}
+.w-dairy{
+    background-position: 120px -400px;
+}
+.c-dairy{
+    background-position: 80px -400px;
+}
+.r-dairy{
+    background-position: 40px -400px;
+}
+.w-cattle{
+    background-position: 120px -440px;
+}
+.c-cattle{
+    background-position: 80px -440px;
+}
+.r-cattle{
+    background-position: 40px -440px;
+}
+.w-bird{
+    background-position: 120px -480px;
+}
+.c-bird{
+    background-position: 80px -480px;
+}
+.r-bird{
+    background-position: 40px -480px;
+}
+/********************************** I C O N - S P R I T E **********************************/
+.icon-sprite{
+    background: transparent url("../sprites.png");
+    display: inline-block;
+}
+.s-search{
+    background-position: -357px -74px;
+}
+.w-icon-map{
+    background-position: -334px -1px;
+}
+.w-icon-people{
+    background-position: -292px -1px;
+}
+.r-icon-map{
+    background-position: -334px -28px;
+}
+.r-icon-people{
+    background-position: -292px -29px;
+}
