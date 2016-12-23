@@ -125,7 +125,7 @@
 }
 /********************************** I C O N - S P R I T E **********************************/
 .icon-sprite{
-    background: transparent url("../sprites.png");
+    background: transparent url("../img/sprites.png");
     display: inline-block;
 }
 .s-search{
@@ -142,4 +142,10 @@
 }
 .r-icon-people{
     background-position: -292px -29px;
+}
+.r-icon-ask{
+    background-position: -355px -242px;
+}
+.r-icon-locator{
+    background-position: -321px -242px;
 }

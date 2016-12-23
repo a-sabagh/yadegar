@@ -7,9 +7,10 @@ MENU
 main nav#main-menu{
     background: #cc262c;
     transition: all 1.5s;
+    transition-delay: 1.5s;
     position: fixed;
     height: 100%;
-    width: 63px;
+    width: 68px;
     overflow: hidden;
     z-index: 999999;
     left: 0;
@@ -20,7 +21,7 @@ main nav#main-menu:hover{
 }
 main nav#main-menu #nav-logo {
     background: white;
-    padding: 20px 0px 10px 10px
+    padding: 20px 0px 10px 14px
 }
 main nav#main-menu #nav-search{
     border-bottom: 1px solid #b62525;
@@ -57,24 +58,25 @@ main nav#main-menu #nav-search form input{
     white-space: normal;
     transition: width 1.5s , padding-left 2s;
     background: transparent;
+    transition-delay: 1.5s;
     color: #ccc;
 }
 main nav#main-menu:hover #nav-search form input{
     padding-left: 7px;
     width: 185px;
 }
-main nav#main-menu:hover #nav-search form input:active{
+main nav#main-menu:hover #nav-search form input:focus{
     font-weight: bold;
     background: white;
     font-weight: bold;
 
 }
 main nav#main-menu ul li{
-    height: 42px;
+    height: 44px;
     border-bottom: 1px solid #b62525;
 }
 main nav#main-menu ul li a{
-    padding-top: 7px;
+    padding-top: 5px;
     display: block;
     white-space: nowrap;
     height: 100%;
@@ -91,13 +93,17 @@ main nav#main-menu ul li a span.menu-name{
     vertical-align: bottom;
     height: 26px;
     color: white;
+    font-size: 17px;
 }
 main nav#main-menu ul li a:hover span.menu-name{
     color: #cc262c;
 }
 /********************************************
 HEADER
-********************************************/
+*********************************************
+/*
+#top-menu
+*/
 main #content{
     margin-left: 63px;
 }
@@ -232,4 +238,203 @@ main #content header #icon-button ul li a i.w-icon-map{
     width: 20px;
     height: 30px;
     margin: auto;
+}
+/*
+.header-scream
+*/
+main #content header .header-scream{
+    position: absolute;
+    right: 0px;
+    top: 45%;
+    background: #CC262C;
+    width: 15%;
+    height: 40%;
+    padding: 12px;
+
+}
+main #content header .header-scream h3{
+    font-size: 20px;
+    line-height: 21px;
+    color: white;
+}
+/********************************************
+HOME CONTENT
+*********************************************
+/*
+#content
+*/
+section{
+    margin: 40px auto 45px;
+}
+/*
+*********************************************
+FOOTER
+*********************************************
+/*
+.footer-login
+*/
+footer{
+    margin: 30px 0;
+    position: relative;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+}
+footer .footer-login .login-container{
+    width: 80px;
+    background: #cc262c;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    padding: 8px;
+    top: 0;
+    right: 0;
+}
+footer .footer-login .footer-login-text{
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+footer .footer-login i{
+    width: 40px;
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+/*
+.footer-menu
+*/
+footer .footer-menu{
+    padding-top: 15px;
+}
+footer .footer-menu ul li{
+    float: left;
+    margin-right: 15px;
+}
+footer .footer-menu ul li:last-child{
+    margin-right: 0px;
+}
+footer .footer-menu ul li a{
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #202020;
+}
+footer .footer-menu ul li a:hover{
+    color: #5E5E5E;
+}
+/*
+.copyright
+*/
+footer .copyright{
+    padding-top: 8px;
+    line-height: 45px;
+}
+footer .copyright #AriazDevs {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+footer .copyright #AriazDevs a:hover ,
+footer .copyright #AriazDevs a:focus,
+footer .copyright #AriazDevs a:active,
+footer .copyright #AriazDevs a:visited{
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+footer .copyright #AriazDevs a{
+    color: #212121;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+footer .copyright #AriazDevs a:hover{
+    color: #00a2b1;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+footer .copyright #AriazDevs img {
+    vertical-align: middle;
+}
+
+/*=========================================================================*/
+/* HORSE.HTML
+/*=========================================================================*/
+main nav.content-nav{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 3px;
+    overflow: hidden;
+    border: 0 solid #ececec;
+    width: 92%;
+    z-index: 1;
+    background-color: #efefef;
+}
+main nav.content-nav .content-nav-menu{
+    overflow: hidden;
+    float: left;
+    width: 83.3333%;
+}
+main nav.content-nav .content-nav-menu li{
+    float: left;
+}
+main nav.content-nav .content-nav-menu li a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    padding: 5px;
+    font-size: 13px;
+}
+main nav.content-nav .content-nav-menu li a::after{
+    content: "";
+    background: transparent url("../img/sprites.png") -157px -43px;
+    display: inline-block;
+    margin-left: 3px;
+    width: 15px;
+    height: 10px;
+}
+main nav.content-nav .content-nav-icon{
+    text-align: center;
+    float: right;
+    width: 16.33333%;
+}
+main nav.content-nav .content-nav-icon li {
+    display: inline-block;
+}
+main nav.content-nav .content-nav-icon li a{
+    display: inline-block;
+}
+main nav.content-nav .content-nav-icon li a i{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+section.product{
+    background: #cc252b;
+    color: white !important;
+}
+.large-format{
+    font-size: 60px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.product-caption{
+    font-family: 'Libre Baskerville',serif;
+    font-size: 16px;
+    font-style: oblique;
+    line-height: 18px;
+    text-align: center;
+    font-weight: bold;
 }

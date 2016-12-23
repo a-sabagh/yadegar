@@ -15,12 +15,12 @@
     text-align: center;
 }
 .alignright {
-    display:inline;
+    display:block;
     float:right;
     text-align:right;
 }
 .alignleft {
-    display:inline;
+    display:block;
     float:left;
     text-align:left;
 }

@@ -1,0 +1,13 @@
+/*
+====================================================
+screen (1200px) and (992px) and (768px) and (480px)|
+====================================================
+*/
+@media screen and (max-width:768px){
+    main nav#main-menu{
+        display: none;
+    }
+    main #content{
+        margin-left: 0px;
+    }
+}
