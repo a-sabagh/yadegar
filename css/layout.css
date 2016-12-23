@@ -438,3 +438,56 @@ section.product{
     text-align: center;
     font-weight: bold;
 }
+.product .product-content{
+    background: white;
+    width: 100%;
+    margin: 15px auto;
+    border: 1px solid #ececec;
+    overflow: hidden;
+}
+.product .product-content .filter-title{
+    display: block;
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #ececec;
+    color: #cc262c;
+    font-size: 13px;
+    font-weight: bold;
+}
+.product .product-content .filter-title span::after{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: transparent url("../img/sprites.png") repeat scroll -157px -43px;
+    margin-left: 6px;
+}
+.product .product-content .filter-content-title {
+    color: #222;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 45px;
+}
+.product .product-content .product-content-filter .filter-content ul{
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.product .product-content .product-content-filter .filter-content ul li{
+    display: inline-block;
+    margin-right: 5%;
+}
+.product .product-content .product-content-filter .filter-content ul li a{
+    display: block;
+    color: #777;
+    padding: 7px 10px;
+}
+.product .product-content .product-content-filter .filter-content ul li.active a{
+    background: #cc262c;
+
+}
+.product .product-content .product-content-filter .filter-content ul li a::hover{
+    background-color: #cc262c;
+    color: white;
+}
