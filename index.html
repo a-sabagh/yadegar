@@ -1,85 +1,407 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <title>Animal Feeds | yadegar</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/sprite.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-        <nav id="main-menu">
-            <div id="nav-logo" class="sprite"><img src="img/logo.png" alt=""></div>
-            <div id="nav-search">
-                <span class="icon-sprite s-search"></span>
-                <form action="index.html" method="GET">
-                    <input type="text" name="s" placeholder="Search">
-                </form>
-            </div><!--#nav-search-->
-            <ul>
-                <li><a href="#"><i class="icon-animals w-dairy"></i><span class="menu-name">Dairy</span></a></li>
-                <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
-                <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
-                <li><a href="#"><i class="icon-animals w-dairy"></i><span class="menu-name">Dairy</span></a></li>
-                <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">Deer</span></a></li>
-                <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
-                <li><a href="#"><i class="icon-animals w-horse"></i><span class="menu-name">Horse</span></a></li>
-                <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
-            </ul>
-        </nav><!--#main-nav-->
-        <div id="content">
-            <header>
-                <img src="img/header.jpeg" class="img-responsive" alt="">
-                <ul id="top-menu">
-                    <li>
-                        <a href="#">behind the checkerboard</a>
+    <head>
+        <meta charset="UTF-8">
+        <title>Animal Feeds | yadegar</title>
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/sprite.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/BTS-ltr-grid.css">
+        <link rel="stylesheet" href="css/shortcode.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <nav id="main-menu">
+                <div id="nav-logo" class="sprite"><img src="img/logo.png" alt=""></div>
+                <div id="nav-search">
+                    <span class="icon-sprite s-search"></span>
+                    <form action="index.html" method="GET">
+                        <input type="text" name="s" placeholder="Search">
+                    </form>
+                </div><!--#nav-search-->
+                <ul>
+                    <li><a href="#"><i class="icon-animals w-dairy"></i><span class="menu-name">Dairy</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-dairy"></i><span class="menu-name">Dairy</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">Deer</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-horse"></i><span class="menu-name">Horse</span></a></li>
+                    <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
+                </ul>
+            </nav><!--#main-nav-->
+            <div id="content">
+                <header>
+                    <img src="img/header.jpeg" class="img-responsive" alt="">
+                    <ul id="top-menu">
+                        <li>
+                            <a href="#">behind the checkerboard</a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img class="sub-menu-img" src="img/navIcon1.png" alt="">
+                                        <span class="sub-menu-text">Our Farm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="sub-menu-img" src="img/navIcon2.png" alt="">
+                                        <span class="sub-menu-text">Our Expert</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="sub-menu-img" src="img/navIcon4.png" alt="">
+                                        <span class="sub-menu-text">Our Quality</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">find answers</a></li>
+                        <li><a href="#">purina merchandlise</a></li>
+                    </ul>
+                    <div id="icon-button"> 
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img class="sub-menu-img" src="img/navIcon1.png" alt="">
-                                    <span class="sub-menu-text">Our Farm</span>
+                                    <span class="top-menu-text">Bussiness Link login</span>
+                                    <i class="icon-sprite w-icon-people"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img class="sub-menu-img" src="img/navIcon2.png" alt="">
-                                    <span class="sub-menu-text">Our Expert</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img class="sub-menu-img" src="img/navIcon4.png" alt="">
-                                    <span class="sub-menu-text">Our Quality</span>
+                                    <span class="top-menu-text">Retallers Nearby</span>
+                                    <i class="icon-sprite w-icon-map"></i>
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li><a href="#">find answers</a></li>
-                    <li><a href="#">purina merchandlise</a></li>
-                </ul>
-                <div id="icon-button"> 
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <span class="top-menu-text">Bussiness Link login</span>
+                    </div><!--#icon-button-->
+                    <div class="header-scream">
+                        <h3>Animal speak louder than word</h3>
+                    </div>
+                </header>
+                <!--#############################################################################################-->
+                <div class="container">
+                    <div class="row">
+                        <section class="intro">
+                            <div class="col-md-12 text-center banner">
+                                <img class="img-responsive" src="img/Feed-Greatness.png" alt="">
+                            </div>
+                            <div class="vertical-space-2"></div>
+                            <div class="video-field">
+                                <img src="img/home-youtube.jpg" class="img-responsive" alt="">
+                            </div><!--.video-field-->
+                            <div class="background-text-horse">
+                                <p><span class="red-text">Feed Greatness.</span> It's our commitment at Purina. And when it comesdown to it, words aren't needed. Because if there's greatness on theinside, it shows on the outside. Animals speak louder than words.</p>
+                            </div><!--.background-text-->
+                        </section><!--.intro-->
+                        <!--#############################################################################################-->
+                        <section class="latest-blog">
+                            <h3 class="section-title">Stories From Our Farm</h3>
+                            <p class="section-caption">For nearly a century at the Purina Animal Nutrition Center, we’ve been learning what helps our animals reach their full potential. And we know if it works for us, it’ll work for other people, too.</p>
+                            <div class="blog-content">
+                                <div class="table-row">
+                                    <div class="blog-square square-full">
+                                        <img class="img-responsive img-square-full" src="img/article3.jpeg" alt="">
+                                        <div class="square-full-box">
+                                            <div class="author">Pattrick Biggs ph.D</div>
+                                            <h4>3 steps to a peaceful backyard flock</h4>
+                                            <span class="category"><i class="icon-animals r-deer"></i></span>
+                                        </div><!--.square-full-box-->
+                                    </div><!--.blog-square-->
+                                    <div class="blog-square">
+                                        <div class="table-row">
+                                            <div class="blog-square-in">
+                                                <div class="square-left-box">
+                                                    <div class="author">Pattrick Biggs ph.D</div>
+                                                    <h4>3 steps to a peaceful backyard flock</h4>
+                                                    <span class="category"><i class="icon-animals r-deer"></i></span>
+                                                </div><!--.square-full-box-->
+                                            </div><!--.blog-square-in-->
+                                            <div class="blog-square-in"><img class="img-responsive" src="img/article5.png" alt=""></div><!--.blog-square-in-->
+                                        </div><!--.table-row-->
+                                        <div class="table-row">
+                                            <div class="blog-square-in"><img class="img-responsive" src="img/article1.jpeg" alt=""></div><!--.blog-square-->
+                                            <div class="blog-square-in">
+                                                <div class="square-right-box">
+                                                    <div class="author">Pattrick Biggs ph.D</div>
+                                                    <h4>3 steps to a peaceful backyard flock</h4>
+                                                    <span class="category"><i class="icon-animals r-deer"></i></span>
+                                                </div><!--.square-full-box-->
+                                            </div><!--.blog-square-in-->
+                                        </div><!--table-row-->
+                                    </div><!--.blog-square-->
+                                </div><!--.table-row-->
+                                <div class="table-row">
+                                    <div class="blog-square">
+                                        <div class="table-row">
+                                            <div class="blog-square-in">
+                                                <div class="square-left-box">
+                                                    <div class="author">Pattrick Biggs ph.D</div>
+                                                    <h4>3 steps to a peaceful backyard flock</h4>
+                                                    <span class="category"><i class="icon-animals r-deer"></i></span>
+                                                </div><!--.square-full-box-->
+                                            </div><!--.blog-square-in-->
+                                            <div class="blog-square-in"><img class="img-responsive" src="img/article1.jpeg" alt=""></div><!--.blog-square-in-->
+                                        </div><!--.table-row-->
+                                        <div class="table-row">
+                                            <div class="blog-square-in"><img class="img-responsive" src="img/article5.png" alt=""></div><!--.blog-square-->
+                                            <div class="blog-square-in">
+                                                <div class="square-right-box">
+                                                    <div class="author">Pattrick Biggs ph.D</div>
+                                                    <h4>3 steps to a peaceful backyard flock</h4>
+                                                    <span class="category"><i class="icon-animals r-deer"></i></span>
+                                                </div><!--.square-full-box-->
+                                            </div><!--.blog-square-in-->
+                                        </div><!--table-row-->
+                                    </div><!--.blog-square-->
+                                    <div class="blog-square square-full">
+                                        <img class="img-responsive img-square-full" src="img/article4.jpeg" alt="">
+                                        <div class="square-full-box">
+                                            <div class="author">Pattrick Biggs ph.D</div>
+                                            <h4>3 steps to a peaceful backyard flock</h4>
+                                            <span class="category"><i class="icon-animals r-deer"></i></span>
+                                        </div><!--.square-full-box-->
+                                    </div><!--.blog-square-->
+                                </div>
+                            </div><!--.blog-content-->
+                        </section><!--.latest-blog-->
+                        <!--#############################################################################################-->
+                        <section class="fqa-tab">
+                            <h3 class="section-title">Information From Our Experts</h3>
+                            <p class="section-caption">Animal experts from the Purina Animal Nutrition Center share their knowledge.</p>
+                            <div id="featured-tab">
+                                <ul class="featured-head">
+                                    <li><a href="#featured-tab1"><i class="icon-animals c-dairy"></i></a></li>
+                                    <li><a href="#featured-tab2"><i class="icon-animals c-rabbit"></i></a></li>
+                                    <li><a href="#featured-tab3"><i class="icon-animals c-goat"></i></a></li>
+                                    <li><a href="#featured-tab4"><i class="icon-animals c-pig"></i></a></li>
+                                    <li><a href="#featured-tab5"><i class="icon-animals c-deer"></i></a></li>
+                                    <li><a href="#featured-tab6"><i class="icon-animals c-horse"></i></a></li>
+                                    <li><a href="#featured-tab7"><i class="icon-animals c-cock"></i></a></li>
+                                    <li><a href="#featured-tab8"><i class="icon-animals c-certificate"></i></a></li>
+                                    <li><a href="#featured-tab9"><i class="icon-animals c-rabbit"></i></a></li>
+                                    <li><a href="#featured-tab10"><i class="icon-animals c-cock"></i></a></li>
+                                    <li><a href="#featured-tab11"><i class="icon-animals c-pig"></i></a></li>
+                                </ul><!--.featured-head-->
+                                <div id="featured-tab-container">
+                                    <div class="tab-menu-content" id="featured-tab1">
+                                        <img src="img/QA/qa-featured-tab1.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div><!--.tab-menu-content-->
+                                    <div class="tab-menu-content" id="featured-tab2">
+                                        <img src="img/QA/qa-featured-tab2.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab3">
+                                        <img src="img/QA/qa-featured-tab3.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab4">
+                                        <img src="img/QA/qa-featured-tab4.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab5">
+                                        <img src="img/QA/qa-featured-tab5.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab6">
+                                        <img src="img/QA/qa-featured-tab6.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab7">
+                                        <img src="img/QA/qa-featured-tab7.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab8">
+                                        <img src="img/QA/qa-featured-tab3.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab9">
+                                        <img src="img/QA/qa-featured-tab9.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab10">
+                                        <img src="img/QA/qa-featured-tab1.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                    <div class="tab-menu-content" id="featured-tab11">
+                                        <img src="img/QA/qa-featured-tab5.jpeg" alt="">
+                                        <div class="qa-content">
+                                            <div class="row question">
+                                                <div class="col-md-3 question-icon">Q</div>
+                                                <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
+                                            </div><!--.question-->
+                                            <div class="row answer">
+                                                <div class="col-md-1 answer-gap"></div>
+                                                <div class="col-md-3 answer-icon">A</div>
+                                                <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed delivery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</p></div>
+                                            </div><!--.answer-->
+                                            <div class="row button text-center">
+                                                <a href="" class="button-all">Find More Answers</a>
+                                            </div><!--button-->
+                                        </div><!--.qa-content-->
+                                    </div>
+                                </div><!--.featured-tab-container-->
+                            </div><!--featured-tab-->
+                        </section><!--.fqa-->
+                        <!--#############################################################################################-->
+                    </div><!--.row-->
+                    <footer class="row">
+                        <div class="col-md-3 copyright">
+                            <p id="AriazDevs"> <a href="http://ariazdevs.com" target="_blank">AriazDevs.co</a><img src="img/ariazdevs.png" alt="Ariazdevs-co"> - 2016 ©</span></p>
+                        </div><!--.copyright-->
+                        <div class="col-md-7 footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Event</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div><!--.footer-menu-->
+                        <div class="col-md-2 footer-login">
+                            <a href="#" class="login-container">
+                                <span class="footer-login-text">Bussiness Link Login</span>
                                 <i class="icon-sprite w-icon-people"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="top-menu-text">Retallers Nearby</span>
-                                <i class="icon-sprite w-icon-map"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--#icon-button-->
-            </header>
-        </div><!--#conten-->
-    </main>
-<script src="js/jquery.min.js"></script>
-</body>
+                        </div><!--.footer-login-->
+                    </footer>
+                </div><!--.container-->
+            </div><!--#content-->
+        </main>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    </body>
 </html>
