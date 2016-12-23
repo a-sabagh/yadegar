@@ -1,18 +1,6 @@
 /* *************** G E N R A L L  *************** */
-.hidden {
-    display: none !important;
-}
 .affix {
     position: fixed;
-}
-.text-left {
-    text-align: left;
-}
-.text-right {
-    text-align: right;
-}
-.text-center {
-    text-align: center;
 }
 .alignright {
     display:block;
@@ -33,6 +21,22 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+clearfix{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    height: 1px;
+    clear: both;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
 }
 .pull-right {
     float: right !important;
