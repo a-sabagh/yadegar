@@ -418,6 +418,9 @@ main nav.content-nav .content-nav-icon li a i{
     width: 28px;
     height: 28px;
 }
+/*
+    =product
+*/
 section.product{
     background: #cc252b;
     color: white !important;
@@ -438,7 +441,7 @@ section.product{
     text-align: center;
     font-weight: bold;
 }
-.product .product-content{
+.product .product-content-filter{
     background: white;
     width: 100%;
     margin: 15px auto;
@@ -473,6 +476,7 @@ section.product{
     width: 80%;
     margin: auto;
     text-align: center;
+    padding-bottom: 20px;
 }
 .product .product-content .product-content-filter .filter-content ul li{
     display: inline-block;
@@ -483,11 +487,34 @@ section.product{
     color: #777;
     padding: 7px 10px;
 }
-.product .product-content .product-content-filter .filter-content ul li.active a{
+.product .product-content .product-content-filter .filter-content controls:target{
+    height: auto;
+    margin-top: -110px;
+    padding-top: 110px;
+}
+.product .product-content .product-content-filter .filter-content ul li a.mixitup-control-active{
     background: #cc262c;
+    color: white;
 
 }
 .product .product-content .product-content-filter .filter-content ul li a::hover{
     background-color: #cc262c;
     color: white;
+}
+/*
+    =product-item
+*/
+.product .product-content .product-item{
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+}
+.product .product-content .product-item .product-item-name {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 15px;
 }
