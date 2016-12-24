@@ -257,15 +257,7 @@ main #content header .header-scream h3{
     line-height: 21px;
     color: white;
 }
-/********************************************
-HOME CONTENT
-*********************************************
-/*
-#content
-*/
-section{
-    margin: 40px auto 45px;
-}
+
 /*
 *********************************************
 FOOTER
@@ -448,14 +440,41 @@ section.product{
     border: 1px solid #ececec;
     overflow: hidden;
 }
+.product .product-content .product-item-container .mix{
+    position: relative;
+}
+.product .product-content .product-item-container .new::before{
+    content: "";
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url("../img/horse-product-sprite.png");
+    background-position: -226px -379px;
+}
+.product .product-content .product-item-container .best-seller::before{
+    content: "";
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url("../img/horse-product-sprite.png");
+    background-position: -80px -379px;
+}
 .product .product-content .filter-title{
     display: block;
     line-height: 50px;
     height: 50px;
-    border-bottom: 1px solid #ececec;
     color: #cc262c;
     font-size: 13px;
     font-weight: bold;
+}
+.product .product-content .filter-content{
+    border-top: 1px solid #ececec;
 }
 .product .product-content .filter-title span::after{
     content: "";

@@ -60,7 +60,7 @@ $(document).ready(function(){
 //+------------------------------------------+
     $(".product .product-content .filter-title").click(function(e){
         e.preventDefault();
-        $(this).find(".filter-content").att("display" , "none");
+        $(".product-content-filter .filter-content").slideToggle();
         return false;
     });
     $(".product-content-filter .filter-content ul li a").click(function(e){
