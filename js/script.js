@@ -16,7 +16,7 @@ $(document).ready(function(){
 //+------------------------------------------+
 // jQeury menu-icon hover
 //+------------------------------------------+
-$("main nav#main-menu ul li a").hover(function(){
+    $("main nav#main-menu ul li a").hover(function(){
         var icon_class = $(this).find("i").attr("class"); 
         var c_icon_class = icon_class.substr(14);
         c_icon_class = "icon-animals c" + c_icon_class;
@@ -26,7 +26,7 @@ $("main nav#main-menu ul li a").hover(function(){
         var w_icon_class = icon_class.substr(14);
         w_icon_class = "icon-animals w" + w_icon_class;
         $(this).find("i").removeClass(icon_class).addClass(w_icon_class);
-});
+    });
 //+------------------------------------------+
 // jQeury Custom readmore..
 //+------------------------------------------+
@@ -56,6 +56,20 @@ $("main nav#main-menu ul li a").hover(function(){
         return false;
     });
 //+------------------------------------------+
-// jQeury Custom readmore..
+// product-filter-title-toggle
 //+------------------------------------------+
+    $(".product .product-content .filter-title").click(function(e){
+        e.preventDefault();
+        $(this).find(".filter-content").att("display" , "none");
+        return false;
+    });
+    $(".product-content-filter .filter-content ul li a").click(function(e){
+        e.preventDefault();
+        return false;
+    });
+//+------------------------------------------+
+// product-filter
+//+------------------------------------------+
+    var containerEl = document.querySelector('.product-item-container');
+    var mixer = mixitup(containerEl);
 });
