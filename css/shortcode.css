@@ -62,6 +62,7 @@
     line-height: 18px;
     text-align: center;
     font-weight: bold;
+    margin: 30px 0;
 }
 .latest-blog .blog-content{
     margin: 20px auto;
@@ -160,30 +161,30 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/*     .featured-tab          
+/*     .fqa -> featured-tab          
 /*----------------------------
 */
-.fqa-tab #featured-tab .featured-head{
+.fqa-tab .featured-tab .featured-head{
     display: block;
     overflow: hidden;
     border: 1px solid #f0f0f0;
     border-bottom: none;
     margin: 29px auto 0px;
 }
-.fqa-tab #featured-tab .featured-head li{
+.fqa-tab .featured-tab .featured-head li{
     float: left;
     background: #cc262c;
     border-right: 1px solid #b72228;
 }
-.fqa-tab #featured-tab .featured-head li.active,
-.fqa-tab #featured-tab .featured-head li:hover{
+.fqa-tab .featured-tab .featured-head li.active,
+.fqa-tab .featured-tab .featured-head li:hover{
     background: white;
 }
-.fqa-tab #featured-tab .featured-head li a{
+.fqa-tab .featured-tab .featured-head li a{
     display: block;
     padding: 5px 24px;
 }
-.fqa-tab #featured-tab .featured-head li:last-child{
+.fqa-tab .featured-tab .featured-head li:last-child{
     border-right: none;
 }
 .tab-menu-content img{
@@ -244,13 +245,13 @@
     border: 3px solid #cc262c;
     color: #fff;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     font-family: arial,san-serif;
     padding: 7px 2px 7px 9px;
     font-size: 21px;
     font-weight: normal;
     width: 250px;
-    margin: auto;
+    margin: 10px;
     transition: all .3s;
 }
 .button.text-center .button-all:hover{
@@ -326,4 +327,113 @@
 .heading-format2::before{
     background-position: center;
     left: 100%;
+}
+/*     vertical featured-tab          
+/*----------------------------
+*/
+.vertical-tab .featured-tab .featured-head li{
+    display: block;
+}
+.vertical-tab .featured-tab .featured-head li a{
+    display: block;
+    color: #222;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 19px;
+}
+.vertical-tab .featured-tab .featured-head li a:hover,
+.vertical-tab .featured-tab .featured-head li.active a{
+    background: #e8e8e8;
+    position: relative;
+    color: #cc262c;
+    font-weight: bold;
+}
+.vertical-tab .featured-tab .featured-head li.active a::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #e8e8e8;
+    position: absolute;
+    right: -30px;
+    top: 0px;
+}
+.vertical-tab .featured-tab .featured-tab-container{
+    padding: 0 30px;
+    margin-bottom: 52px;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider{
+    position: relative;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-arrow{
+    position: absolute;
+    bottom: -52px;
+    cursor: pointer;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    text-indent: -9999;
+    border: none;
+    background: transparent;
+    width: 45px;
+    height: 52px;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-next{
+    right: 0;
+    background: url("../img/arrow-right.png");
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-prev{
+    background: url("../img/arrow-left.png");
+    right: 45px;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots{
+    position: absolute;
+    margin: 5px auto;
+    text-align: center;
+    width: 50%;
+    left: 0;
+    right: 0;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li{
+    display: inline-block;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li button{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    text-indent: -9999;
+    background-color: red;
+    opacity: .55;
+    border: none;
+    border-radius: 50%;
+    outline: none !important;
+    width: 6px;
+    height: 6px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: block;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li.slick-active button{
+    opacity: 1;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li button::-moz-focus-inner{
+    border: none;
+}
+.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li button:active{
+    outline: none;
+}
+.vertical-tab .featured-tab .featured-tab-container .vertical-tab-caption{
+    background: #f6f6f6;
+    margin: 7px 0;
+    padding: 8px 17px;
+}
+.vertical-tab .featured-tab .featured-tab-container .vertical-tab-caption .vt-caption-title h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.vertical-tab .featured-tab .featured-tab-container .vertical-tab-caption .vt-caption-content p{
+    font-size: 15px;
+    line-height: 23px;
 }

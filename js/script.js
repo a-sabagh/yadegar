@@ -2,12 +2,12 @@ $(document).ready(function(){
 //+------------------------------------------+
 // featured-tab-menu
 //+------------------------------------------+
-    $("#featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+    $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
     $("ul.featured-head li:first").addClass("active");//show first tab is active
-    $("#featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+    $(".featured-tab-container .tab-menu-content:first").show();//show first content is of tab
     $("ul.featured-head li").click(function(){
         var attr = $(this).find("a").attr("href");
-        $("#featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+        $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
         $("ul.featured-head li").removeClass("active");//remove all active class
         $(this).addClass("active");//active the tab that you click this
         $(attr).fadeIn();//fade in the content of tab you click on this
@@ -72,4 +72,10 @@ $(document).ready(function(){
 //+------------------------------------------+
     var containerEl = document.querySelector('.product-item-container');
     var mixer = mixitup(containerEl);
+//+------------------------------------------+
+// slick-slider
+//+------------------------------------------+
+    $(".slider").slick({
+        dots : true
+    });
 });
