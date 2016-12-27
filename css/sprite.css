@@ -149,3 +149,22 @@
 .r-icon-locator{
     background-position: -321px -242px;
 }
+/********************************** I C O N - S O C I A L **********************************/
+.social {
+    background: transparent url("../img/social-icons.png") no-repeat;
+    display: inline-block;
+    width: 47px;
+    height: 43px;
+}
+.facebook{
+    background-position: -122px -11px;
+}
+.twitter{
+    background-position: -20px -11px;
+}
+.youtube{
+    background-position: -409px -8px;
+}
+.google-plus{
+    background-position: -224px -11px;
+}
