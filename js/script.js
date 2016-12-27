@@ -1,5 +1,15 @@
 $(document).ready(function(){
 //+------------------------------------------+
+// product-tab
+//+------------------------------------------+
+   $('.tabs .tab-link').click(function(){
+       var tab_id = $(this).attr('data-tab');
+       $('ul.tabs li').removeClass('current');
+       $('.tab-content').removeClass('current');
+       $(this).addClass('current');
+       $("#"+tab_id).addClass('current');
+   });
+//+------------------------------------------+
 // featured-tab-menu
 //+------------------------------------------+
     $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
@@ -13,6 +23,7 @@ $(document).ready(function(){
         $(attr).fadeIn();//fade in the content of tab you click on this
         return false;
     });
+
 //+------------------------------------------+
 // jQeury menu-icon hover
 //+------------------------------------------+
@@ -68,8 +79,10 @@ $(document).ready(function(){
         return false;
     });
 //+------------------------------------------+
-// product-filter
+// portfolio-filter
 //+------------------------------------------+
     var containerEl = document.querySelector('.product-item-container');
     var mixer = mixitup(containerEl);
+
+
 });
