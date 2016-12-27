@@ -367,42 +367,33 @@
     padding: 0 30px;
     margin-bottom: 52px;
 }
-.vertical-tab .featured-tab .featured-tab-container .slider{
-    position: relative;
-}
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-arrow{
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-control{
     position: absolute;
-    bottom: -52px;
+    top: 103%;
+    z-index: 999;
     cursor: pointer;
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    text-indent: -9999;
-    border: none;
-    background: transparent;
     width: 45px;
     height: 52px;
 }
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-next{
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-control-right{
     right: 0;
     background: url("../img/arrow-right.png");
 }
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-prev{
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-control-left{
     background: url("../img/arrow-left.png");
     right: 45px;
 }
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots{
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-indicators{
     position: absolute;
     margin: 5px auto;
     text-align: center;
     width: 50%;
     left: 0;
     right: 0;
+    bottom: -35px;
 }
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li{
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-indicators li {
     display: inline-block;
-}
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li button{
     font: 0/0 a;
     color: transparent;
     text-shadow: none;
@@ -416,16 +407,13 @@
     height: 6px;
     margin: 0 10px;
     cursor: pointer;
-    display: block;
 }
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li.slick-active button{
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-indicators li.active{
     opacity: 1;
-}
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li button::-moz-focus-inner{
-    border: none;
-}
-.vertical-tab .featured-tab .featured-tab-container .slider .slick-dots li button:active{
     outline: none;
+}
+.vertical-tab .featured-tab .featured-tab-container .carousel .carousel-indicators li::-moz-focus-inner{
+    border: none;
 }
 .vertical-tab .featured-tab .featured-tab-container .vertical-tab-caption{
     background: #f6f6f6;
