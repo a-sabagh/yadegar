@@ -72,10 +72,4 @@ $(document).ready(function(){
 //+------------------------------------------+
     var containerEl = document.querySelector('.product-item-container');
     var mixer = mixitup(containerEl);
-//+------------------------------------------+
-// slick-slider
-//+------------------------------------------+
-    $(".slider").slick({
-        dots : true
-    });
 });
