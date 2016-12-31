@@ -1,8 +1,8 @@
 $(document).ready(function(){
 //+------------------------------------------+
-// product-tab
+// product-tab HOVER
 //+------------------------------------------+
-   $('.tabs .tab-link').click(function(){
+   $('.tabs .tab-link').hover(function(){
        var tab_id = $(this).attr('data-tab');
        $('ul.tabs li').removeClass('current');
        $('.tab-content').removeClass('current');
@@ -10,20 +10,52 @@ $(document).ready(function(){
        $("#"+tab_id).addClass('current');
    });
 //+------------------------------------------+
-// featured-tab-menu
+// featured-tab-menu CLICK
 //+------------------------------------------+
-    $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
-    $("ul.featured-head li:first").addClass("active");//show first tab is active
-    $(".featured-tab-container .tab-menu-content:first").show();//show first content is of tab
-    $("ul.featured-head li").click(function(){
+    $(".toturial-tab .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+    $(".toturial-tab ul.featured-head li:first").addClass("active");//show first tab is active
+    $(".toturial-tab .featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+    $(".toturial-tab ul.featured-head li").click(function(){
         var attr = $(this).find("a").attr("href");
-        $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
-        $("ul.featured-head li").removeClass("active");//remove all active class
+        $(".toturial-tab .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+        $(".toturial-tab ul.featured-head li").removeClass("active");//remove all active class
         $(this).addClass("active");//active the tab that you click this
         $(attr).fadeIn();//fade in the content of tab you click on this
         return false;
     });
-
+    $(".vertical-tab .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+    $(".vertical-tab ul.featured-head li:first").addClass("active");//show first tab is active
+    $(".vertical-tab .featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+    $(".vertical-tab ul.featured-head li").click(function(){
+        var attr = $(this).find("a").attr("href");
+        $(".vertical-tab .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+        $(".vertical-tab ul.featured-head li").removeClass("active");//remove all active class
+        $(this).addClass("active");//active the tab that you click this
+        $(attr).fadeIn();//fade in the content of tab you click on this
+        return false;
+    });
+    $(".fqa-tab .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+    $(".fqa-tab ul.featured-head li:first").addClass("active");//show first tab is active
+    $(".fqa-tab .featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+    $(".fqa-tab ul.featured-head li").click(function(){
+        var attr = $(this).find("a").attr("href");
+        $(".fqa-tab .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+        $(".fqa-tab ul.featured-head li").removeClass("active");//remove all active class
+        $(this).addClass("active");//active the tab that you click this
+        $(attr).fadeIn();//fade in the content of tab you click on this
+        return false;
+    });
+    $(".product-article .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+    $(".product-article ul.featured-head li:first").addClass("active");//show first tab is active
+    $(".product-article .featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+    $(".product-article ul.featured-head li").click(function(){
+        var attr = $(this).find("a").attr("href");
+        $(".product-article .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+        $(".product-article ul.featured-head li").removeClass("active");//remove all active class
+        $(this).addClass("active");//active the tab that you click this
+        $(attr).fadeIn();//fade in the content of tab you click on this
+        return false;
+    });
 //+------------------------------------------+
 // jQeury menu-icon hover
 //+------------------------------------------+
@@ -79,10 +111,71 @@ $(document).ready(function(){
         return false;
     });
 //+------------------------------------------+
-// portfolio-filter
+// category-title-toggle
 //+------------------------------------------+
-    var containerEl = document.querySelector('.product-item-container');
-    var mixer = mixitup(containerEl);
-
-
+    $(".category-box .category-box-title .cb-title-link").click(function(e){
+        e.preventDefault();
+        $(".category-box .category-box-content").slideToggle();
+        return false;
+    });
+//+------------------------------------------+
+// jquery archive toggler
+//+------------------------------------------+
+    var test = $(".category .row-post:odd").each(function(){
+    var before = $(this).find(".row-post-item .blog-square-in:last-child");
+    $(this).find(".row-post-item .blog-square-in:first-child").before(before);
+    $(this).find(".row-post-item:first-child .blog-square-in:first-child").remove();
+    $(this).find(".row-post-item:last-child .blog-square-in:first-child").remove();
 });
+//+------------------------------------------+
+// load-more-post
+//+------------------------------------------+
+    $(".category .row-post").slice(0 , 3).attr("style" , "display: table");
+    $(".category .load-more #load-more-post").click(function(e){
+        e.preventDefault();
+        $(".category .row-post:hidden").slice(0 , 3).fadeIn("slow").attr("style" , "display: table");
+        if($(".category .row-post:hidden").length == 0){
+            $(".category .load-more #load-more-post").fadeOut("slow");
+        }
+        return false;
+    });
+//+------------------------------------------+
+// accordian
+//+------------------------------------------+
+    $(".accordian li").removeClass("active");//remove active class from all li
+    $(".accordian li .accordian-panel").hide();//hide all accordian panel
+    $(".accordian li").click(function () {
+        var content = $(this).children("div.accordian-panel");//define content as accordian panel of clicked li
+        if (content.is(":hidden")) {
+            $(this).addClass("active").children(".accordian-panel").slideDown(403);//if content hidden slidedown
+        } else {
+            $(this).removeClass("active").children("div.accordian-panel").slideUp(400);//if content show slideup
+        }
+    });
+//+------------------------------------------+
+// load-more-qa
+//+------------------------------------------+
+    $(".qa-accordian .accordian li").slice(0 , 4).fadeIn("slow");
+    $(".category .load-more #load-more-qa").click(function(e){
+        e.preventDefault();
+        $(".qa-accordian .accordian li:hidden").slice(0 , 3).fadeIn("slow");
+        if($(".qa-accordian .accordian li:hidden").length == 0){
+            $(".category .load-more #load-more-qa").fadeOut("slow");
+        }
+        return false;
+    });
+});//jQeury
+
+//--------------------------------------javascript----------------------------------------+
+
+//--------portfolio-filter----------//
+var containerEl = document.querySelector('.product-item-container');
+var mixer = mixitup(containerEl);
+//--------emailCurrentPage----------//
+function emailCurrentPage(){
+    window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
+}
+//--------printCurrentPage----------//
+function printCurrentPage(){
+    window.print();
+}

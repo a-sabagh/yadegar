@@ -959,3 +959,41 @@ header,hgroup,main,menu,nav,section,summary {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+@media (min-width: 1200px) {
+  .pull-right {
+      float: right !important;
+  }
+  .pull-left {
+      float: left !important;
+  }
+}
+@media (min-width: 1200px) {
+  .pull-right-lg {
+      float: right !important;
+  }
+  .pull-left-lg {
+      float: left !important;
+  }
+}
+@media (min-width: 1200px) {
+  .pull-right-md {
+      float: right !important;
+  }
+  .pull-left-md {
+      float: left !important;
+  }
+}
+@media (min-width: 992px) {
+  .pull-right-sm {
+      float: right !important;
+  }
+  .pull-left-sm {
+      float: left !important;
+  }
+}
