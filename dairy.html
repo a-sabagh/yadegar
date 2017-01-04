@@ -2,68 +2,104 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title>deer | yadegar</title>
+        <title>Animal Feeds | yadegar</title>
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/sprite.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/BTS-ltr-grid.css">
         <link rel="stylesheet" href="css/carousel.css">
         <link rel="stylesheet" href="css/shortcode.css">
+        <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <main>
             <nav id="main-menu">
-                <div id="nav-logo" class="sprite"><img src="img/logo.png" alt=""></div>
-                <div id="nav-search">
-                    <span class="icon-sprite s-search"></span>
-                    <form action="index.html" method="GET">
-                        <input type="text" name="s" placeholder="Search">
-                    </form>
-                </div><!--#nav-search-->
-                <ul>
-                    <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">Deer</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
-                    <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
-                </ul>
+                <div id="nav-logo" class="sprite">
+                    <img class="img-logo" src="img/logo.png" alt=""><!--.img-logo-->
+                    <div class="nav-btn-meta">
+                        <div class="btn-menu"><a href="#">MENU</a></div><!--.btn-menu-->
+                        <div class="btn-search"><i class="icon-sprite s-search"></i></div><!--.btn-search-->
+                        <div class="btn-login"><i class="icon-sprite w-icon-people"></i></div>    
+                    </div><!--.nav-btn-meta-->
+                </div><!--.nav-logo-->
+                <div class="menu-all">
+                    <div class="mobile-search-wrapper">
+                        <form method="GET" action="#" class="mobile-nav-search">
+                            <input type="search" name="s" placeholder="Search">
+                            <span class="cross-clean"></span>
+                            <input type="submit" value="">
+                        </form><!--.mobile-nav-search-->
+                    </div><!--.mobile-search-wrapper-->
+                    <div class="mobile-menu-toggler"><a href="#">side menu</a></div><!--.mobile-menu-toggler-->
+                    <div id="nav-search">
+                        <span class="icon-sprite s-search"></span>
+                        <form action="index.html" method="GET">
+                            <input type="text" name="s" placeholder="Search">
+                        </form>
+                    </div><!--#nav-search-->
+                    <div id="mobile-top-menu" class="hide">
+                        <ul>
+                            <li>
+                                <a href="#">behind the checkerboard</a>
+                                <ul>
+                                    <li><a href="#">Our Farm</a></li>
+                                    <li><a href="#">Our Expert</a></li>
+                                    <li><a href="#">Our Quality</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">find answers</a></li>
+                            <li><a href="#">purina merchandlise</a></li>
+                        </ul>
+                    </div><!--#mobile-top-menu-->
+                    <ul class="side-menu">
+                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">Deer</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-horse"></i><span class="menu-name">Horse</span></a></li>
+                        <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
+                    </ul>
+                </div>
+                <!--.menu-all-->
             </nav><!--#main-nav-->
             <div id="content">
                 <header>
-                    <img src="img/dairy-header.jpeg" class="img-responsive" alt="">
-                    <ul id="top-menu">
-                        <li>
-                            <a href="#">behind the checkerboard</a>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img class="sub-menu-img" src="img/navIcon1.png" alt="">
-                                        <span class="sub-menu-text">Our Farm</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="sub-menu-img" src="img/navIcon2.png" alt="">
-                                        <span class="sub-menu-text">Our Expert</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="sub-menu-img" src="img/navIcon4.png" alt="">
-                                        <span class="sub-menu-text">Our Quality</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">find answers</a></li>
-                        <li><a href="#">purina merchandlise</a></li>
-                    </ul>
+                    <img src="img/header.jpeg" class="img-responsive" alt="">
+                    <div id="top-menu">
+                        <ul>
+                            <li>
+                                <a href="#">behind the checkerboard</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img class="sub-menu-img" src="img/navIcon1.png" alt="">
+                                            <span class="sub-menu-text">Our Farm</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="sub-menu-img" src="img/navIcon2.png" alt="">
+                                            <span class="sub-menu-text">Our Expert</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="sub-menu-img" src="img/navIcon4.png" alt="">
+                                            <span class="sub-menu-text">Our Quality</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">find answers</a></li>
+                            <li><a href="#">purina merchandlise</a></li>
+                        </ul>
+                    </div><!--#top-menu-->
                     <div id="icon-button"> 
                         <ul>
                             <li>
@@ -309,7 +345,7 @@
                                 <div class="col-md-8 question-text"><p>Should I hand-feed my show pig or use a self-feeder?</p></div>
                             </div><!--.question-->
                             <div class="row answer">
-                                <div class="col-md-1 answer-gap"></div>
+                                <div class="col-md-1 answer-gap hidden-sm hidden-xs"></div>
                                 <div class="col-md-3 answer-icon">A</div>
                                 <div class="col-md-7 answer-text"><p class="more">Whether you hand-feed or self-feed at the beginning of the feeding period, it is merely a feed deliv<span class="moreellipses">...&nbsp;</span><span class="morecontent"><span>ery process. However, hand-feeding usually results in the pig becoming gentle more quickly. When the... Read More</span>&nbsp;&nbsp;<a href="" class="morelink">Readmore</a></span></p></div>
                             </div><!--.answer-->

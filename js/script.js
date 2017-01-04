@@ -164,6 +164,55 @@ $(document).ready(function(){
         }
         return false;
     });
+//+------------------------------------------+
+// Cross-clear
+//+------------------------------------------+
+    $(".cross-clean").click(function(){
+        // alert("it work");
+        $(this).prev().val("").focus();
+    });
+//+------------------------------------------+
+// mobile-nav-toggler
+//+------------------------------------------+
+    $(".nav-btn-meta .btn-search").click(function(){
+        $(this).toggleClass("active");
+        $("nav#main-menu .mobile-search-wrapper").slideToggle();
+    });
+//+------------------------------------------+
+// mobile-top-menu has-child-class
+//+------------------------------------------+
+    $("#mobile-top-menu > ul > li").has("ul").addClass("has-child");
+    $("#mobile-top-menu > ul > li.has-child").click(function(e){
+        e.preventDefault();
+        $(this).children("ul").slideToggle();
+        return false;
+    });
+//+------------------------------------------+
+// mobile-menu-toggler
+//+------------------------------------------+
+    $("#main-menu div.mobile-menu-toggler a").click(function(e){
+        e.preventDefault();
+        var value = $(this).text();
+            if(value == "top menu"){
+                value = "side menu";
+            }else{
+                value = "top menu";
+            }
+        $(this).text(value);
+        $(this).parent().toggleClass("red");
+        $("main nav#main-menu #mobile-top-menu").toggleClass("show");
+        $("main #main-menu ul.side-menu").toggleClass("hide");
+        return false;
+    });
+    $("#main-menu .nav-btn-meta .btn-menu").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass("active");
+        $("#main-menu .menu-all").slideToggle();
+        return false;
+    });
+    // if($(".button.text-center a.btn-all").length() == 1){
+    //     $(".button.text-center").attr("style" , "height: 0;");
+    // }
 });//jQeury
 
 //--------------------------------------javascript----------------------------------------+

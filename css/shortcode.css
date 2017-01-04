@@ -25,6 +25,9 @@
 /*     .background-text          
 /*----------------------------
 */
+.intro-logo img{
+    display: inline-block !important;
+}
 .background-text-horse{
     background: transparent url("../img/horse-background.jpeg") no-repeat center center;
     background-size: cover;
@@ -465,6 +468,7 @@
     font-size: 0;
     margin: 30px auto;
     border-top: 8px solid #EEEEEE;
+    border-left: 1px solid #eee;
 }
 .block-list .bl-item{
     display: inline-block;
@@ -473,9 +477,6 @@
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
     border-top: none;
-}
-.block-list .bl-item:first-child{
-    border-left: 1px solid #eee;
 }
 .block-list .bl-item .bl-item-title h3{
     font-size: 14px;

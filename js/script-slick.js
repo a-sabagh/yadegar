@@ -2,7 +2,7 @@
 // slick-slider
 //+------------------------------------------+
     $( '.pt-slider' ).slick( {
-        dots: true
+        dots: false
         , slidesToShow: 4
         , responsive: [
             { breakpoint: 1200,

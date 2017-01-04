@@ -13,32 +13,19 @@ h1, h2, h3, h4, h5, h6 {
 /********************************************
 MENU
 ********************************************/
-main nav#main-menu{
-    background: #cc262c;
-    transition: all 1.5s;
-    transition-delay: 1.5s;
-    position: fixed;
-    height: 100%;
-    width: 68px;
-    overflow: hidden;
-    z-index: 999999;
-    left: 0;
-    top: 0;
-}
-main nav#main-menu:hover{
-    width: 250px;
-}
-main nav#main-menu #nav-logo {
+
+main nav#main-menu > #nav-logo {
     background: white;
-    padding: 20px 0px 10px 14px
+    padding: 20px 0px 10px 14px;
+    border-bottom: 1px solid #eee;
 }
-main nav#main-menu #nav-search{
+main nav#main-menu  #nav-search{
     border-bottom: 1px solid #b62525;
     height: 38px;
     overflow: hidden;
     position: relative;
 }
-main nav#main-menu #nav-search span{
+main nav#main-menu  #nav-search span{
     margin: 0px 15px;
     position: absolute;
     left: 0px;
@@ -46,17 +33,20 @@ main nav#main-menu #nav-search span{
     width: 62px;
     cursor: pointer;
 }
-main nav#main-menu #nav-search .s-search{
+main nav#main-menu  #nav-search .s-search{
     width: 40px;
     height: 34px;
 }
-main nav#main-menu #nav-search:hover{
+main nav#main-menu  #nav-search:hover .s-search{
+    background-position: -357px -37px;
+}
+main nav#main-menu  #nav-search:hover{
     background: white;
 }
-main nav#main-menu #nav-search form{
+main nav#main-menu  #nav-search form{
     float: right;
 }
-main nav#main-menu #nav-search form input{
+main nav#main-menu  #nav-search form input{
     position: absolute;
     top: 0px;
     right: 0px;
@@ -80,31 +70,31 @@ main nav#main-menu:hover #nav-search form input:focus{
     font-weight: bold;
 
 }
-main nav#main-menu ul li{
+main nav#main-menu .menu-all > ul li{
     height: 44px;
     border-bottom: 1px solid #b62525;
 }
-main nav#main-menu ul li a{
+main nav#main-menu .menu-all > ul li a{
     padding-top: 5px;
     display: block;
     white-space: nowrap;
     height: 100%;
 }
-main nav#main-menu ul li:hover{
+main nav#main-menu .menu-all > ul li:hover{
     background-color: white;
 }
-main nav#main-menu ul li a i{
+main nav#main-menu .menu-all > ul li a i{
     vertical-align: bottom;
     margin: 0px 15px;
 }
-main nav#main-menu ul li a span.menu-name{
+main nav#main-menu .menu-all > ul li a span.menu-name{
     display: inline-block;
     vertical-align: bottom;
     height: 26px;
     color: white;
     font-size: 17px;
 }
-main nav#main-menu ul li a:hover span.menu-name{
+main nav#main-menu .menu-all > ul li a:hover span.menu-name{
     color: #cc262c;
 }
 /********************************************
@@ -129,18 +119,18 @@ main #content header #top-menu{
     margin-left: auto;
     width: 50%;
 }
-main #content header ul#top-menu > li{
+main #content header #top-menu > ul > li{
     float: left;
     text-align: center;
     width: 33%;
     margin-top: 15px;
     position: relative;
 }
-.single main #content header ul#top-menu > li > a,
-.category main #content header ul#top-menu >li >a{
+.single main #content header #top-menu > ul > li > a,
+.category main #content header #top-menu > ul >li >a{
     color: #222;
 }
-main #content header ul#top-menu > li > a{
+main #content header #top-menu > ul > li > a{
     transition: all .3s;
     display: block;
     text-decoration: none;
@@ -152,10 +142,10 @@ main #content header ul#top-menu > li > a{
     margin: 0 auto;
     padding: 10% 0 8%;
 }
-main #content header ul#top-menu > li > a:hover{
+main #content header #top-menu > ul > li > a:hover{
     color: #b72228;
 }
-main #content header ul#top-menu > li > ul{
+main #content header #top-menu > ul > li > ul{
     display: none;
     visibility: hidden;
     z-index: 9999;
@@ -165,15 +155,15 @@ main #content header ul#top-menu > li > ul{
     right: 0;
     margin: 0 auto;
 }
-main #content header ul#top-menu > li:hover > ul{
+main #content header #top-menu > ul > li:hover > ul{
     display: block;
     visibility: visible;
 }
-.single main #content header ul#top-menu > li > ul li:first-child,
-.category main #content header ul#top-menu > li > ul li:first-child{
+.single main #content header #top-menu > ul > li > ul li:first-child,
+.category main #content header #top-menu > ul > li > ul li:first-child{
     box-shadow: -2px 0px 5px #eee;
 }
-main #content header ul#top-menu > li > ul li:first-child::before{
+main #content header #top-menu > ul > li > ul li:first-child::before{
     content: "";
     width: 0;
     height: 0;
@@ -186,30 +176,30 @@ main #content header ul#top-menu > li > ul li:first-child::before{
     right: 0;
     margin: 0 auto;
 }
-main #content header ul#top-menu > li > ul li:first-child:hover::before{
+main #content header #top-menu > ul > li > ul li:first-child:hover::before{
     border-bottom: 10px solid white;
 }
-main #content header ul#top-menu > li > ul > li a{
+main #content header #top-menu > ul > li > ul > li a{
     display: block;
     text-decoration: none;
     color: white;
     background: #cc262c;
     transition: all .2s;
 }
-main #content header ul#top-menu > li > ul li a:hover{
+main #content header #top-menu > ul > li > ul li a:hover{
     background: white;
     color: #cc262c;
 }
-main #content header ul#top-menu > li > ul li{
+main #content header #top-menu > ul > li > ul li{
     overflow: hidden;
     line-height: 42px;
     border-bottom: 1px solid #b62525;
 
 }
-main #content header ul#top-menu > li > ul li a span.sub-menu-text{
+main #content header #top-menu > ul > li > ul li a span.sub-menu-text{
     display: inline-block;
 }
-main #content header ul#top-menu > li > ul li a .sub-menu-img{
+main #content header #top-menu > ul > li > ul li a .sub-menu-img{
     float: left;
     width: 42px;
     height: 42px;
@@ -330,6 +320,7 @@ footer .footer-menu ul li a{
     font-size: 12px;
     font-weight: 700;
     color: #202020;
+    cursor: pointer;
 }
 footer .footer-menu ul li a:hover{
     color: #5E5E5E;
@@ -338,6 +329,7 @@ footer .footer-menu ul li a:hover{
 .copyright
 */
 footer .copyright{
+    text-align: center;
     padding-top: 8px;
     line-height: 45px;
 }
@@ -468,7 +460,7 @@ section.product{
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
     background: transparent url("../img/horse-product-sprite.png");
     background-position: -226px -379px;
 }
@@ -479,7 +471,7 @@ section.product{
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
     background: transparent url("../img/horse-product-sprite.png");
     background-position: -80px -379px;
 }
@@ -926,6 +918,7 @@ search field
 }
 .search-box .search-box-input {
     border: none;
+    background: transparent;
     display: inline-block;
     height: 48px;
     box-shadow: none;
@@ -966,11 +959,11 @@ category-box
 .category-box .category-box-title h3{
     display: inline;
     margin: 0;
-    cursor: pointer;
     font-size: 20px;
 }
 .category-box .category-box-title h3 .cb-title-link{
     color: #cc262c;
+    cursor: pointer;
 }
 .category-box .category-box-title h3 .cb-title-link::after{
     content: "";
@@ -1034,7 +1027,7 @@ qa-accordian
 */
 .qa-accordian {
     border: 1px solid rgb(221, 221, 221);
-    
+    border-bottom: none;
     padding: 0;
     margin: 20px auto 0;
 }
