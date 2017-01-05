@@ -44,6 +44,19 @@ screen (1200px) and (992px) and (768px) and (480px)|
     main #content header #top-menu > ul > li > a{
         font-size: 11px;
     }
+    main #content header #top-menu > ul > li > ul{
+        width: 150px;
+    }
+    main #content header #top-menu > ul > li > ul li{
+        line-height: 30px;
+    }
+    main #content header #top-menu > ul > li > ul li a span.sub-menu-text{
+        font-size: 11px;
+    }
+    main #content header #top-menu > ul > li > ul li a .sub-menu-img{
+        width: 32px;
+        height: 32px;
+    }
     main #content header .header-scream h3{
         font-size: 11px;
     }
@@ -182,7 +195,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         color: #fff;
         cursor: pointer;
         font-family: arial,san-serif;
-        font-size: 21px;
+        font-size: 24px;
         font-weight: normal;
         border: 3px solid #cc262c;
         padding: 5px 10px;
@@ -383,6 +396,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         float: right;
         width: 50%;
         border-right: 1px solid #b62525;
+        box-sizing: border-box;
     }
     main #content{
         margin-right: 0px;
@@ -399,15 +413,28 @@ screen (1200px) and (992px) and (768px) and (480px)|
     }
     main nav#main-menu .btn-menu a{
         padding: 5px;
-        font-size: 17.5px;
+        font-size: 15px;
     }
     main nav#main-menu .btn-search{
         padding: 0;
         margin: 0 5px;
     }
+    main nav#main-menu .btn-search i.s-search{
+        height: 26px;
+        width: 30px;
+        background-position: -357px -77px;
+    }
+    main nav#main-menu .btn-search.active i.s-search,
+    main nav#main-menu .btn-search:hover i.s-search{
+        background-position: -358px -36px;
+    }
     main nav#main-menu .btn-login{
         padding: 0;
     }
+    main nav#main-menu .btn-login i.w-icon-people{
+        height: 26px;
+    }
+    
 }
 /**************** L A T E S T B L O G  *****************/
 @media screen and (max-width: 600px){
