@@ -152,7 +152,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         width: 68px;
         overflow: hidden;
         z-index: 999999;
-        left: 0;
+        right: 0;
         top: 0;
     }
 }
@@ -165,7 +165,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         background: #cc262c;
         overflow: hidden;
         z-index: 999999;
-        left: 0;
+        right: 0;
         top: 0;
     }
     main nav#main-menu .img-logo{
@@ -174,8 +174,8 @@ screen (1200px) and (992px) and (768px) and (480px)|
         height: auto;
     }
     main nav#main-menu .btn-menu{
-        float: right;
-        margin-right: 10px;
+        float: left;
+        margin-left: 10px;
     }
     main nav#main-menu .btn-menu a{
         background-color: #cc262c;
@@ -186,7 +186,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         font-weight: normal;
         border: 3px solid #cc262c;
         padding: 5px 10px;
-        float: right;
+        float: left;
     }
     main nav#main-menu .menu-all{
         display: none;
@@ -198,7 +198,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         cursor: pointer;
     }
     main nav#main-menu .btn-search{
-        float: right;
+        float: left;
         margin: 0 10px;
         background-color: #cc262c;
         border: 3px solid #cc262c;
@@ -219,7 +219,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         background-position: -355px -32px;
     }
     main nav#main-menu .btn-login{
-        float: right;
+        float: left;
         border: 3px solid #cc262c;
         background: #cc262c;
         padding: 2px;
@@ -236,14 +236,14 @@ screen (1200px) and (992px) and (768px) and (480px)|
         background-position: -292px -29px;
     }
     main nav#main-menu > ul li{
-        border-left: 1px solid #b62525;
+        border-right: 1px solid #b62525;
     }
     main nav#main-menu #nav-search{
         display: none;
     }
     main nav#main-menu .nav-btn-meta{
         width: 230px;
-        float: right;
+        float: left;
     }
     main nav#main-menu .mobile-search-wrapper {
         display: none;
@@ -264,7 +264,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         height: 46px;
         color: #ccc;
         font-size: 22px;
-        padding-left: 5px;
+        padding-right: 5px;
         font-weight: 600;
     }
     main nav#main-menu .mobile-search-wrapper .mobile-nav-search input[type="submit"]{
@@ -276,7 +276,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         font: 0;
         color: transparent;
         position: absolute;
-        left: 1%;
+        right: 1%;
         top: 0;
         bottom: 0;
         margin: auto;
@@ -286,7 +286,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: inline-block;
         position: absolute;
         margin: auto;
-        right: 1%;
+        left: 1%;
         top: 0;
         bottom: 0;
         width: 30px;
@@ -327,9 +327,9 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: block;
         width: 6px;
         height: 9px;
-        background: transparent url("../img/right-arrow.png") no-repeat 0 -31px;
+        background: transparent url("../img/left-arrow.png") no-repeat 0 -31px;
         position: absolute;
-        right: -15px;
+        left: -15px;
         margin: auto;
         top: 0;
         bottom: 0;
@@ -357,8 +357,8 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: inline-block;
         width: 6px;
         height: 9px;
-        background: transparent url("../img/right-arrow.png") no-repeat 0 0;
-        margin-left: 7px;
+        background: transparent url("../img/left-arrow.png") no-repeat 0 0;
+        margin-right: 7px;
         vertical-align: middle;
     }
     main nav#main-menu .mobile-menu-toggler a{
@@ -375,17 +375,17 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: inline-block;
         width: 6px;
         height: 9px;
-        background: transparent url("../img/left-arrow.png") no-repeat 0 -31px;
-        margin-right: 7px;
+        background: transparent url("../img/right-arrow.png") no-repeat 0 -31px;
+        margin-left: 7px;
         vertical-align: middle;
     }
     main nav#main-menu .menu-all > ul li{
-        float: left;
+        float: right;
         width: 50%;
-        border-left: 1px solid #b62525;
+        border-right: 1px solid #b62525;
     }
     main #content{
-        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 @media screen and (max-width: 739px){
@@ -422,7 +422,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         width: 95px;
         height: 95px;
         font-size: 65px;
-        float: left;
+        float: right;
     }
     .row.question{
         border-bottom: 1px solid #e0e0e0;
@@ -436,10 +436,10 @@ screen (1200px) and (992px) and (768px) and (480px)|
         width: 85px;
         height: 85px;
         font-size: 50px;
-        float: left;
+        float: right;
     }
     .tab-menu-content .answer .answer-text, .tab-menu-content .question .question-text{
-        padding-left: 18px;
+        padding-right: 18px;
     }
     .row.question{
         border-bottom: 1px solid #e0e0e0;
@@ -453,10 +453,10 @@ screen (1200px) and (992px) and (768px) and (480px)|
         width: 75px;
         height: 75px;
         font-size: 45px;
-        float: left;
+        float: right;
     }
     .tab-menu-content .answer .answer-text, .tab-menu-content .question .question-text{
-        padding-left: 15px;
+        padding-right: 15px;
     }
     .button.text-center{
         height: 60px;
@@ -465,8 +465,8 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: block;
         width: 100%;
         position: absolute;
-        left: 0;
         right: 0;
+        left: 0;
         margin: 0;
     }
     .button.text-center .button-all:nth-child(2){
@@ -497,7 +497,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: inline-block;
     }
     footer .footer-menu ul li{
-        margin-right: 5px;
+        margin-left: 5px;
     }
 }
 

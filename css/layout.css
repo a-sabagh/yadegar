@@ -16,7 +16,7 @@ MENU
 
 main nav#main-menu > #nav-logo {
     background: white;
-    padding: 20px 0px 10px 14px;
+    padding: 20px 14px 10px 0px;
     border-bottom: 1px solid #eee;
 }
 main nav#main-menu  #nav-search{
@@ -28,7 +28,7 @@ main nav#main-menu  #nav-search{
 main nav#main-menu  #nav-search span{
     margin: 0px 15px;
     position: absolute;
-    left: 0px;
+    right: 0px;
     top: 0px;
     width: 62px;
     cursor: pointer;
@@ -44,24 +44,24 @@ main nav#main-menu  #nav-search:hover{
     background: white;
 }
 main nav#main-menu  #nav-search form{
-    float: right;
+    float: left;
 }
 main nav#main-menu  #nav-search form input{
     position: absolute;
     top: 0px;
-    right: 0px;
+    left: 0px;
     width: 0px;
     border: none;
     height: 38px;
     font-size: 15px;
     white-space: normal;
-    transition: width 1.5s , padding-left 2s;
+    transition: width 1.5s , padding-right 2s;
     background: transparent;
     transition-delay: 1.5s;
     color: #ccc;
 }
 main nav#main-menu:hover #nav-search form input{
-    padding-left: 7px;
+    padding-right: 7px;
     width: 185px;
 }
 main nav#main-menu:hover #nav-search form input:focus{
@@ -104,7 +104,7 @@ HEADER
 #top-menu
 */
 main #content{
-    margin-left: 63px;
+    margin-right: 63px;
 }
 main #content header{
     position: relative;
@@ -113,14 +113,14 @@ main #content header{
 main #content header #top-menu{
     position: absolute;
     top: 0px;
-    left: 0;
     right: 0;
-    margin-right: auto;
+    left: 0;
     margin-left: auto;
+    margin-right: auto;
     width: 50%;
 }
 main #content header #top-menu > ul > li{
-    float: left;
+    float: right;
     text-align: center;
     width: 33%;
     margin-top: 15px;
@@ -151,8 +151,8 @@ main #content header #top-menu > ul > li > ul{
     z-index: 9999;
     width: 180px;
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     margin: 0 auto;
 }
 main #content header #top-menu > ul > li:hover > ul{
@@ -161,19 +161,19 @@ main #content header #top-menu > ul > li:hover > ul{
 }
 .single main #content header #top-menu > ul > li > ul li:first-child,
 .category main #content header #top-menu > ul > li > ul li:first-child{
-    box-shadow: -2px 0px 5px #eee;
+    box-shadow: 2px 0px 5px #eee;
 }
 main #content header #top-menu > ul > li > ul li:first-child::before{
     content: "";
     width: 0;
     height: 0;
-    border-right: 10px solid transparent;
     border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
     border-bottom: 10px solid #cc262c;
     position: absolute;
     top: -10px;
-    left: 0;
     right: 0;
+    left: 0;
     margin: 0 auto;
 }
 main #content header #top-menu > ul > li > ul li:first-child:hover::before{
@@ -200,7 +200,7 @@ main #content header #top-menu > ul > li > ul li a span.sub-menu-text{
     display: inline-block;
 }
 main #content header #top-menu > ul > li > ul li a .sub-menu-img{
-    float: left;
+    float: right;
     width: 42px;
     height: 42px;
 }
@@ -210,11 +210,11 @@ main #content header #top-menu > ul > li > ul li a .sub-menu-img{
 main #content header #icon-button{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 175px;
 }
 main #content header #icon-button ul > li{
-    float: left;
+    float: right;
     width: 50%;
 }
 main #content header #icon-button ul > li > a{
@@ -252,7 +252,7 @@ main #content header #icon-button ul li a i.w-icon-map{
 */
 main #content header .header-scream{
     position: absolute;
-    right: 0px;
+    left: 0px;
     top: 45%;
     background: #CC262C;
     width: 15%;
@@ -287,7 +287,7 @@ footer .footer-login .login-container{
     position: absolute;
     padding: 8px;
     top: 0;
-    right: 0;
+    left: 0;
 }
 footer .footer-login .footer-login-text{
     font-size: 12px;
@@ -308,11 +308,11 @@ footer .footer-menu{
     padding-top: 15px;
 }
 footer .footer-menu ul li{
-    float: left;
-    margin-right: 15px;
+    float: right;
+    margin-left: 15px;
 }
 footer .footer-menu ul li:last-child{
-    margin-right: 0px;
+    margin-left: 0px;
 }
 footer .footer-menu ul li a{
     display: block;
@@ -371,8 +371,8 @@ footer .copyright #AriazDevs img {
 /* HORSE.HTML
 /*=========================================================================*/
 main nav.content-nav{
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     padding: 3px;
     overflow: hidden;
@@ -383,11 +383,11 @@ main nav.content-nav{
 }
 main nav.content-nav .content-nav-menu{
     overflow: hidden;
-    float: left;
+    float: right;
     width: 83.3333%;
 }
 main nav.content-nav .content-nav-menu li{
-    float: left;
+    float: right;
 }
 main nav.content-nav .content-nav-menu li a{
     display: block;
@@ -400,13 +400,13 @@ main nav.content-nav .content-nav-menu li a::after{
     content: "";
     background: transparent url("../img/sprites.png") -157px -43px;
     display: inline-block;
-    margin-left: 3px;
+    margin-right: 3px;
     width: 15px;
     height: 10px;
 }
 main nav.content-nav .content-nav-icon{
     text-align: center;
-    float: right;
+    float: left;
     width: 16.33333%;
 }
 main nav.content-nav .content-nav-icon li {
@@ -460,7 +460,7 @@ section.product{
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 10px;
+    right: 10px;
     background: transparent url("../img/horse-product-sprite.png");
     background-position: -226px -379px;
 }
@@ -471,7 +471,7 @@ section.product{
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 10px;
+    right: 10px;
     background: transparent url("../img/horse-product-sprite.png");
     background-position: -80px -379px;
 }
@@ -493,7 +493,7 @@ section.product{
     width: 15px;
     height: 10px;
     background: transparent url("../img/sprites.png") repeat scroll -157px -43px;
-    margin-left: 6px;
+    margin-right: 6px;
 }
 .product .product-content .filter-content-title {
     color: #222;
@@ -510,7 +510,7 @@ section.product{
 }
 .product .product-content .product-content-filter .filter-content ul li{
     display: inline-block;
-    margin-right: 5%;
+    margin-left: 5%;
 }
 .product .product-content .product-content-filter .filter-content ul li a{
     display: block;
@@ -576,7 +576,7 @@ section.product{
     width: 15px;
     height: 15px;
     display: inline-block;
-    margin: 5px 0px 0px 5px;
+    margin: 5px 5px 0px 0px;
     vertical-align: middle;
 }
 .btn-read-more:hover::after{
@@ -593,7 +593,7 @@ section.product{
     font-family: Arial,sans-serif;
     font-size: 60px;
     font-weight: 700;
-    text-align: left;
+    text-align: right;
     margin: 0;
 }
 .blog-head blockquote.blog-author{
@@ -605,17 +605,17 @@ section.product{
     line-height: 18px;
 }
 .blog-head ul.blog-meta{
-    float: right;
+    float: left;
 }
 .blog-head ul.blog-meta li{
-    float: left;
+    float: right;
 }
 .blog-head ul.blog-meta li.meta-eshare a::before{
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 7px;
+    margin-left: 7px;
     background: transparent url("../img/eshare.png");
     vertical-align: middle;
 }
@@ -624,7 +624,7 @@ section.product{
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 7px;
+    margin-left: 7px;
     background: transparent url("../img/print.png");
     vertical-align: middle;
 }
@@ -638,7 +638,7 @@ section.product{
     line-height: 26px;
     color: #777;
     border-top: 1px solid #eee;
-    margin: 15px 0 25px 8px;
+    margin: 15px 8px 25px 0;
     padding: 75px 0 0 0 !important;
 }
 .blog-content a{
@@ -672,10 +672,10 @@ caption {
    padding-top: 8px;
    padding-bottom: 8px;
    color: #777;
-   text-align: left;
+   text-align: right;
 }
 th {
-   text-align: left;
+   text-align: right;
 }
 .table {
    width: 100%;
@@ -772,7 +772,7 @@ table > tbody > tr:hover {
     height: 50%;
     position: absolute;
     top: 0;
-    left: 0 !important;
+    right: 0 !important;
 }
 .related-post .square-right-box,
 .related-post .square-left-box{
@@ -781,7 +781,7 @@ table > tbody > tr:hover {
     width: 100%;
 }
 .related-post .square-right-box{
-    left: 50%;
+    right: 50%;
 }
 
 .related-post .blog-square-in .square-full-box{
@@ -857,7 +857,7 @@ table > tbody > tr:hover {
     height: 50%;
     position: absolute;
     top: 0;
-    left: 0 !important;
+    right: 0 !important;
 }
 .row-post .square-right-box,
 .row-post .square-left-box{
@@ -866,7 +866,7 @@ table > tbody > tr:hover {
     width: 100%;
 }
 .row-post .square-right-box{
-    left: 50%;
+    right: 50%;
 }
 
 .row-post .blog-square-in .square-full-box{
@@ -929,15 +929,15 @@ search field
     font-size: 22px;
     width: 55%;
     margin: 0 auto;
-    left: 0;
     right: 0;
+    left: 0;
 }
 .search-box .search-box-btn {
     border: none;
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 20%;
+    left: 20%;
     width: 30px;
     height: 28px;
     margin: auto;
@@ -971,7 +971,7 @@ category-box
     width: 15px;
     height: 10px;
     background: transparent url("../img/sprites.png") repeat scroll -157px -43px;
-    margin-left: 6px;
+    margin-right: 6px;
 }
 .category-box .category-box-content {
     border-top: 1px solid #ececec;
@@ -1020,7 +1020,7 @@ category-box
     background: transparent url("../img/loader.png") no-repeat center center;
     cursor: pointer;
     vertical-align: middle;
-    margin-left: 8px;
+    margin-right: 8px;
 }
 /*
 qa-accordian
@@ -1044,7 +1044,7 @@ qa-accordian
 .qa-accordian .accordian .accordian-panel .ac-a-sign{
     text-transform: uppercase;
     display: block;
-    float: left;
+    float: right;
     font-family: "Helvetica",Arial,sans-serif;
     font-size: 46px;
     color: #333;
@@ -1068,7 +1068,7 @@ qa-accordian
     display: block;
     position: absolute;
     top: 40%;
-    right: 25px;
+    left: 25px;
     width: 20px;
     height: 20px;
     background: transparent url("../img/plus-icon.png") no-repeat center center;
@@ -1077,7 +1077,7 @@ qa-accordian
     background: transparent url("../img/minus-icon.png") no-repeat center center;
 }
 .qa-accordian .accordian .accordian-panel {
-    padding-left: 70px;
+    padding-right: 70px;
     overflow: hidden;
 }
 .qa-accordian .accordian .accordian-panel .ac-answer-content{

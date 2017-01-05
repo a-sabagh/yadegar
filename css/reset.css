@@ -20,7 +20,7 @@ ol, ul, li {
     list-style:none
 }
 caption, th {
-    text-align:left;
+    text-align:right;
 }
 q:before, q:after {
     content:''
