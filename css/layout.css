@@ -1,9 +1,7 @@
 body{
-    font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
     color: #222;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
     font-style: normal;
     line-height: 1.4;
     margin-bottom: .5rem;
@@ -138,7 +136,7 @@ main #content header #top-menu > ul > li > a{
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     margin: 0 auto;
     padding: 10% 0 8%;
 }
@@ -429,14 +427,12 @@ section.product{
 }
 .large-format{
     font-size: 60px;
-    font-family: Helvetica,Arial,sans-serif;
     font-weight: 700;
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
 }
 .product-caption{
-    font-family: 'Libre Baskerville',serif;
     font-size: 16px;
     font-style: oblique;
     line-height: 18px;
@@ -557,7 +553,6 @@ section.product{
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: arial,san-serif;
     font-size: 16px;
     font-weight: normal;
     padding: 8px;
@@ -590,7 +585,6 @@ section.product{
 }
 .blog-head h1.blog-title{
     color: #cc262c;
-    font-family: Arial,sans-serif;
     font-size: 60px;
     font-weight: 700;
     text-align: right;
@@ -599,7 +593,6 @@ section.product{
 .blog-head blockquote.blog-author{
     display: inline-block;
     color: #777;
-    font-family: 'Libre Baskerville',serif;
     font-size: 16px;
     font-style: oblique;
     line-height: 18px;
@@ -1045,7 +1038,6 @@ qa-accordian
     text-transform: uppercase;
     display: block;
     float: right;
-    font-family: "Helvetica",Arial,sans-serif;
     font-size: 46px;
     color: #333;
     font-style: normal;

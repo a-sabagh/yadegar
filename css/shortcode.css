@@ -51,7 +51,6 @@
 .section-title{
     text-transform: capitalize;
     font-size: 60px;
-    font-family: Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #cc262c;
     text-align: center;
@@ -61,7 +60,6 @@
 .section-caption{
     text-transform: capitalize;
     color: #777;
-    font-family: 'Libre Baskerville',serif;
     font-size: 16px;
     font-style: oblique;
     line-height: 18px;
@@ -209,7 +207,6 @@
 }
 .tab-menu-content .question .question-icon,
 .tab-menu-content .answer .answer-icon{
-    font-family: Helvetica,Arial,sans-serif;
     font-size: 82px;
     color: #333;
     font-style: normal;
@@ -221,7 +218,6 @@
 }
 .tab-menu-content .answer .answer-text,
 .tab-menu-content .question .question-text{
-    font-family: Arial,sans-serif;
     color: #777;
     font-size: 14px;
     line-height: 25px;
@@ -251,7 +247,6 @@
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: arial,san-serif;
     padding: 7px 9px 7px 2px;
     font-size: 21px;
     font-weight: normal;
@@ -610,7 +605,6 @@
     color: #fff;
     cursor: pointer;
     display: block;
-    font-family: arial,san-serif;
     font-size: 16px;
     font-weight: normal;
     padding: 8px;
