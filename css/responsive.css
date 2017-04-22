@@ -1,0 +1,615 @@
+/*
+====================================================
+screen (1200px) and (992px) and (768px) and (480px)|
+====================================================
+*/
+/**************** F O N T S I Z E *****************/
+@media screen and (max-width:1200px) and (min-width: 992px){
+    .section-title,
+    .large-format,
+    .blog-head h1.blog-title{
+        font-size: 45px;
+    }
+    .background-text-horse{
+        font-size: 23px;
+    }
+    main #content header .header-scream h3{
+        font-size: 13px;
+    }
+    main #content header #top-menu > ul > li > a{
+        font-size: 13px;
+    }
+    main #content header #icon-button ul li a .top-menu-text{
+        font-size: 13px;
+    }
+    .latest-blog .blog-content .blog-square .square-left-box h4,
+    .latest-blog .blog-content .blog-square .square-right-box h4,
+    .latest-blog .blog-content .blog-square .square-full-box h4,
+    .related-post .square-left-box h4, .related-post .square-right-box h4, h4{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:991px) and (min-width: 768px){
+    .section-title,
+    .large-format,
+    .blog-head h1.blog-title{
+        font-size: 35px;
+    }
+    .section-caption{
+        font-size: 13px;
+    }
+    .background-text-horse{
+        font-size: 21px;
+    }
+    main #content header #top-menu > ul > li > a{
+        font-size: 11px;
+    }
+    main #content header #top-menu > ul > li > ul{
+        width: 150px;
+    }
+    main #content header #top-menu > ul > li > ul li{
+        line-height: 30px;
+    }
+    main #content header #top-menu > ul > li > ul li a span.sub-menu-text{
+        font-size: 11px;
+    }
+    main #content header #top-menu > ul > li > ul li a .sub-menu-img{
+        width: 32px;
+        height: 32px;
+    }
+    main #content header .header-scream h3{
+        font-size: 11px;
+    }
+    main #content header #icon-button ul li a .top-menu-text{
+        font-size: 11px;
+    }
+    .latest-blog .blog-content .blog-square .square-left-box h4,
+    .latest-blog .blog-content .blog-square .square-right-box h4,
+    .latest-blog .blog-content .blog-square .square-full-box h4,
+    .related-post .square-left-box h4, .related-post .square-right-box h4, h4{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:767px) and (min-width: 480px){
+    .section-title,
+    .large-format,
+    .blog-head h1.blog-title{
+        font-size: 25px;
+    }
+    .section-caption{
+        font-size: 13px;
+    }
+    .background-text-horse{
+        font-size: 18px;
+    }
+    main #content header .header-scream h3{
+        font-size: 11px;
+    }
+    main #content header #top-menu > ul > li > a{
+        font-size: 11px;
+    }
+    main #content header #icon-button ul li a .top-menu-text{
+        font-size: 11px;
+    }
+    .latest-blog .blog-content .blog-square .square-left-box h4,
+    .latest-blog .blog-content .blog-square .square-right-box h4,
+    .latest-blog .blog-content .blog-square .square-full-box h4,
+    .related-post .square-left-box h4, .related-post .square-right-box h4, h4{
+        font-size: 16px;
+    }
+    .blog-content{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 479px){
+    .section-title,
+    .large-format,
+    .blog-head h1.blog-title{
+        font-size: 25px;
+    }
+    .section-caption{
+        font-size: 13px;
+    }
+    .background-text-horse{
+        font-size: 17px;
+    }
+    main #content header .header-scream h3{
+        font-size: 11px;
+    }
+    main #content header #icon-button ul li a .top-menu-text{
+        font-size: 11px;
+    }
+    .latest-blog .blog-content .blog-square .square-left-box h4,
+    .latest-blog .blog-content .blog-square .square-right-box h4,
+    .latest-blog .blog-content .blog-square .square-full-box h4,
+    .related-post .square-left-box h4, .related-post .square-right-box h4, h4{
+        font-size: 16px;
+    }
+    .blog-content{
+        font-size: 13px;
+    }
+}
+/****************@ F O N T S I Z E *****************/
+
+
+/**************** H E A D E R  *****************/
+/*-------------screen---------------*/
+@media screen and (min-width: 767px){
+    main nav#main-menu .btn-menu{
+        display: none;
+    }
+    main nav#main-menu .btn-search{
+        display: none;
+    }
+    main nav#main-menu .btn-login{
+        display: none;
+    }
+    main nav#main-menu .mobile-search-wrapper{
+        display: none !important;
+    }
+    #mobile-top-menu{
+        display: none !important;
+    }
+    main nav#main-menu .mobile-menu-toggler{
+        display: none;
+    }
+    main nav#main-menu:hover{
+        width: 250px;
+    }
+    main nav#main-menu{
+        background: #cc262c;
+        transition: all 1.5s;
+        transition-delay: 1.5s;
+        position: fixed;
+        height: 100%;
+        width: 68px;
+        overflow: hidden;
+        z-index: 999999;
+        right: 0;
+        top: 0;
+    }
+   .logged-in.admin-bar main nav#main-menu{
+        top: 32px;
+    }
+}
+/*-------------responsive---------------*/
+@media screen and (max-width:768px){
+    main nav#main-menu{
+        display: block;
+        position: static;
+        width: 100%;
+        background: #cc262c;
+        overflow: hidden;
+        z-index: 999999;
+        right: 0;
+        top: 0;
+    }
+    main nav#main-menu .img-logo{
+        max-width: 100%;
+        display: inline-block;
+        height: auto;
+    }
+    main nav#main-menu .btn-menu{
+        float: left;
+        margin-left: 10px;
+    }
+    main nav#main-menu .btn-menu a{
+        background-color: #cc262c;
+        color: #fff;
+        cursor: pointer;
+        font-family: arial,san-serif;
+        font-size: 21px;
+        font-weight: normal;
+        border: 3px solid #cc262c;
+        padding: 5px 10px;
+        float: left;
+    }
+    main nav#main-menu .menu-all{
+        display: none;
+    }
+    main nav#main-menu .btn-menu.active a,
+    main nav#main-menu .btn-menu a:hover{
+        background-color: #fff;
+        color: #cc262c;
+        cursor: pointer;
+    }
+    main nav#main-menu .btn-search{
+        float: left;
+        margin: 0 10px;
+        background-color: #cc262c;
+        border: 3px solid #cc262c;
+        padding: 2px;
+        cursor: pointer;
+    }
+    main nav#main-menu .btn-search:hover,
+    main nav#main-menu .btn-search.active{
+        background-color: #fff;
+        color: #cc262c;
+    }
+    main nav#main-menu .btn-search .s-search{
+        width: 35px;
+        height: 30px;
+    }
+    main nav#main-menu .btn-search:hover .s-search,
+    main nav#main-menu .btn-search.active .s-search{
+        background-position: -355px -32px;
+    }
+    main nav#main-menu .btn-login{
+        float: left;
+        border: 3px solid #cc262c;
+        background: #cc262c;
+        padding: 2px;
+        cursor: pointer;
+    }
+    main nav#main-menu .btn-login:hover{
+        background: #fff;
+    }
+    main nav#main-menu .btn-login .w-icon-people{
+        width: 40px;
+        height: 30px;
+    }
+    main nav#main-menu .btn-login:hover .w-icon-people{
+        background-position: -292px -29px;
+    }
+    main nav#main-menu > ul li{
+        border-right: 1px solid #b62525;
+    }
+    main nav#main-menu #nav-search{
+        display: none;
+    }
+    main nav#main-menu .nav-btn-meta{
+        /*width: 230px;*/
+        float: left;
+    }
+    main nav#main-menu .mobile-search-wrapper {
+        display: none;
+        width: 100%;
+        padding: 15px 0;
+        background: #fff;
+    }
+    main nav#main-menu .mobile-search-wrapper .mobile-nav-search{
+        position: relative;
+        border: 1px solid #d7d5d5;
+        width: 80%;
+        margin: auto;
+    }
+    main nav#main-menu .mobile-search-wrapper .mobile-nav-search input[type="search"]{
+        border: none;
+        margin: 0 35px;
+        background: transparent;
+        height: 46px;
+        color: #ccc;
+        font-size: 22px;
+        padding-right: 5px;
+        font-weight: 600;
+    }
+    main nav#main-menu .mobile-search-wrapper .mobile-nav-search input[type="submit"]{
+        border: none;
+        background: transparent url("../img/sprites.png") no-repeat -357px -1px;
+        width: 30px;
+        height: 30px;
+        box-shadow: none;
+        font: 0;
+        color: transparent;
+        position: absolute;
+        right: 1%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+    }
+    main nav#main-menu .mobile-search-wrapper .mobile-nav-search .cross-clean{
+        display: inline-block;
+        position: absolute;
+        margin: auto;
+        left: 1%;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+        background: transparent url("../img/sprites.png") no-repeat -254px -241px;
+        cursor: pointer;
+    }
+    /*
+    #mobile-top-menu
+    */
+    #top-menu,
+    #icon-button{
+        display: none;
+    }
+    #mobile-top-menu {
+        background: white;
+        overflow: hidden;
+    }
+    #mobile-top-menu  ul  li{
+        float: none !important;
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    #mobile-top-menu ul li a{
+        display: inline-block;
+        cursor: pointer;
+        color: #cc262c;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    #mobile-top-menu ul li a{
+        position: relative;
+    }
+    #mobile-top-menu ul > li.has-child > a::after{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 9px;
+        background: transparent url("../img/left-arrow.png") no-repeat 0 -31px;
+        position: absolute;
+        left: -15px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+    #mobile-top-menu > ul > li > ul {
+        display: none;
+    }
+    #mobile-top-menu > ul > li > ul li:last-child{
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    main nav#main-menu .mobile-menu-toggler {
+        display: block;
+        text-align: center;
+        background: white;
+    }
+    main nav#main-menu .mobile-menu-toggler.red{
+        background: #cc262c;
+    }
+    main nav#main-menu .mobile-menu-toggler.red a{
+        color: white;
+    }
+    main nav#main-menu .mobile-menu-toggler.red a::after{
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 9px;
+        background: transparent url("../img/left-arrow.png") no-repeat 0 0;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+    main nav#main-menu .mobile-menu-toggler a{
+        display: inline-block;
+        color: #cc262c;
+        text-align: center;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 15px 0;
+        font-size: 18px;
+    }
+    main nav#main-menu .mobile-menu-toggler a::before{
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 9px;
+        background: transparent url("../img/right-arrow.png") no-repeat 0 -31px;
+        margin-left: 7px;
+        vertical-align: middle;
+    }
+    main nav#main-menu .menu-all > ul li{
+        float: right;
+        width: 50%;
+        border-right: 1px solid #b62525;
+        box-sizing: border-box;
+    }
+    main #content{
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width: 739px){
+    main #content header .header-scream{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px){
+    main nav#main-menu .btn-menu{
+        margin-left: 5px;
+    }
+    main nav#main-menu .btn-menu a{
+        padding: 5px;
+        font-size: 15px;
+    }
+    main nav#main-menu .btn-search{
+        padding: 0;
+        margin: 0 5px;
+    }
+    main nav#main-menu .btn-search i.s-search{
+        height: 26px;
+        width: 30px;
+        background-position: -357px -77px;
+    }
+    main nav#main-menu .btn-search.active i.s-search,
+    main nav#main-menu .btn-search:hover i.s-search{
+        background-position: -358px -36px;
+    }
+    main nav#main-menu .btn-login{
+        padding: 0;
+    }
+    main nav#main-menu .btn-login i.w-icon-people{
+        height: 26px;
+    }
+    
+}
+/**************** L A T E S T B L O G  *****************/
+@media screen and (max-width: 600px){
+    .relate-post-item,
+    .latest-blog .blog-content .blog-square{
+        display: block;
+        width: 100%;
+    }
+}
+/****************@ L A T E S T B L O G  *****************/
+
+/**************** N A V L O G O  *****************/
+@media screen and (max-width: 480px){
+    #nav-logo img{
+        width: 125px;
+        margin-bottom: 5px;
+    }
+}
+/****************@ N A V L O G O  *****************/
+
+/**************** FAQ T A B   *****************/
+
+@media screen and (max-width: 992px ) and (min-width: 768px){
+    .fqa-tab .featured-tab .featured-head li a{
+        padding: 5px 15px; 
+    }
+    .tab-menu-content .question .question-icon, .tab-menu-content .answer .answer-icon{
+        width: 95px;
+        height: 95px;
+        font-size: 65px;
+        float: right;
+    }
+    .row.question{
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .fqa-tab .featured-tab .featured-head li a{
+        padding: 5px 10px; 
+    }
+    .tab-menu-content .question .question-icon, .tab-menu-content .answer .answer-icon{
+        width: 85px;
+        height: 85px;
+        font-size: 50px;
+        float: right;
+    }
+    .tab-menu-content .answer .answer-text, .tab-menu-content .question .question-text{
+        padding-right: 18px;
+    }
+    .row.question{
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
+@media screen and (max-width: 479px) {
+    .fqa-tab .featured-tab .featured-head li a{
+        padding: 5px 10px; 
+    }
+    .tab-menu-content .question .question-icon, .tab-menu-content .answer .answer-icon{
+        width: 75px;
+        height: 75px;
+        font-size: 45px;
+        float: right;
+    }
+    .tab-menu-content .answer .answer-text, .tab-menu-content .question .question-text{
+        padding-right: 15px;
+    }
+    .button.text-center{
+        height: 60px;
+    }
+    .button.text-center .button-all{
+        display: block;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0;
+    }
+    .button.text-center .button-all:nth-child(2){
+        margin-top: 53px;
+    }
+    .row.question{
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
+/**************** @ FAQ T A B   *****************/
+
+@media screen and (max-width: 480px) {
+    .footer-login{
+        clear: both;
+    }
+    footer .footer-login .login-container{
+        width: 100%;
+        padding: 5px 0;
+    }
+    footer .footer-login i{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    footer .footer-menu{
+        text-align: center;
+    }
+    footer .footer-menu ul{
+        display: inline-block;
+    }
+    footer .footer-menu ul li{
+        margin-left: 5px;
+    }
+}
+
+
+@media screen and (max-width: 986px){
+    .product-article .pa-filter{
+        margin: 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .product-article .pa-content .featured-tab .tab-menu-content .pa-product-item .btn-read-more{
+        position: static !important;
+        text-align: center;
+    }
+}
+/**************** V E R T I C A L T A B  *****************/
+@media screen and (max-width: 991px){
+    .vertical-tab .featured-tab .featured-head li.active a::before{
+        display: none;
+    }
+}
+/****************@ V E R T I C A L T A B  ****************/
+
+/**************** L E A D E R I T E M   *****************/
+@media screen and (max-width: 992px) and (min-width: 480px){
+    .leaders .leader-item{
+        width: 50% !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .leaders .leader-item{
+        width: 100% !important;
+    }
+}
+/****************@ L E A D E R I T E M  ****************/
+
+/**************** L E A D E R I T E M   *****************/
+@media screen and (max-width: 992px) and (min-width: 480px){
+    .block-list .bl-item{
+        width: 50% !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .block-list .bl-item{
+        width: 100% !important;
+    }
+}
+/**************** T O T U R I A L TAB  ****************/
+@media screen and (max-width: 991px){
+    .toturial-tab .featured-head li.active a::before{
+        display: none;
+    }
+}
+/****************@ T O T U R I A L TAB  ****************/
+
+/**************** T O T U R I A L TAB  ****************/
+@media screen and (max-width: 991px){
+    .toturial-tab .featured-head li.active a::before{
+        display: none;
+    }
+}
+/****************@ header  ****************/
+@media screen and (max-width: 768px){
+    .single main #content header,
+    .category main #content header,
+    .page main #content header{
+        display: none;
+    }
+}

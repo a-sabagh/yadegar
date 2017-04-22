@@ -1,0 +1,61 @@
+/* *************** G E N R A L L  *************** */
+.affix {
+    position: fixed;
+}
+.alignright {
+    display:block;
+    float:right;
+    text-align:right;
+}
+.alignleft {
+    display:block;
+    float:left;
+    text-align:left;
+}
+.aligncenter {
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+clearfix{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    height: 1px;
+    clear: both;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.invisible {
+    visibility: hidden;
+}
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

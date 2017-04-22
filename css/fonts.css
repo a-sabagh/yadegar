@@ -1,0 +1,44 @@
+@font-face {
+	font-family:'yekan';
+	src: url('../fonts/font.woff');
+	src: url('../fonts/yekan.eot?#iefix') format('eot'), 
+	     url('../fonts/yekan.woff') format('woff'), 
+	     url('../fonts/yekan.ttf') format('truetype');
+	 font-weight: normal;
+	 font-style: normal;
+}
+*:not([class*='icon']):not(.fa):not(i) {
+    font-family: yekan;
+    letter-spacing: normal !important;
+}
+
+body, div, span, h1, h2, h3, h4, h5, h6, p, a,section, mark,
+ol, ul, li, form, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, details, figcaption, footer, header, hgroup, menu, nav, output,
+input[type="text"] , input[type="textarea"] , input[type="submit"] {
+    font-family: yekan;
+    letter-spacing: normal !important;
+}
+a , span {
+    font-family: yekan;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: yekan;
+    direction: rtl !important;
+    letter-spacing: normal !important;
+}
+
+p {
+    font-family: yekan;
+    letter-spacing: normal !important;
+    direction: rtl !important;
+    line-height: 20px !important;
+}
+.fa , [class*='fa-'] {font-family: "FontAwesome" !important;}
+.ab-icon {font: 400 20px/1 "dashicons" !important;}
+.dashicons {font-family: "dashicons" !important;}
+.font-number{
+    display: inline-block;
+    direction: ltr;
+}
