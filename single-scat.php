@@ -1,5 +1,5 @@
 <?php get_header("single"); ?>
-<div class="container">
+<div class="container rng-load">
     <?php
     global $post;
     $scat_id = strval($post->ID);
@@ -74,7 +74,7 @@
                     <?php } ?>
                     <div class="row-post-item">
                         <div class="blog-square-in">
-                            <div class="square-left-box">
+                            <a href="<?php the_permalink(); ?>" class="square-left-box">
                                 <div class="author"><?php the_author(); ?></div>
                                 <h4><?php the_title(); ?></h4>
                                 <?php
@@ -82,7 +82,7 @@
                                 $scat_icon = get_post_meta($scat_id, 'rng_scat_icon', TRUE);
                                 ?>
                                 <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
-                            </div><!--.square-full-box-->
+                            </a><!--.square-full-box-->
                         </div><!--.blog-square-in-->
                         <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
                     </div><!--.row-post-item-->

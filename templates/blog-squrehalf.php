@@ -122,6 +122,6 @@
     </section><!--.latest-blog-->
     <div class="vertical-space-1"></div>
     <div class="row button text-center">
-        <a href="" class="button-all">See All Article</a>
+        <a href="<?php echo get_category_link(1); ?>" class="button-all">مشاهده تمامی مقالات</a>
     </div><!--.button-->
 </div>

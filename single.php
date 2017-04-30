@@ -73,7 +73,6 @@
         </div><!--.table-row-->
     </div><!--.related-post-->
     <div class="row button text-center">
-        <?php  ?>
         <a href="<?php echo get_category_link(1); ?>" class="button-all">مشاهده تمامی مقالات</a>
     </div><!--.button-->
 </div><!--.container-->

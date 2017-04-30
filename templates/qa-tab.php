@@ -77,7 +77,7 @@ $hqa_himg_alt = $hqa_array['himg_alt'];
             endfor;
             ?>
             <div class="row button text-center">
-                <a href="" class="button-all">پرسش ها و پاسخ ها</a>
+                <a href="<?php echo get_post_type_archive_link('qa'); ?>" class="button-all">پرسش ها و پاسخ ها</a>
             </div><!--button-->
         </div><!--.featured-tab-container-->
     </div><!--.featured-tab-->

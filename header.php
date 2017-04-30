@@ -18,7 +18,7 @@
                 </div><!--.nav-logo-->
                 <div class="menu-all">
                     <div class="mobile-search-wrapper">
-                        <form method="GET" action="#" class="mobile-nav-search">
+                        <form method="post" class="mobile-nav-search">
                             <input type="search" name="s" placeholder="جستجو">
                             <span class="cross-clean"></span>
                             <input type="submit" value="">
@@ -27,7 +27,7 @@
                     <div class="mobile-menu-toggler"><a href="#">منوی سایدبار</a></div><!--.mobile-menu-toggler-->
                     <div id="nav-search">
                         <span class="icon-sprite s-search"></span>
-                        <form action="index.html" method="GET">
+                        <form method="post">
                             <input type="text" name="s" placeholder="جستجو">
                         </form>
                     </div><!--#nav-search-->
