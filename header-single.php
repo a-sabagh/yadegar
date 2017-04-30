@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width , initial-scale=1" />
         <?php wp_head(); ?>
     </head>
-    <body class="category">
-        <main>
+    <body <?php body_class(); ?>>
+        <main class="category">
             <nav id="main-menu">
                 <div id="nav-logo" class="sprite">
                     <img class="img-logo" src="<?php echo RNG_TDU; ?>/img/logo.png" alt=""><!--.img-logo-->
                     <div class="nav-btn-meta">
-                        <div class="btn-menu"><a href="#">MENU</a></div><!--.btn-menu-->
+                        <div class="btn-menu"><a href="#">منو</a></div><!--.btn-menu-->
                         <div class="btn-search"><i class="icon-sprite s-search"></i></div><!--.btn-search-->
                         <div class="btn-login"><i class="icon-sprite w-icon-people"></i></div>    
                     </div><!--.nav-btn-meta-->
@@ -19,74 +19,44 @@
                 <div class="menu-all">
                     <div class="mobile-search-wrapper">
                         <form method="GET" action="#" class="mobile-nav-search">
-                            <input type="search" name="s" placeholder="Search">
+                            <input type="search" name="s" placeholder="جستجو">
                             <span class="cross-clean"></span>
                             <input type="submit" value="">
                         </form><!--.mobile-nav-search-->
                     </div><!--.mobile-search-wrapper-->
-                    <div class="mobile-menu-toggler"><a href="#">side menu</a></div><!--.mobile-menu-toggler-->
+                    <div class="mobile-menu-toggler"><a href="#">منو سایدبار</a></div><!--.mobile-menu-toggler-->
                     <div id="nav-search">
                         <span class="icon-sprite s-search"></span>
                         <form action="index.html" method="GET">
-                            <input type="text" name="s" placeholder="Search">
+                            <input type="text" name="s" placeholder="جستجو">
                         </form>
                     </div><!--#nav-search-->
                     <div id="mobile-top-menu" class="hide">
-                        <ul>
-                            <li>
-                                <a href="#">behind the checkerboard</a>
-                                <ul>
-                                    <li><a href="#">Our Farm</a></li>
-                                    <li><a href="#">Our Expert</a></li>
-                                    <li><a href="#">Our Quality</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">find answers</a></li>
-                            <li><a href="#">purina merchandlise</a></li>
-                        </ul>
+                        <?php 
+                        $top_menu_arg = array(
+                            'theme_location' => "header_menu",
+                            'container' => FALSE,
+                            'depth' => 2
+                        );
+                        wp_nav_menu($top_menu_arg);
+                        ?>
                     </div><!--#mobile-top-menu-->
-                    <ul class="side-menu">
-                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">deer</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">Deer</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">Goat</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-horse"></i><span class="menu-name">Horse</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">Pig</span></a></li>
-                    </ul>
+                    <?php
+                    $side_menu_args = array(
+                        "menu_class" => "side-menu",
+                        "theme_location" => "side_menu",
+                        "container" => FALSE,
+                        "depth" => 1,
+                        "walker" => new rng_side_walker()
+                    );
+                    wp_nav_menu($side_menu_args);
+                    ?>
                 </div><!--.menu-all-->
             </nav><!--#main-nav-->
             <div id="content">
                 <header>
                     <div id="top-menu">
-                        <ul>
-                            <li>
-                                <a href="#">behind the checkerboard</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img class="sub-menu-img" src="<?php echo RNG_TDU; ?>/img/navIcon1.png" alt="">
-                                            <span class="sub-menu-text">Our Farm</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="sub-menu-img" src="<?php echo RNG_TDU; ?>/img/navIcon2.png" alt="">
-                                            <span class="sub-menu-text">Our Expert</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="sub-menu-img" src="<?php echo RNG_TDU; ?>/img/navIcon4.png" alt="">
-                                            <span class="sub-menu-text">Our Quality</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#">find answers</a></li>
-                            <li><a href="#">purina merchandlise</a></li>
-                        </ul>
+                        <?php wp_nav_menu($top_menu_arg); ?>
                     </div><!--#top-menu-->
                     <div id="icon-button"> 
                         <ul>

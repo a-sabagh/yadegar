@@ -117,12 +117,18 @@ main #content header #top-menu{
     margin-right: auto;
     width: 50%;
 }
-main #content header #top-menu > ul > li{
-    float: right;
+main #content header #top-menu > ul{
     text-align: center;
-    width: 33%;
+}
+main #content header #top-menu > ul > li{
+    /*float: right;*/
+    display: inline-block;
+    text-align: center;
+    /*width: 33%;*/
     margin-top: 15px;
     position: relative;
+    padding: 20px;
+    width: 140px;
 }
 .single main #content header #top-menu > ul > li > a,
 .category main #content header #top-menu > ul >li >a{
@@ -138,7 +144,7 @@ main #content header #top-menu > ul > li > a{
     line-height: 18px;
     letter-spacing: 0;
     margin: 0 auto;
-    padding: 10% 0 8%;
+    /*padding: 10% 0 8%;*/
 }
 main #content header #top-menu > ul > li > a:hover{
     color: #b72228;
@@ -147,10 +153,10 @@ main #content header #top-menu > ul > li > ul{
     display: none;
     visibility: hidden;
     z-index: 9999;
-    width: 180px;
     position: absolute;
     right: 0;
     left: 0;
+    top: 50px;
     margin: 0 auto;
 }
 main #content header #top-menu > ul > li:hover > ul{
@@ -1078,4 +1084,11 @@ qa-accordian
     color: #777;
     font-size: 14px;
     padding: 10px 30px 10px 30px;
+}
+.blog-square img{
+    width: 100%;
+}
+.menu-white-alert{
+    color: white;
+    padding: 5px;
 }

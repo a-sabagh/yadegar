@@ -7,7 +7,7 @@
                             $footer_menu = array(
                                 "theme_location" => "footer_menu",
                                 "container" => FALSE,
-                                "depth" => 1
+                                "depth" => 1,
                             );
                             wp_nav_menu($footer_menu);      
                             ?>

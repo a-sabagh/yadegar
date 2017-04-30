@@ -1,12 +1,11 @@
- <!DOCTYPE html>
- <html <?php echo language_attributes(); ?>>
+<!DOCTYPE html>
+<html <?php echo language_attributes(); ?>>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class();?>>
-
+    <body <?php body_class(); ?>>
         <main>
             <nav id="main-menu">
                 <div id="nav-logo" class="sprite">
@@ -20,76 +19,65 @@
                 <div class="menu-all">
                     <div class="mobile-search-wrapper">
                         <form method="GET" action="#" class="mobile-nav-search">
-                            <input type="search" name="s" placeholder="Search">
+                            <input type="search" name="s" placeholder="جستجو">
                             <span class="cross-clean"></span>
                             <input type="submit" value="">
                         </form><!--.mobile-nav-search-->
                     </div><!--.mobile-search-wrapper-->
-                    <div class="mobile-menu-toggler"><a href="#">side menu</a></div><!--.mobile-menu-toggler-->
+                    <div class="mobile-menu-toggler"><a href="#">منوی سایدبار</a></div><!--.mobile-menu-toggler-->
                     <div id="nav-search">
                         <span class="icon-sprite s-search"></span>
                         <form action="index.html" method="GET">
-                            <input type="text" name="s" placeholder="Search">
+                            <input type="text" name="s" placeholder="جستجو">
                         </form>
                     </div><!--#nav-search-->
                     <div id="mobile-top-menu" class="hide">
-                        <ul>
-                            <li>
-                                <a href="#">منوی شماره یک</a>
-                                <ul>
-                                    <li><a href="#">پروژه های ما</a></li>
-                                    <li><a href="#">تجربیات ما</a></li>
-                                    <li><a href="#">کیفیت کار ما</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">پرسش و پاسخ</a></li>
-                            <li><a href="#">رزومه یادگار</a></li>
-                        </ul>
+                        <?php 
+                        $top_menu_arg = array(
+                            'theme_location' => "header_menu",
+                            'container' => FALSE,
+                            'depth' => 2
+                        );
+                        wp_nav_menu($top_menu_arg);
+                        ?>
                     </div><!--#mobile-top-menu-->
-                    <ul class="side-menu">
-                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">گوزن</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">بز</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">خوک</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">گوزن</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-deer"></i><span class="menu-name">گوزن</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-goat"></i><span class="menu-name">بز</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-horse"></i><span class="menu-name">اسب</span></a></li>
-                        <li><a href="#"><i class="icon-animals w-pig"></i><span class="menu-name">خوک</span></a></li>
-                    </ul>
+                    <?php 
+                    $side_menu_args = array(
+                        "menu_class" => "side-menu",
+                        "theme_location" => "side_menu",
+                        "container" => FALSE,
+                        "depth" => 1,
+                        "walker" => new rng_side_walker()
+                    );
+                    wp_nav_menu($side_menu_args);
+                    ?>
                 </div>
                 <!--.menu-all-->
             </nav><!--#main-nav-->
             <div id="content">
                 <header>
-                    <img src="<?php echo RNG_TDU; ?>/img/header.jpeg" class="img-responsive" alt="">
+                    <?php
+                    global $post;
+                    $post_id = $post->ID;
+                    $header_text = get_post_meta($post_id, 'rng_header_text', TRUE);
+                    if (is_page()):
+                            $post_thumbnail_id = get_post_thumbnail_id($post_id);
+                            $thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', TRUE);
+                            $thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'full', FALSE);
+                        if (!empty($thumbnail_url)) {
+                            $product_img_src = $thumbnail_url[0];
+                            $product_img_alt = $thumbnail_alt;
+                        }else{
+                            $product_img_src = RNG_TDU . '/img/header.jpeg';
+                            $product_img_alt = get_the_excerpt();                            
+                        }
+                    endif;
+                    ?>
+                    <img src="<?php echo $product_img_src ?>" class="img-responsive" alt="<?php echo $product_img_alt; ?>">
                     <div id="top-menu">
-                        <ul>
-                            <li>
-                                <a href="#">منوی شماره یک</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img class="sub-menu-img" src="<?php echo RNG_TDU; ?>/img/navIcon1.png" alt="">
-                                            <span class="sub-menu-text">پروژه های ما</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="sub-menu-img" src="<?php echo RNG_TDU; ?>/img/navIcon2.png" alt="">
-                                            <span class="sub-menu-text">تجربیات ما</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="sub-menu-img" src="<?php echo RNG_TDU; ?>/img/navIcon4.png" alt="">
-                                            <span class="sub-menu-text">کیفیت کار ما</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#">پاسخ خود را بیابید</a></li>
-                            <li><a href="#">رزومه یادگار</a></li>
-                        </ul>
+                        <?php 
+                        wp_nav_menu($top_menu_arg);
+                        ?>
                     </div><!--#top-menu-->
                     <div id="icon-button"> 
                         <ul>
@@ -107,8 +95,14 @@
                             </li>
                         </ul>
                     </div><!--#icon-button-->
-                    <div class="header-scream">
-                        <h3>صدای حیوانات فراتر از کلمه است</h3>
-                    </div>
+                    <?php
+                    if (!empty($header_text)):
+                        ?>
+                        <div class="header-scream">
+                            <h3><?php echo $header_text; ?></h3>
+                        </div>                        
+                        <?php
+                    endif;
+                    ?>
                 </header>
                 <!--#############################################################################################-->

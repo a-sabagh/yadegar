@@ -743,6 +743,7 @@
     top: 0;
     width: 100%;
 }
+.product-tab .tab-container .tab-content .pt-slider{direction: ltr;}
 .product-tab .tab-container .tab-content .pt-slider .slider-item .pt-item-image{
     padding: 0 15px;
 }

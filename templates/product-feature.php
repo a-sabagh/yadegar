@@ -1,0 +1,212 @@
+<!--#############################################################################################-->
+<div class="container">
+    <h3 class="section-title">Lessons from the Farm</h3>
+    <p class="section-caption">What we’ve learned can help you care for your horses and return the happiness they bring you.</    
+</div><!--.container-->
+<div class="container">
+    <div class="product-tab">
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">
+                <span class="product-tab-img icon-tab icon-one"></span><!--.product-tab-img-->
+                <span class="product-tab-txt">Cattle one</span><!--.product-tab-txt-->
+            </li><!--.tab-link-->
+            <li class="tab-link" data-tab="tab-2">
+                <span class="product-tab-img icon-tab icon-tow"></span><!--.product-tab-img-->
+                <span class="product-tab-txt">Cattle tow</span><!--.product-tab-txt-->
+            </li><!--.tab-link-->
+            <li class="tab-link" data-tab="tab-3">
+                <span class="product-tab-img icon-tab icon-three"></span><!--.product-tab-img-->
+                <span class="product-tab-txt">Cattle tow</span><!--.product-tab-txt-->
+            </li><!--.tab-link-->
+            <li class="tab-link" data-tab="tab-4">
+                <span class="product-tab-img icon-tab icon-four"></span><!--.product-tab-img-->
+                <span class="product-tab-txt">Cattle tow</span><!--.product-tab-txt-->
+            </li><!--.tab-link-->
+        </ul><!--.tabs-->
+        <div class="tab-container">
+            <div id="tab-1" class="tab-content current">
+                <div class="pt-content-title">
+                    <h3>Lorem ipsum dolor.</h3>
+                </div><!--.pt-content-title-->
+                <div class="pt-content-subtitle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eos!</p>
+                </div><!--.pt-content-subtitle-->
+                <div class="pt-slider">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product1.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product1.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product1.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product1.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product1.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product1.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                </div><!--.pt-slider-->
+            </div><!--.tab-content-->
+            <div id="tab-2" class="tab-content">
+                <div class="pt-content-title">
+                    <h3>Lorem ipsum dolor.</h3>
+                </div><!--.pt-content-title-->
+                <div class="pt-content-subtitle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eos!</p>
+                </div><!--.pt-content-subtitle-->
+                <div class="pt-slider">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product2.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product2.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product2.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product2.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product2.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product2.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                </div><!--.pt-slider-->
+            </div><!--.tab-content-->
+            <div id="tab-3" class="tab-content">
+                <div class="pt-content-title">
+                    <h3>Lorem ipsum dolor.</h3>
+                </div><!--.pt-content-title-->
+                <div class="pt-content-subtitle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eos!</p>
+                </div><!--.pt-content-subtitle-->
+                <div class="pt-slider">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product3.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product3.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product3.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product3.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product3.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product3.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                </div><!--.pt-slider-->
+            </div><!--.tab-content-->
+            <div id="tab-4" class="tab-content">
+                <div class="pt-content-title">
+                    <h3>Lorem ipsum dolor.</h3>
+                </div><!--.pt-content-title-->
+                <div class="pt-content-subtitle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eos!</p>
+                </div><!--.pt-content-subtitle-->
+                <div class="pt-slider">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="<?php echo RNG_TDU; ?>/img/product.png" class="img-responsive pt-item-image"/>
+                            <h5 class="pt-item-title">Lorem ipsum dolor.</h5><!--.pt-item-title-->
+                        </a>
+                    </div><!--.slider-item-->
+                </div><!--.pt-slider-->
+            </div><!--.tab-content-->
+        </div><!--.tab-container-->
+    </div><!--.product-tab-->

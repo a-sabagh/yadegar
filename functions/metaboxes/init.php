@@ -33,3 +33,5 @@ add_action( 'admin_menu' , 'rng_remove_metaboxes' );
 require_once 'qa-metaboxe.php';
 require_once 'scat-icon-metabox.php';
 require_once 'scat-metabox.php';
+require_once 'product.php';
+require_once 'page.php';

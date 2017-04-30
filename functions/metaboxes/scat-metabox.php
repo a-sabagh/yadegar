@@ -2,7 +2,11 @@
 
 function rng_metabox_scat_input($post) {
     wp_nonce_field(basename(__FILE__), 'rng_scat_nonce');
-    $categories = get_posts('post_type=scat');
+    $args = array(
+        'post_type' => 'scat',
+        'posts_per_page' => -1
+    );
+    $categories = get_posts($args);
     $category_id = $course_name = array();
     $select_category = get_post_meta($post->ID, 'rng_scat', TRUE);
     ?>

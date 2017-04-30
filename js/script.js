@@ -75,8 +75,8 @@ jQuery(document).ready(function ($) {
 //+------------------------------------------+
     var showChar = 100;
     var ellipsestext = "...";
-    var moretext = "Readmore";
-    var lesstext = "ShowLess";
+    var moretext = "نمایش بیشتر";
+    var lesstext = "نمایش کمتر";
     $('.more').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
@@ -193,10 +193,10 @@ jQuery(document).ready(function ($) {
     $("#main-menu div.mobile-menu-toggler a").click(function (e) {
         e.preventDefault();
         var value = $(this).text();
-        if (value == "top menu") {
-            value = "side menu";
+        if (value == "منوی بالا") {
+            value = "منوی سایدبار";
         } else {
-            value = "top menu";
+            value = "منوی بالا";
         }
         $(this).text(value);
         $(this).parent().toggleClass("red");
@@ -213,6 +213,35 @@ jQuery(document).ready(function ($) {
     // if($(".button.text-center a.btn-all").length() == 1){
     //     $(".button.text-center").attr("style" , "height: 0;");
     // }
+    
+    
+    //+------------------------------------------+
+    // slick-slider
+    //+------------------------------------------+
+    var slick_selector = $(".pt-slider");
+    if(slick_selector.length){
+        $( '.pt-slider' ).slick( {
+            dots: false
+            , slidesToShow: 4
+            , responsive: [
+                { breakpoint: 1200,
+                    settings: { slidesToShow: 3, dots: true }
+                }
+                , {
+                    breakpoint: 992,
+                    settings: { slidesToShow: 2, dots: true }
+                }
+                , {
+                    breakpoint: 600,
+                    settings: { slidesToShow: 1, dots: true }
+                }
+            ]
+        } );        
+    }
+    
+    
+    
+    
 });//jQeury
 
 //--------------------------------------javascript----------------------------------------+
