@@ -33,7 +33,7 @@ p {
     font-family: yekan;
     letter-spacing: normal !important;
     direction: rtl !important;
-    line-height: 20px !important;
+    line-height: 25px !important;
 }
 .fa , [class*='fa-'] {font-family: "FontAwesome" !important;}
 .ab-icon {font: 400 20px/1 "dashicons" !important;}

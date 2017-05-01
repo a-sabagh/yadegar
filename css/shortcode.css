@@ -298,11 +298,11 @@
 }
 .heading-format1::after{
     background-position: center right;
-    left: 80%;
+    left: 100%;
 }
 .heading-format1::before{
     background-position: center left;
-    right: 80%;
+    right: 100%;
 }
 .heading-format2{
     margin-top: 40px;
