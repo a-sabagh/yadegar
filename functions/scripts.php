@@ -25,7 +25,7 @@ function rng_script_init() {
     wp_enqueue_script("carousel", RNG_TDU . "/js/carousel.js", array("jquery"), '', TRUE);
     wp_enqueue_script("mixitup", RNG_TDU . "/js/mixitup.min.js", array(), '', TRUE);
     wp_enqueue_script("slick", RNG_TDU . "/js/slick.js", array("jquery"), '', TRUE);
-    wp_enqueue_script("script", RNG_TDU . "/js/script.js", array("jquery", "mixitup" , "slick"), '', TRUE);
+    wp_enqueue_script("script", RNG_TDU . "/js/script.js", array("jquery", "mixitup", "slick", "masonry"), '', TRUE);
 }
 
 add_action("wp_enqueue_scripts", "rng_script_init");

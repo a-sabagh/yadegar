@@ -213,39 +213,46 @@ jQuery(document).ready(function ($) {
     // if($(".button.text-center a.btn-all").length() == 1){
     //     $(".button.text-center").attr("style" , "height: 0;");
     // }
-    
-    
+
+
     //+------------------------------------------+
     // slick-slider
     //+------------------------------------------+
     var slick_selector = $(".pt-slider");
-    if(slick_selector.length){
-        $( '.pt-slider' ).slick( {
+    if (slick_selector.length) {
+        $('.pt-slider').slick({
             dots: false
             , slidesToShow: 4
             , responsive: [
-                { breakpoint: 1200,
-                    settings: { slidesToShow: 3, dots: true }
+                {breakpoint: 1200,
+                    settings: {slidesToShow: 3, dots: true}
                 }
                 , {
                     breakpoint: 992,
-                    settings: { slidesToShow: 2, dots: true }
+                    settings: {slidesToShow: 2, dots: true}
                 }
                 , {
                     breakpoint: 600,
-                    settings: { slidesToShow: 1, dots: true }
+                    settings: {slidesToShow: 1, dots: true}
                 }
             ]
-        } );        
+        });
     }
-    
-    
-    
-    
+
 });//jQeury
 
-//--------------------------------------javascript----------------------------------------+
+//--------------------------------------jQuery----------------------------------------+
 
+//--------masonryGrid----------//
+    var masonry = document.getElementsByClassName("grid");
+    if(masonry.length){
+//        if (typeof Masonry !== "undefined") {
+            var container = document.querySelector('.grid');
+            var masonry = new Masonry(container, {
+                itemSelector: '.grid-item'
+            });
+//        }    
+    }
 //--------portfolio-filter----------//
 var mixedup_selector = document.getElementsByClassName("product-item-container");
 if (mixedup_selector.length) {
