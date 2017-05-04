@@ -256,6 +256,7 @@
     width: 250px;
     margin: 10px;
     transition: all .3s;
+    position: relative;
 }
 .button.text-center .button-all:hover{
     background-color: #fff;
@@ -270,6 +271,9 @@
     display: inline-block;
     margin: 5px 5px 0px 0px;
     vertical-align: middle;
+    position: absolute;
+    right: 10px;
+    top: 32%;
 }
 .button.text-center .button-all:hover::after{
     background-position: -129px -45px;
@@ -803,7 +807,7 @@
     text-transform: capitalize;
 }
 .toturial-tab .featured-tab-container .tab-menu-content h3.tt-content-title{
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 700;
     margin: 20px 0 11px !important;
 }
@@ -823,8 +827,8 @@
     height: 0;
     border-top: 27px solid transparent;
     border-bottom: 27px solid transparent;
-    border-left: 23px solid #eee;
+    border-right: 23px solid #eee;
     position: absolute;
     top: 0;
-    right: -23px;
+    left: -23px;
 }

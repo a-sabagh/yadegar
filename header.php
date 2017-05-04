@@ -68,7 +68,7 @@
                             $product_img_src = $thumbnail_url[0];
                             $product_img_alt = $thumbnail_alt;
                         }else{
-                            $product_img_src = RNG_TDU . '/img/header.jpeg';
+                            $product_img_src = get_option('srng_default_page_thumbnail');
                             $product_img_alt = get_the_excerpt();                            
                         }
                     endif;

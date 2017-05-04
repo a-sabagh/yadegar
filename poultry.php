@@ -19,7 +19,7 @@ get_header();
 </nav><!--.content-nav-->
 <?php get_template_part('templates/content' , 'imgdouble'); ?>
 <!--#############################################################################################-->
-<?php get_template_part('templates/blog' , 'imgtab'); ?>
+<?php get_template_part('templates/qa' , 'vtab'); ?>
 <!--#############################################################################################-->
 <?php get_template_part('templates/product' , 'mix'); ?>
 <div class="vertical-space-4"></div><!--.vertical-space-4-->

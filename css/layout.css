@@ -15,8 +15,11 @@ MENU
 
 main nav#main-menu > #nav-logo {
     background: white;
-    padding: 20px 14px 10px 0px;
+    padding: 9px 9px 9px 0px;
     border-bottom: 1px solid #eee;
+}
+main nav#main-menu > #nav-logo img{
+    vertical-align: middle;
 }
 main nav#main-menu  #nav-search{
     border-bottom: 1px solid #b62525;
@@ -565,12 +568,13 @@ section.product{
     padding: 8px;
     line-height: 20px;
     margin: 10px;
+    position: relative;
+    padding-right: 30px;
 }
 .btn-read-more:hover{
     background-color: #fff;
     border: 3px solid #cc262c;
     color: #cc262c;
-    padding: 8px;
 }
 .btn-read-more::after{
     background: transparent url("../img/sprites.png") no-repeat -129px -14px;
@@ -580,6 +584,8 @@ section.product{
     display: inline-block;
     margin: 5px 5px 0px 0px;
     vertical-align: middle;
+    position: absolute;
+    right: 0;
 }
 .btn-read-more:hover::after{
     background-position: -129px -45px;

@@ -59,7 +59,7 @@
                     $related_img_src = $thumbnail_url[0];
                     $related_img_alt = $thumbnail_alt;
                 } else {
-                    $related_img_src =  RNG_TDU . '/img/product1.png';
+                    $related_img_src =  get_option('srng_default_post_thumbnail');
                     $related_img_alt = get_the_excerpt();
                 }
                 ?>

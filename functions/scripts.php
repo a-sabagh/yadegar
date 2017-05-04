@@ -25,7 +25,11 @@ function rng_script_init() {
     wp_enqueue_script("carousel", RNG_TDU . "/js/carousel.js", array("jquery"), '', TRUE);
     wp_enqueue_script("mixitup", RNG_TDU . "/js/mixitup.min.js", array(), '', TRUE);
     wp_enqueue_script("slick", RNG_TDU . "/js/slick.js", array("jquery"), '', TRUE);
-    wp_enqueue_script("script", RNG_TDU . "/js/script.js", array("jquery", "mixitup", "slick", "masonry"), '', TRUE);
+    if(is_search() || is_home()){
+        wp_enqueue_script("script", RNG_TDU . "/js/script.js", array("jquery", "mixitup", "slick", "masonry"), '', TRUE);
+    }else{
+        wp_enqueue_script("script", RNG_TDU . "/js/script.js", array("jquery", "mixitup", "slick"), '', TRUE);
+    }
 }
 
 add_action("wp_enqueue_scripts", "rng_script_init");
@@ -39,9 +43,11 @@ if (is_admin()) {
     function admin_script() {
         wp_enqueue_style("admin-style", RNG_ADMIN . "/css/admin-style.css", array());
         wp_enqueue_style("sprite", RNG_TDU . "/css/sprite.css", array());
-        wp_enqueue_style("chosen-style", RNG_ADMIN . "/css/chosen.min.css", array());
-        wp_enqueue_script("admin-script", RNG_ADMIN . "/js/admin-script.js", array("jquery"), '', TRUE);
-        wp_enqueue_script("chosen-script", RNG_ADMIN . "/js/chosen.jquery.min.js", array("jquery"), '', TRUE);
+        wp_enqueue_style("chosen", RNG_ADMIN . "/css/chosen.min.css", array());
+        wp_enqueue_style("select2", RNG_ADMIN . "/css/select2.css", array());
+        wp_enqueue_script("chosen", RNG_ADMIN . "/js/chosen.jquery.min.js", array("jquery"), '', TRUE);
+        wp_enqueue_script("select2", RNG_ADMIN . "/js/select2.js", array("jquery"), '', TRUE);
+        wp_enqueue_script("admin-script", RNG_ADMIN . "/js/admin-script.js", array("jquery" , "chosen" , "select2"), '', TRUE);
     }
 
     add_action("admin_enqueue_scripts", "admin_script");

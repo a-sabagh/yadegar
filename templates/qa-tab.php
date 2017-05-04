@@ -19,8 +19,8 @@ if ($qa_query->have_posts()):
         $qa_cat_id = get_post_meta(get_the_ID(), 'rng_scat', TRUE);
         $qa_cat = get_post_meta($qa_cat_id, 'rng_scat_icon', TRUE);
         $hqa_array['icon'][] = $qa_cat;
-        $hqa_array['href'][] = "#ft-" . $qa_cat;
-        $hqa_array['id'][] = "ft-" . $qa_cat;
+        $hqa_array['href'][] = "#ft-" . get_the_ID();
+        $hqa_array['id'][] = "ft-" . get_the_ID();
         $hqa_array['q'][] = get_post_meta(get_the_ID(), 'rng_question', TRUE);
         $hqa_array['a'][] = get_post_meta(get_the_ID(), 'rng_answer', TRUE);
         if (has_post_thumbnail()) {
@@ -30,7 +30,7 @@ if ($qa_query->have_posts()):
             $hqa_array['himg_src'][] = $thumbnail_url[0];
         } else {
             $hqa_array['himg_alt'][] = get_post_meta(get_the_ID(), 'rng_question', TRUE);
-            $hqa_array['himg_src'][] = RNG_TDU . '/img/QA/qa-featured-tab1.jpeg';
+            $hqa_array['himg_src'][] = get_option('srng_default_qa_thumbnail');
         }
         $qa_counter++;
     endwhile;

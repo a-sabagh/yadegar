@@ -38,19 +38,21 @@
                                     $post_img_src = $thumbnail_url[0];
                                     $post_img_alt = $thumbnail_alt;
                                 } else {
-                                    $post_img_src = RNG_TDU . '/img/post1.png';
+                                    $post_img_src = get_option('srng_default_post_thumbnail');
                                     $post_img_alt = get_the_excerpt();
                                 }
                                 ?>
                                 <img class="img-responsive img-square-full" src="<?php echo $post_img_src; ?>" alt="<?php echo $post_img_alt; ?>">
-                                <div class="square-full-box">
-                                    <div class="author"><?php the_author(); ?></div>
-                                    <h4><?php the_title(); ?></h4>
-                                    <?php
-                                    $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE);
-                                    ?>
-                                    <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
-                                </div><!--.square-full-box-->
+                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
+                                    <div class="square-full-box">
+                                        <div class="author"><?php the_author(); ?></div>
+                                        <h4><?php the_title(); ?></h4>
+                                        <?php
+                                        $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE);
+                                        ?>
+                                        <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
+                                    </div><!--.square-full-box-->
+                                </a>
                             </div><!--.blog-square-->
                             <?php
                         } elseif ($counter == 1) {
@@ -58,12 +60,14 @@
                             <div class="blog-square">
                                 <div class="table-row">
                                     <div class="blog-square-in">
-                                        <div class="square-left-box">
-                                            <div class="author"><?php the_author(); ?></div>
-                                            <h4><?php the_title(); ?></h4>
-                                            <?php $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE); ?>
-                                            <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
-                                        </div><!--.square-full-box-->
+                                        <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >
+                                            <div class="square-left-box">
+                                                <div class="author"><?php the_author(); ?></div>
+                                                <h4><?php the_title(); ?></h4>
+                                                <?php $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE); ?>
+                                                <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
+                                            </div><!--.square-full-box-->                                        
+                                        </a>
                                     </div><!--.blog-square-in-->
                                     <?php
                                     if (has_post_thumbnail()) {
@@ -73,15 +77,15 @@
                                         $post_img_src = $thumbnail_url[0];
                                         $post_img_alt = $thumbnail_alt;
                                     } else {
-                                        $post_img_src = RNG_TDU . '/img/post1.png';
+                                        $post_img_src = get_option('srng_default_post_thumbnail');
                                         $post_img_alt = get_the_excerpt();
                                     }
                                     ?>
                                     <div class="blog-square-in"><img class="img-responsive" src="<?php echo $post_img_src; ?>" alt="<?php echo $post_img_alt; ?>"></div><!--.blog-square-in-->
                                 </div><!--.table-row-->
-
                                 <?php
-                                if($post_count == 2) echo '</div>';
+                                if ($post_count == 2)
+                                    echo '</div>';
                             } elseif ($counter == 2) {
                                 ?>
 
@@ -94,29 +98,31 @@
                                         $post_img_src = $thumbnail_url[0];
                                         $post_img_alt = $thumbnail_alt;
                                     } else {
-                                        $post_img_src = RNG_TDU . '/img/post1.png';
+                                        $post_img_src = get_option('srng_default_post_thumbnail');
                                         $post_img_alt = get_the_excerpt();
                                     }
                                     ?>
                                     <div class="blog-square-in"><img class="img-responsive" src="<?php echo $post_img_src; ?>" alt="<?php echo $post_img_alt; ?>"></div><!--.blog-square-->
                                     <div class="blog-square-in">
-                                        <div class="square-right-box">
-                                            <div class="author"><?php the_author(); ?></div>
-                                            <h4><?php the_title(); ?></h4>
-                                            <?php $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE); ?>
-                                            <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
-                                        </div><!--.square-full-box-->
+                                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                            <div class="square-right-box">
+                                                <div class="author"><?php the_author(); ?></div>
+                                                <h4><?php the_title(); ?></h4>
+                                                <?php $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE); ?>
+                                                <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
+                                            </div><!--.square-full-box-->
+                                        </a>
                                     </div><!--.blog-square-in-->
                                 </div><!--table-row-->
                             </div><!--.blog-square-->
 
-                        <?php
-                    }
-                    $counter++;
-                endwhile;
-            endif;
-            wp_reset_postdata();
-            ?>
+                            <?php
+                        }
+                        $counter++;
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
             </div><!--.table-row-->
         </div><!--.blog-content-->
     </section><!--.latest-blog-->

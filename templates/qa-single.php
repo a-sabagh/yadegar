@@ -29,7 +29,7 @@
                     $qa_img_src = $thumbnail_url[0];
                     $qa_img_alt = $thumbnail_alt;
                 } else {
-                    $qa_img_src =  RNG_TDU . '/img/QA/qa-featured-tab1.jpeg';
+                    $qa_img_src =  get_option('srng_default_qa_thumbnail');
                     $qa_img_alt = get_the_excerpt();
                 }
             ?>
@@ -45,8 +45,8 @@
                     <div class="col-md-7 answer-text"><p class="more"><?php echo get_post_meta(get_the_ID() , 'rng_answer' , TRUE); ?></p></div>
                 </div><!--.answer-->
                 <div class="row button text-center">
-                    <a href="" class="button-all">Find More Answers</a>
-                    <a href="" class="button-all">Ask Question</a>
+                    <a href="<?php echo get_post_type_archive_link('qa'); ?>" class="button-all">تمامی پرسش ها</a>
+                    <a href="<?php echo get_post_permalink(get_option('srng_qa_page')); ?>" class="button-all">سوال بپرسید</a>
                 </div><!--button-->
             </div><!--.qa-content-->
             <?php

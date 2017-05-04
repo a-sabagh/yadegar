@@ -27,7 +27,7 @@
                                 echo '<img src="' . $thumbnail_url[0] . '" class="r-post-thumb img-responsive" alt="' . $thumbnail_alt . '" />';
                             } else {
                                 ?>
-                                <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div>
+                                <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt="<?php the_excerpt(); ?>"></div>
                             <?php } ?>
                             <a href="<?php the_permalink(); ?>" class="square-full-box">
                                 <div class="author"><?php the_author(); ?></div>
@@ -56,7 +56,7 @@
                                         echo '<img src="' . $thumbnail_url[0] . '" class="r-post-thumb img-responsive" alt="' . $thumbnail_alt . '" />';
                                     } else {
                                         ?>
-                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div>
+                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div>
                                     <?php } ?>
                                 </div><!--.blog-square-in-->
                             </div><!--.table-row-->    
@@ -75,7 +75,7 @@
                                         echo '<img src="' . $thumbnail_url[0] . '" class="r-post-thumb img-responsive" alt="' . $thumbnail_alt . '" />';
                                     } else {
                                         ?>
-                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div>
+                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div>
                                     <?php } ?>
                                 </div><!--.blog-square-->
                                 <div class="blog-square-in">
@@ -110,7 +110,7 @@
                                         echo '<img src="' . $thumbnail_url[0] . '" class="r-post-thumb img-responsive" alt="' . $thumbnail_alt . '" />';
                                     } else {
                                         ?>
-                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div>
+                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div>
                                     <?php } ?>                                        </div><!--.blog-square-in-->
                             </div><!--.table-row-->    
                             <?php
@@ -128,7 +128,7 @@
                                         echo '<img src="' . $thumbnail_url[0] . '" class="r-post-thumb img-responsive" alt="' . $thumbnail_alt . '" />';
                                     } else {
                                         ?>
-                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div>
+                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div>
                                     <?php } ?>                                        </div><!--.blog-square-->
                                 <div class="blog-square-in">
                                     <a href="<?php the_permalink(); ?>" class="square-right-box">
@@ -151,7 +151,7 @@
                                 echo '<img src="' . $thumbnail_url[0] . '" class="r-post-thumb img-responsive" alt="' . $thumbnail_alt . '" />';
                             } else {
                                 ?>
-                                <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div>
+                                <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div>
                             <?php } ?>
                             <a href="<?php the_permalink(); ?>" class="square-full-box">
                                 <div class="author"><?php the_author(); ?></div>
