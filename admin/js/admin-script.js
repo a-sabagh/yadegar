@@ -9,4 +9,22 @@
         console.log('it work');
         $(this).next(".menu-icons-wrapper").slideToggle();
     });
+    $(".select2dropdown").select2({width: '470',theme: "classic"});
+    //
+    var file_frame;
+    $( '.rng-button-banner' ).live( 'click', function ( event ) {
+        event.preventDefault();
+        window.next_element = $( this ).next( '.rng-link-banner' );
+        if ( file_frame ) {
+            file_frame.open();
+            return;
+        }
+        file_frame = wp.media.frames.file_frame = wp.media();
+
+        file_frame.on( 'select', function () {
+            attachment = file_frame.state().get( 'selection' ).first().toJSON();
+            next_element.val( attachment.url );
+        } );
+        file_frame.open();
+    } );
 });

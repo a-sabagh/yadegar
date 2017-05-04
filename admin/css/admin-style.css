@@ -27,3 +27,44 @@ and open the template in the editor.
     display: none;
 }
 .menu-icons-wrapper .scat-icon {text-align: center;}
+
+.srng2-container{
+    width: 960px;
+    margin: auto;
+}
+.rng-button-banner{
+    height: 36px !important;
+    line-height: 36px !important;
+}
+.rng-poster-btn{
+    width: 13%;
+}
+.rng-poster-holder{
+    width: 35%;
+    text-align: left;
+    line-height: 26px;
+}
+.rng-btn-reset{
+    color: #555 !important;
+    border-color: #ccc !important;
+    background: #f7f7f7 !important;
+    -webkit-box-shadow: 0 1px 0 #ccc !important;
+    box-shadow: 0 1px 1px #eee !important;
+    vertical-align: top !important;
+    height: 33px !important;
+    padding: 0 10px !important;
+    border: 1px solid #ccc !important;
+}
+.srng2-title{
+    position: relative;
+    padding-bottom: 7px;
+}
+.srng2-title:before{
+    border-bottom: 2px solid #ccc;
+    content: "";
+    width: 90px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+}
