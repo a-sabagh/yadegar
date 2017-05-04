@@ -9,16 +9,25 @@ function rng_initilize_theme() {
     add_theme_support('post-formats', array('video', 'gallery'));
     add_theme_support('custom-header');
     add_theme_support("menus");
-    add_image_size('large-blog' , 475 , 475 , TRUE);
-    add_image_size('small-blog' , 250 , 250 , TRUE);
+    add_image_size('large-blog', 475, 475, TRUE);
+    add_image_size('small-blog', 250, 250, TRUE);
 }
 
-require_once 'functions/custom-excerpt.php';
+require_once 'functions/functions.php';
 require_once 'functions/shortcodes/init.php';
 require_once 'functions/metaboxes/init.php';
 require_once 'functions/post-type.php';
 require_once 'functions/scripts.php';
 require_once 'functions/menus/init.php';
+if (is_admin()) {
+    require_once 'admin/srng-option2.php';
+}
+
+function rng_admin_media() {
+    wp_enqueue_media();
+}
+
+add_action('srng2_option', 'rng_admin_media');
 add_action('after_setup_theme', 'rng_initilize_theme');
 $menu_position = array(
     "header_menu" => "فهرست بالا",
@@ -26,3 +35,15 @@ $menu_position = array(
     "side_menu" => "فهرست ساید بار"
 );
 register_nav_menus($menu_position);
+add_filter('manage_posts_columns', 'posts_columns_id', 5);
+add_action('manage_posts_custom_column', 'posts_custom_id_columns', 5, 2);
+function posts_columns_id($defaults) {
+    $defaults['wps_post_id'] = 'شناسه';
+    return $defaults;
+}
+function posts_custom_id_columns($column_name, $id) {
+    if ($column_name === 'wps_post_id') {
+        echo $id;
+    }
+}
+
