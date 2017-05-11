@@ -18,6 +18,9 @@ main nav#main-menu > #nav-logo {
     padding: 9px 9px 9px 0px;
     border-bottom: 1px solid #eee;
 }
+main nav#main-menu > #nav-logo h1{
+    display: inline-block;
+}
 main nav#main-menu > #nav-logo img{
     vertical-align: middle;
 }
