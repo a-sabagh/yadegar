@@ -6,6 +6,7 @@ function rng_shortcode_qa_vtab($atts) {
         'id' => 1
     );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    ob_start();
     ?>
     <div class="container">
         <div class="row text-center">
@@ -89,5 +90,7 @@ function rng_shortcode_qa_vtab($atts) {
         </div><!--.blog-tab-->
     </div><!--.container-->        
     <?php
+    $output = ob_get_clean();
+    return $output;
 }
 add_shortcode('qa_vtab', 'rng_shortcode_qa_vtab');

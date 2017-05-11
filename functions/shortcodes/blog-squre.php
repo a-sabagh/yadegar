@@ -1,6 +1,7 @@
 <?php
 
 function rng_shortcode_blog_squre() {
+    ob_start();
     ?>
     <section class="latest-blog">
         <h3 class="section-title">گزیده ای از مقالات ما</h3>

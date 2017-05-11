@@ -4,12 +4,17 @@ function rng_shortcode_blog_squrehalf($atts) {
     $shortcode = 'blog_squrehalf';
     $pairs = array('id' => 1);
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    ob_start();
     ?>
     <!--#############################################################################################-->
     <div class="vertical-space-4"></div><!--.vertical-space-4-->
     <div class="container">
         <div class="row text-center">
-            <h2 class="heading-format2">مقالات برگزیده با موضوع گاو</h2>
+            <?php 
+                $scat = get_post($array_atts['id']);
+                $scat_title = $scat->post_title;
+            ?>
+            <h2 class="heading-format2">مقالات برگزیده با موضوع <?php echo $scat_title; ?></h2>
         </div><!--.row-->
     </div><!--.container-->
     <!--#############################################################################################-->
@@ -55,7 +60,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                             <div class="author"><?php the_author(); ?></div>
                                             <h4><?php the_title(); ?></h4>
                                             <?php
-                                            $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE);
+                                            $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE);
                                             ?>
                                             <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
                                         </div><!--.square-full-box-->
@@ -71,7 +76,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                                 <div class="square-left-box">
                                                     <div class="author"><?php the_author(); ?></div>
                                                     <h4><?php the_title(); ?></h4>
-                <?php $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE); ?>
+                <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
                                                     <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
                                                 </div><!--.square-full-box-->                                        
                                             </a>
@@ -115,7 +120,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                                 <div class="square-right-box">
                                                     <div class="author"><?php the_author(); ?></div>
                                                     <h4><?php the_title(); ?></h4>
-                <?php $cat_icon = get_post_meta(113, 'rng_scat_icon', TRUE); ?>
+                <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
                                                     <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
                                                 </div><!--.square-full-box-->
                                             </a>

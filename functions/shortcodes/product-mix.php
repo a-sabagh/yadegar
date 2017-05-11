@@ -6,6 +6,7 @@ function rng_shortcode_product_mix($atts) {
         'id' => 1
     );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    ob_start();
     ?>
     <div class="container">
         <div class="row">
@@ -17,8 +18,12 @@ function rng_shortcode_product_mix($atts) {
     <section class="product">
         <div class="container">
             <div class="row text-center">
+                <?php 
+                    $scat = get_post($array_atts['id']);
+                    $scat_title = $scat->post_title;
+                ?>
                 <h2 class="heading-format1">محصولات گاوی</h2>
-                <h3 class="large-format">محصولات مرتبط با گاو تولیدی یادگار</h3>
+                <h3 class="large-format">محصولات مرتبط با <?php echo $scat_title; ?> تولیدی یادگار</h3>
                 <p class="product-caption">تولیدی یادگار لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p><br>
                 <div class="product-content">
                     <div class="clearfix"></div><!--clearfix-->
@@ -52,7 +57,7 @@ function rng_shortcode_product_mix($atts) {
                                 }
                                 ?>
                                 <div class="<?php echo $new_on . ' ' . $best_seller_on; ?> col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                                    <a href="#" class="product-item">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="product-item">
                                         <img src="<?php echo $product_img_src; ?>" class="img-responsive product-item-image" alt="<?php echo $product_img_alt; ?>" >
                                         <span class="product-item-name"><?php the_excerpt(); ?></span>
                                     </a><!--product-item-->

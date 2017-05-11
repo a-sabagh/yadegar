@@ -6,6 +6,7 @@ function rng_shortcode_qa_single($atts) {
         'id' => 1
     );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    ob_start();
     ?>
     <div class="container">
         <div class="row text-center">

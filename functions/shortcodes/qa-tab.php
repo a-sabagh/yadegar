@@ -44,6 +44,7 @@ function rng_shortcode_qa_tab() {
     $hqa_a = $hqa_array['a'];
     $hqa_himg_src = $hqa_array['himg_src'];
     $hqa_himg_alt = $hqa_array['himg_alt'];
+    ob_start();
     ?>
 
     <section class="fqa-tab">
