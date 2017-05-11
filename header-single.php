@@ -9,7 +9,7 @@
         <main class="category">
             <nav id="main-menu">
                 <div id="nav-logo" class="sprite">
-                    <img class="img-logo" src="<?php echo RNG_TDU; ?>/img/logo.png" alt=""><!--.img-logo-->
+                    <h1><a href="<?php echo home_url();?>" title="<?php echo home_url(); ?>"><img class="img-logo" src="<?php echo get_option('srng_logo'); ?>" alt="<?php bloginfo('description'); ?>"></a></h1><!--.img-logo-->
                     <div class="nav-btn-meta">
                         <div class="btn-menu"><a href="#">منو</a></div><!--.btn-menu-->
                         <div class="btn-search"><i class="icon-sprite s-search"></i></div><!--.btn-search-->
@@ -18,7 +18,7 @@
                 </div><!--.nav-logo-->
                 <div class="menu-all">
                     <div class="mobile-search-wrapper">
-                        <form method="get" class="mobile-nav-search">
+                        <form method="get" action="<?php echo home_url(); ?>" class="mobile-nav-search">
                             <input type="search" name="s" placeholder="جستجو">
                             <span class="cross-clean"></span>
                             <input type="submit" value="">
@@ -27,7 +27,7 @@
                     <div class="mobile-menu-toggler"><a href="#">منو سایدبار</a></div><!--.mobile-menu-toggler-->
                     <div id="nav-search">
                         <span class="icon-sprite s-search"></span>
-                        <form method="get">
+                        <form method="get" action="<?php echo home_url(); ?>">
                             <input type="text" name="s" placeholder="جستجو">
                         </form>
                     </div><!--#nav-search-->
