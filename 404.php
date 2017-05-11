@@ -1,11 +1,15 @@
-<?php get_header();
-if(have_posts()):
-    while(have_posts()):
-    the_post();
-
-    endwhile;
-endif;
+<?php
+get_header('single');
 ?>
+<div class="container" >
+    <h2>خطای ۴۰۴</h2>
+    <p>برگه ای که به دنبال آن هستید به دلایل زیر موجود نمی باشد</p>
+    <ul>
+        <li>چنین برگه ای وجود نداشته است</li>
+        <li>برگه مورد نظر پاک شده است</li>
+    </ul>
+    <p>در صورت نیاز می توانید از فیلد جستجو موجود در منوی سمت راست استفاده کنید</p>
+</div>
 <div class="container">
 <?php get_footer(); ?>
 
