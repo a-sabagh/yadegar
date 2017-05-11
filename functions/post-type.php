@@ -31,7 +31,7 @@ function register_scat_post_type() {
         'show_ui' => true,
         'show_in_menu' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'scat'),
+        'rewrite' => array('slug' => 'product'),
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => 5,
@@ -40,6 +40,7 @@ function register_scat_post_type() {
     );
 
     register_post_type('product', $product_args);
+    
 
     /*
      * qa 
@@ -70,7 +71,7 @@ function register_scat_post_type() {
         'show_ui' => true,
         'show_in_menu' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'scat'),
+        'rewrite' => array('slug' => 'qa'),
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => 5,
