@@ -11,6 +11,7 @@ function srng_theme_option() {
         update_option('srng_default_page_thumbnail', $_POST['srng_default_page_thumbnail']);
         update_option('srng_profile_page', $_POST['srng_profile_page']);
         update_option('srng_qa_page', $_POST['srng_qa_page']);
+        update_option('srng_logo', $_POST['srng_logo']);
     }
     do_action('srng2_option');
     $default_post_thumbnail = get_option('srng_default_post_thumbnail');
@@ -18,6 +19,7 @@ function srng_theme_option() {
     $default_page_thumbnails = get_option('srng_default_page_thumbnail');
     $profile_page = get_option('srng_profile_page');
     $qa_page = get_option('srng_qa_page');
+    $logo = get_option('srng_logo');
     ?>
     <div class="srng2-container">
         <div class="srng2-header">
@@ -26,6 +28,9 @@ function srng_theme_option() {
         <form action="" method="post" class="srng2">
             <fieldset>
                 <h2 class="srng2-title">تنظیمات تصاویر</h2>
+                <p>لوگوی وبسایت را انتخاب کنید: </p>
+                <input type="button" class="rng-button-banner wp-core-ui button rng-poster-btn" value="انتخاب عکس"/>
+                <input type="text" class="rng-link-banner rng-poster-holder" name="srng_logo" value="<?php echo $logo; ?>" />
                 <p>تصویر پیش فرض برای نوشته ها را انتخاب کنید:</p>
                 <input type="button" class="rng-button-banner wp-core-ui button rng-poster-btn" value="انتخاب عکس"/>
                 <input type="text" class="rng-link-banner rng-poster-holder" name="srng_default_post_thumbnail" value="<?php echo $default_post_thumbnail; ?>" />
