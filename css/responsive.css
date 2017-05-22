@@ -613,3 +613,22 @@ screen (1200px) and (992px) and (768px) and (480px)|
         display: none;
     }
 }
+/*########################################################################################*/
+@media screen and (max-width: 400px){
+    .search-box .search-box-btn {
+        left: 10%;       
+    }
+    .qa-accordian .accordian .accordian-list .ac-toggle-icon{
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .row-post-item {
+        display: table-row;
+    }
+    .banner img {
+        margin: 20px 0px; 
+        width: 100%;
+   }
+}

@@ -1155,3 +1155,7 @@ qa-accordian
     position: relative;
     top: 10px;
 }
+.single-product-content p
+{
+    text-align: justify;
+}

@@ -58,7 +58,7 @@
                     <div id="top-menu">
                         <?php wp_nav_menu($top_menu_arg); ?>
                     </div><!--#top-menu-->
-                    <div id="icon-button"> 
+                   <!--<div id="icon-button"> 
                         <ul>
                             <li>
                                 <a href="#">
@@ -73,5 +73,5 @@
                                 </a>
                             </li>
                         </ul>
-                    </div><!--#icon-button-->
+                    </div>#icon-button-->
                 </header>
