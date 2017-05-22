@@ -2,7 +2,11 @@
 
 function rng_shortcode_blog_squrehalf($atts) {
     $shortcode = 'blog_squrehalf';
-    $pairs = array('id' => 1);
+    $pairs = array(
+        'id' => 1,
+        'title' => 'مقالات برگزیده',
+        'caption' => ''
+        );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
     ob_start();
     ?>
@@ -14,14 +18,14 @@ function rng_shortcode_blog_squrehalf($atts) {
                 $scat = get_post($array_atts['id']);
                 $scat_title = $scat->post_title;
             ?>
-            <h2 class="heading-format2">مقالات برگزیده با موضوع <?php echo $scat_title; ?></h2>
+            <h2 class="heading-format2">مقالات برگزیده </h2>
         </div><!--.row-->
     </div><!--.container-->
     <!--#############################################################################################-->
     <div class="container">
         <section class="latest-blog">
-            <h3 class="section-title">دانش و تجربیات ما</h3>
-            <p class="section-caption">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+            <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
+            <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
             <div class="blog-content">
                 <div class="table-row">
                     <?php

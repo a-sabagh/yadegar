@@ -1,11 +1,17 @@
 <?php
 
-function rng_shortcode_blog_squre() {
+function rng_shortcode_blog_squre($atts) {
+    $shortcode = 'blog_squre';
+    $pairs = array(
+        'title' => 'آخرین مقالات',
+        'caption' => ''
+    );
+    $array_atts = shortcode_atts($pairs, $atts, $shortcode);
     ob_start();
     ?>
     <section class="latest-blog">
-        <h3 class="section-title">گزیده ای از مقالات ما</h3>
-        <p class="section-caption">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته،</p>
+        <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
+        <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
         <div class="blog-content">
             <?php
             $rev_row_args = array(
@@ -178,4 +184,5 @@ function rng_shortcode_blog_squre() {
     $output = ob_get_clean();
     return $output;
 }
+
 add_shortcode('blog_squre', 'rng_shortcode_blog_squre');

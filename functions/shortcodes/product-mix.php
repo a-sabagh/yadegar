@@ -3,7 +3,9 @@
 function rng_shortcode_product_mix($atts) {
     $shortcode = 'product_mix';
     $pairs = array(
-        'id' => 1
+        'id' => 1,
+        'title' => 'محصولات برگزیده',
+        'caption' => ''
     );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
     ob_start();
@@ -22,9 +24,9 @@ function rng_shortcode_product_mix($atts) {
                     $scat = get_post($array_atts['id']);
                     $scat_title = $scat->post_title;
                 ?>
-                <h2 class="heading-format1">محصولات گاوی</h2>
-                <h3 class="large-format">محصولات مرتبط با <?php echo $scat_title; ?> تولیدی یادگار</h3>
-                <p class="product-caption">تولیدی یادگار لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p><br>
+                <h2 class="heading-format1">محصولات ما</h2>
+                <h3 class="large-format"><?php echo $array_atts['title']; ?></h3>
+                <p class="product-caption"><?php echo $array_atts['caption']; ?></p><br>
                 <div class="product-content">
                     <div class="clearfix"></div><!--clearfix-->
                     <div class="product-item-container">

@@ -1,6 +1,12 @@
 <?php
 
-function rng_shortcode_qa_tab() {
+function rng_shortcode_qa_tab($atts) {
+    $shortcode = 'qa_tab';
+    $pairs = array(
+        'title' => 'پرسش ها و پاسخ ها',
+        'caption' => ''
+    );
+    $array_atts = shortcode_atts($pairs, $atts, $shortcode);
     $qa_args = array(
         'post_type' => 'qa',
         'posts_per_page' => 10
@@ -48,8 +54,8 @@ function rng_shortcode_qa_tab() {
     ?>
 
     <section class="fqa-tab">
-        <h3 class="section-title">پرسش های شما پاسخ های ما</h3>
-        <p class="section-caption">ما تجربیات چندین ساله خود را در رابطه با دام و طیور با شما به اشتراک می گذاریم</p>
+        <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
+        <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
         <div class="featured-tab">
             <ul class="featured-head">
                 <?php
