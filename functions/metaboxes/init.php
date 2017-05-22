@@ -34,4 +34,5 @@ require_once 'qa-metaboxe.php';
 require_once 'scat-icon-metabox.php';
 require_once 'scat-metabox.php';
 require_once 'product.php';
+require_once 'shortcode-creator.php';
 require_once 'page.php';

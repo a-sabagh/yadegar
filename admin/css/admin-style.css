@@ -68,3 +68,29 @@ and open the template in the editor.
     position: absolute;
     bottom: -5px;
 }
+.rng-shortcode{
+    display: none;
+}
+.shortcode-output {
+    text-align: left;
+    direction: ltr;
+}
+.shortcode-input {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    line-height: 25px;
+}
+.shortcode-output {
+    width: 80%;
+    line-height: 25px;
+}
+.create-shortcode-blog-squre,
+.create-shortcode-blog-squrehalf,
+.create-shortcode-product-mix,
+.create-shortcode-qa-single,
+.create-shortcode-qa-tab,
+.create-shortcode-qa-vtab{
+    height: 33px !important;
+    width: 19% !important;
+}
