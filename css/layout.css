@@ -652,6 +652,7 @@ section.product{
     border-top: 1px solid #eee;
     margin: 15px 8px 25px 0;
     padding: 75px 0 0 0 !important;
+    text-align: justify;
 }
 .blog-content a{
     color: #cc262c;
@@ -1097,6 +1098,7 @@ qa-accordian
     color: #777;
     font-size: 14px;
     padding: 10px 30px 10px 30px;
+    text-align: justify;
 }
 .blog-square img{
     width: 100%;

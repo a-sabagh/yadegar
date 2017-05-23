@@ -631,4 +631,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         margin: 20px 0px; 
         width: 100%;
    }
+   .qa-accordian .accordian .accordian-panel .ac-answer-content{
+    padding: 10px 30px 10px 0px;
+   }
 }
