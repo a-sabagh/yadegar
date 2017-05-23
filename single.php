@@ -44,12 +44,14 @@
             ?>
             <div class="relate-post-item">
                 <div class="blog-square-in">
-                    <div class="square-left-box">
-                        <div class="author"><?php the_author(); ?></div>
-                        <h4><?php the_title(); ?></h4>
-                        <?php $scat_icon = get_post_meta(get_post_meta(get_the_ID() , 'rng_scat' , TRUE) , 'rng_scat_icon' , TRUE); ?>
-                        <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
-                    </div><!--.square-full-box-->
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                        <div class="square-left-box">
+                            <div class="author"><?php the_author(); ?></div>
+                            <h4><?php the_title(); ?></h4>
+                            <?php $scat_icon = get_post_meta(get_post_meta(get_the_ID() , 'rng_scat' , TRUE) , 'rng_scat_icon' , TRUE); ?>
+                            <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
+                        </div><!--.square-full-box-->
+                    </a>
                 </div><!--.blog-square-in-->
                 <?php
                 if (has_post_thumbnail()) {
