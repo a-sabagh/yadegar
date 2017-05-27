@@ -324,7 +324,7 @@
     content: "";
     width: 90px;
     height: 5px;
-    top: 5px;
+    top: 10px;
     background: transparent url("../img/heading-format2.png") no-repeat;
     position: absolute;
 }
