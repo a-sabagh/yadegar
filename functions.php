@@ -19,6 +19,7 @@ require_once 'functions/metaboxes/init.php';
 require_once 'functions/post-type.php';
 require_once 'functions/scripts.php';
 require_once 'functions/menus/init.php';
+require_once 'functions/profile/init.php';
 if (is_admin()) {
     require_once 'admin/srng-option2.php';
 }
@@ -37,26 +38,27 @@ $menu_position = array(
 register_nav_menus($menu_position);
 add_filter('manage_posts_columns', 'posts_columns_id', 5);
 add_action('manage_posts_custom_column', 'posts_custom_id_columns', 5, 2);
+
 function posts_columns_id($defaults) {
     $defaults['wps_post_id'] = 'شناسه';
     $defaults['rng_post_scat'] = 'آیکن دسته بندی';
     return $defaults;
 }
+
 function posts_custom_id_columns($column_name, $id) {
     if ($column_name === 'wps_post_id') {
         echo $id;
     }
-    if($column_name === 'rng_post_scat') {
+    if ($column_name === 'rng_post_scat') {
         $post = get_post($id);
         $post_type = get_post_type($post);
-        if(!($post_type == 'scat')){
-            $scat_id = get_post_meta($id , 'rng_scat' , TRUE);
-            $scat_icon = get_post_meta($scat_id , 'rng_scat_icon' , TRUE);
+        if (!($post_type == 'scat')) {
+            $scat_id = get_post_meta($id, 'rng_scat', TRUE);
+            $scat_icon = get_post_meta($scat_id, 'rng_scat_icon', TRUE);
             echo '<label class="icon-animals c-' . $scat_icon . '"></label>';
-        }else{
-            $icon = get_post_meta($id , 'rng_scat_icon' , TRUE);
+        } else {
+            $icon = get_post_meta($id, 'rng_scat_icon', TRUE);
             echo '<label class="icon-animals c-' . $icon . '"></label>';
         }
     }
 }
-
