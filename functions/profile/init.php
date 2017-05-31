@@ -2,6 +2,8 @@
 require_once 'mail_configure.php';
 require_once 'login.php';
 require_once 'registration.php';
+require_once 'change-pass.php';
+require_once 'reset-pass.php';
 
 /**
  * Hide admin bar

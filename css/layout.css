@@ -1277,3 +1277,30 @@ input[type="radio"] + label,
 input[type="checkbox"] + label {
     font-weight: 400;
 }
+
+.profile-tab ul li {
+    line-height: 35px;
+    border-left: 3px solid red;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}
+.profile-tab ul li.active {
+    border-left: none;
+}
+.profile-tab ul li a{
+    color: black;
+}
+.alet {
+    width: 75%;
+    margin: 10px auto;
+    height: 40px;
+    background: #efefef;
+    line-height: 37px;
+    padding: 0 8px;
+}
+.alert-success {
+    border-right: 4px solid greenyellow;
+}
+.alert-warning{
+    border-right: 4px solid #cc262c;
+}

@@ -39,13 +39,13 @@ function rng_register_user_first() {
                     $msg = '<div class="alet alert-success">ثبت نام با موفقیت انجام شد لطفا برای تایید ثبت نام ایمیل خود را چک کنید.</div>';
                     global $wpdb;
                     $user_data = $wpdb->get_row("SELECT ID,user_login,user_activation_key FROM {$wpdb->users} WHERE user_login ='{$username}'");
-                    $user_id = $user_data->user_ID;
+                    $user_id = $user_data->ID;
                     add_user_meta($user_id, 'status', '0');
-                    global $user_ID;
-                    $user_ID = $user_data->ID;
                     $user_activation_key = $user_data->user_activation_key;
                     $user_login = $username;
-                    if (empty($user_activation_key)) $user_activation_key = wp_generate_password();
+                    if (empty($user_activation_key)) {
+                        $user_activation_key = wp_generate_password(10, false, false);
+                    }
                     global $wpdb;
                     $wpdb->update(
                             $wpdb->users, array('user_activation_key' => $user_activation_key), array('user_login' => $user_login)
@@ -53,7 +53,7 @@ function rng_register_user_first() {
                     $to = $email;
                     $subject = "ثبت نام در وبسایت یادگار";
                     $messages = 'برای تایید ثبت نام خود <a href="' . home_url() . '/login?registration=true&user_login=' . $user_login . '&activation_key=' . $user_activation_key . '" >اینجا</a> کلیک کنید.';
-                    wp_mail($to, $subject, $messages);
+//                    wp_mail($to, $subject, $messages);
                 }//is_wp_error
             }//empty register_error
         }//is_valid_nonce
@@ -63,26 +63,24 @@ function rng_register_user_first() {
 //function rng_register_user
 
 function rng_register_user_second() {
-    if (isset($_GET) && isset($_GET['registration']) && $_GET['registration'] == 'true') {
+    if (isset($_GET['registration']) && $_GET['registration'] == 'true') {
         $user_login = $_GET['user_login'];
         $activation_key = $_GET['activation_key'];
         global $wpdb;
-        $user = $wpdb->get_row("SELECT ID,user_login, user_activation_key FROM {$wpdb->users} WHERE user_login='{$user_login}'");
+        $user = $wpdb->get_row("SELECT ID,user_login,user_activation_key FROM {$wpdb->users} WHERE user_login='{$user_login}'");
         $user_id = $user->ID;
-        if ($user->user_activation_key == $activation_key && $user->user_login == $user_login) {
+        if ($activation_key == $user->user_activation_key) {
             update_user_meta($user_id, 'status', '1');
-            $wpdb->update(
-                    $wpdb->users, array('user_activation_key', ''), array('user_login', $user_login)
-            );
-        }
-        $user_status = get_user_meta($user_id, 'status', TRUE);
-        if ($user_status == '1') {
+            $wpdb->update($wpdb->users, array('user_activation_key' => ''), array('user_login' => $user_login));
             global $msg;
             $msg = '<div class="alet alert-success">حساب کاربری شما با موفقیت فعال شد.</div>';
+        } else {
+            global $msg;
+            $msg = '<div class="alet alert-warning">لینک فعال سازی غیر معتبر است</div>';
         }
     }
 }
 
-add_action('template_redirect', 'rng_register_user_first');
-add_action('template_redirect', 'rng_register_user_second');
+add_action('template_redirect', 'rng_register_user_first', 1);
+add_action('template_redirect', 'rng_register_user_second', 2);
 

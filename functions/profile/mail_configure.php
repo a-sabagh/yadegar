@@ -3,8 +3,8 @@
 function rng_phpmailer_init(PHPMailer $phpmailer) {
     $phpmailer->Host = 'mail.yadegar.co';
     $phpmailer->Port = 25;
-    $phpmailer->Username = 'info@yadegarchick.com';
-    $phpmailer->Password = 'B%em.L=1xCB=';
+    $phpmailer->Username = 'info@zenitgarden.com';
+    $phpmailer->Password = '5w-K+SLoyI#J';
     $phpmailer->SMTPAuth = true;
     $phpmailer->IsSMTP();
 }

@@ -57,6 +57,24 @@ jQuery(document).ready(function ($) {
         return false;
     });
 //+------------------------------------------+
+// featured-tab-menu profile-tab
+//+------------------------------------------+
+
+
+    $(".profile-content .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+    $(".profile-tab ul.featured-head li:first").addClass("active"); //show first tab is active
+    $(".profile-content .featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+    $(".profile-tab ul.featured-head li").click(function () {
+        var attr = $(this).find("a").attr("href");
+        $(".profile-content .featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+        $(".profile-tab ul.featured-head li").removeClass("active");//remove all active class
+        $(this).addClass("active");//active the tab that you click this
+        $(attr).fadeIn();//fade in the content of tab you click on this
+        return false;
+    });
+
+
+//+------------------------------------------+
 // jQeury menu-icon hover
 //+------------------------------------------+
     $("main nav#main-menu ul li a").hover(function () {
@@ -244,15 +262,15 @@ jQuery(document).ready(function ($) {
 //--------------------------------------jQuery----------------------------------------+
 
 //--------masonryGrid----------//
-    var masonry = document.getElementsByClassName("grid");
-    if(masonry.length){
+var masonry = document.getElementsByClassName("grid");
+if (masonry.length) {
 //        if (typeof Masonry !== "undefined") {
-            var container = document.querySelector('.grid');
-            var masonry = new Masonry(container, {
-                itemSelector: '.grid-item'
-            });
+    var container = document.querySelector('.grid');
+    var masonry = new Masonry(container, {
+        itemSelector: '.grid-item'
+    });
 //        }    
-    }
+}
 //--------portfolio-filter----------//
 var mixedup_selector = document.getElementsByClassName("product-item-container");
 if (mixedup_selector.length) {
