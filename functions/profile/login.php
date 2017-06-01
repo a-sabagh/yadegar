@@ -2,6 +2,10 @@
 
 function rng_login_user() {
     if (isset($_POST['rng_login']) && isset($_POST['rng_hidden_login']) && ($_POST['rng_hidden_login'] == 'login_true')) {
+        if(isset($_GET)){
+            $_GET['registration'] = '';
+            $_GET['reset_pwd'] = '';
+        }
         $is_valid_nonce = (isset($_POST['rng_nonce_login']) && wp_verify_nonce($_POST['rng_nonce_login'], 'rng_login_true')) ? TRUE : FALSE;
         if ($is_valid_nonce) {
             $username = $_POST['rng_username'];
@@ -19,8 +23,9 @@ function rng_login_user() {
             }else{
                 global $msg;
                 $msg = '<div class="alet alert-success">شما با موفقیت وارد شدید.</div>';
-                global $user_ID;
-                $user_ID = $user->ID;
+                global $current_user_id;
+                $current_user_id = $user->ID;
+                wp_redirect(home_url() . '/login');
             }
         }//is_valid_nonce
     }//isset rng_login

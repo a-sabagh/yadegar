@@ -4,6 +4,11 @@ global $user_ID;
 global $msg;
 echo $msg;
 $user_status = get_user_meta($user_ID , 'status' , TRUE);
+global $current_user_id;
+if(!empty($current_user_id)){
+    global $wpdb;
+    $wpdb->update($wpdb->users, array('user_activation_key' => ''), array('ID' => $current_user_id));
+}
 if ($user_ID == 0) {
     //userlogout
     ?>
@@ -168,12 +173,12 @@ if ($user_ID == 0) {
     }
 }elseif($user_ID !== 0 && $user_status == '0'){
     ?>
-    <div class="alt alert-warning">حساب کاربری شما غیر فعال است لطفا جهت فعال کردن آن به لینک ایمیل بروید.</div>
-    <a class="profile-logout" href="<?php echo wp_logout_url(home_url()); ?>">خروج</a>
+    <div class="alet alert-warning">حساب کاربری شما غیر فعال است لطفا جهت فعال کردن آن به لینک ایمیل بروید.</div>
+    <div class="container"><a class="profile-logout" href="<?php echo wp_logout_url(home_url()); ?>">خروج</a></div>
     <?php
 }else{
     ?>
-    <h1>شما به عنوان مدیر کل وارد شده اید.</h1>    
+    <h1 class="container">شما به عنوان مدیر کل وارد شده اید.</h1>    
     <?php
 }
 ?>

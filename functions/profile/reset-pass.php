@@ -2,6 +2,10 @@
 
 function rng_reset_password_first() {
     if (isset($_POST['reset_password']) && isset($_POST['reset_password_hidden']) && ($_POST['reset_password_hidden'] == 'reset_password_hidden_true')) {
+        if(isset($_GET)){
+            $_GET['registration'] = '';
+            $_GET['reset_pwd'] = '';
+        }
         $is_valid_nonce = (isset($_POST['reset_password_nonce']) && wp_verify_nonce($_POST['reset_password_nonce'], 'reset_password_nonce_true')) ? TRUE : FALSE;
         if ($is_valid_nonce) {
             $username = $_POST['rng_username'];

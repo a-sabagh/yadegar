@@ -53,14 +53,12 @@ function rng_register_user_first() {
                     $to = $email;
                     $subject = "ثبت نام در وبسایت یادگار";
                     $messages = 'برای تایید ثبت نام خود <a href="' . home_url() . '/login?registration=true&user_login=' . $user_login . '&activation_key=' . $user_activation_key . '" >اینجا</a> کلیک کنید.';
-//                    wp_mail($to, $subject, $messages);
+                    wp_mail($to, $subject, $messages);
                 }//is_wp_error
             }//empty register_error
         }//is_valid_nonce
     }//isset rng_register
-}
-
-//function rng_register_user
+}//function rng_register_user
 
 function rng_register_user_second() {
     if (isset($_GET['registration']) && $_GET['registration'] == 'true') {
@@ -71,7 +69,8 @@ function rng_register_user_second() {
         $user_id = $user->ID;
         if ($activation_key == $user->user_activation_key) {
             update_user_meta($user_id, 'status', '1');
-            $wpdb->update($wpdb->users, array('user_activation_key' => ''), array('user_login' => $user_login));
+            global $current_user_id;
+            $current_user_id = $user_id;
             global $msg;
             $msg = '<div class="alet alert-success">حساب کاربری شما با موفقیت فعال شد.</div>';
         } else {
