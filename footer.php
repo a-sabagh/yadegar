@@ -13,8 +13,8 @@
                             ?>
                         </div><!--.footer-menu-->
                         <div class="col-sm-2 footer-login">
-                            <a href="#" class="login-container">
-                                <span class="footer-login-text">لینک ورود اعضا</span>
+                            <a href="<?php echo get_permalink(get_option('srng_profile_page')); ?>" target="_blank" class="login-container">
+                                <span class="footer-login-text">حساب کاربری</span>
                                 <i class="icon-sprite w-icon-people"></i>
                             </a><!--.login-container-->
                         </div><!--.footer-login-->

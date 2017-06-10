@@ -12,12 +12,14 @@ function srng_theme_option() {
         update_option('srng_profile_page', $_POST['srng_profile_page']);
         update_option('srng_qa_page', $_POST['srng_qa_page']);
         update_option('srng_logo', $_POST['srng_logo']);
+        update_option('srng_reset_password_page', $_POST['srng_reset_password_page']);
     }
     do_action('srng2_option');
     $default_post_thumbnail = get_option('srng_default_post_thumbnail');
     $default_qa_thumbnail = get_option('srng_default_qa_thumbnail');
     $default_page_thumbnails = get_option('srng_default_page_thumbnail');
     $profile_page = get_option('srng_profile_page');
+    $reset_password_page = get_option('srng_reset_password_page');
     $qa_page = get_option('srng_qa_page');
     $logo = get_option('srng_logo');
     ?>
@@ -43,12 +45,27 @@ function srng_theme_option() {
             </fieldset>
             <fieldset>
                 <h2 class="srng2-title">تنظیمات برگه ها</h2>
-                <?php $pages = get_posts('post_type=>page', 'post_per_pages=>-1'); ?>
+                <?php
+                $param = array(
+                    'post_type' => 'page',
+                    'posts_per_page'=> -1
+                );
+                $pages = get_posts($param);   echo count($pages);
+                ?>
                 <p>برگه پروفایل کاربری را انتخاب کنید</p>
                 <select name="srng_profile_page" class="select2dropdown">
                     <?php
                     foreach ($pages as $page):
                         $selected = ($profile_page == $page->ID)? 'selected' : '';
+                        echo '<option value="' . $page->ID . '" ' . $selected . ' >' . $page->post_title . '</option>';
+                    endforeach;
+                    ?>
+                </select>
+                <p>برگه بازیابی رمزعبور را انتخاب کنید</p>
+                <select name="srng_reset_password_page" class="select2dropdown">
+                    <?php
+                    foreach ($pages as $page):
+                        $selected = ($reset_password_page == $page->ID)? 'selected' : '';
                         echo '<option value="' . $page->ID . '" ' . $selected . ' >' . $page->post_title . '</option>';
                     endforeach;
                     ?>

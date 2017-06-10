@@ -3,7 +3,10 @@ get_header();
 global $msg;
 echo $msg;
 global $front_user_id;
-$wpdb->update($wpdb->users, array('user_activation_key' => ''), array('ID' => $front_user_id));
+if(!empty($front_user_id)){
+    global $wpdb;
+    $wpdb->update($wpdb->users, array('user_activation_key' => ''), array('ID' => $front_user_id));
+}
 ?>
 <div class="container">
     <div class="row text-center">

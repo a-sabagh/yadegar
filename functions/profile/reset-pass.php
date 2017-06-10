@@ -2,7 +2,7 @@
 
 function rng_reset_password_first() {
     if (isset($_POST['reset_password']) && isset($_POST['reset_password_hidden']) && ($_POST['reset_password_hidden'] == 'reset_password_hidden_true')) {
-        if(isset($_GET)){
+        if (isset($_GET)) {
             $_GET['registration'] = '';
             $_GET['reset_pwd'] = '';
         }
@@ -15,19 +15,19 @@ function rng_reset_password_first() {
                 $user_email = $user->user_email;
                 $user_login = $user->user_login;
                 $old_activation_key = $user->user_activation_key;
-                $new_activation_key = wp_generate_password(10,false,false);
+                $new_activation_key = wp_generate_password(10, false, false);
                 $activation_key = (empty($old_activation_key)) ? $new_activation_key : $old_activation_key;
                 global $wpdb;
-		$wpdb->update($wpdb->users,array('user_activation_key' => $activation_key),array('ID' => $user_id),array('%s'),array( '%d' ) );
+                $wpdb->update($wpdb->users, array('user_activation_key' => $activation_key), array('ID' => $user_id), array('%s'), array('%d'));
                 $to = $user_email;
                 $subject = 'بازیابی رمز عبور حساب کاربری';
                 $message = "از حساب کاربری شما در وبسایت تولیدی یادگار تقاضای بازیابی رمز عبور داده شده است\n.";
-                $message .= "اگر شما تقاضای تغییر رمز عبور را داده اید <a href=\"" . home_url() . "/reset-password?reset_pwd=true&login=" . rawurldecode($user_login) . "&key=" . rawurldecode($activation_key) . "  \">اینجا</a> کلیک کنید در غیر این صورت این ایمیل را نادیده بگیرید.";
+                $message .= "اگر شما تقاضای تغییر رمز عبور را داده اید <a href=\"" . get_permalink(get_option('srng_reset_password_page')) . "?reset_pwd=true&login=" . rawurldecode($user_login) . "&key=" . rawurldecode($activation_key) . "  \">اینجا</a> کلیک کنید در غیر این صورت این ایمیل را نادیده بگیرید.";
                 $email = wp_mail($to, $subject, $message);
-                if($email){
+                if ($email) {
                     global $msg;
                     $msg .= '<div class="alet alert-success">ایمیل تایید برای بازیابی پسوورد به شما ارسال شد . جهت تایید ایمیل خود را چک کنید.</div>';
-                }else{
+                } else {
                     global $msg;
                     $msg .= '<div class="alet alert-warning">ارسال ایمیل با مشکل مواجه شد. لطفا مجددا تلاش کنید.</div>';
                 }
@@ -53,13 +53,12 @@ function rng_reset_password_second() {
             wp_set_password($new_password, $user_id);
             $to = $user_email;
             $subject = 'پسوورد جدید حساب کاربری';
-            $message = 'پسوورد جدید حساب کاربری شما در تولیدی یادگار : ' . $new_password . '';
+            $message = 'پسوورد جدید حساب کاربری شما در تولیدی یادگار : <br>' . $new_password . '';
             $email = wp_mail($to, $subject, $message);
             global $front_user_id;
-            $front_user_id= $user_id;
+            $front_user_id = $user_id;
             global $msg;
             $msg = '<div class="alet alert-success">پسوورد جدید به ایمیل شما ارسال شد.</div>';
-           
         } else {
             global $msg;
             $msg = '<div class="alet alert-warning">لینک تغییر پسوورد نامعتبر است لطفا مجددا تقاضای تغییر پسوورد کنید.</div>';

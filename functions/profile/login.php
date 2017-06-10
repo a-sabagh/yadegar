@@ -5,6 +5,7 @@ function rng_login_user() {
         if(isset($_GET)){
             $_GET['registration'] = '';
             $_GET['reset_pwd'] = '';
+            $_GET['change_pass'] = '';
         }
         $is_valid_nonce = (isset($_POST['rng_nonce_login']) && wp_verify_nonce($_POST['rng_nonce_login'], 'rng_login_true')) ? TRUE : FALSE;
         if ($is_valid_nonce) {
@@ -25,7 +26,8 @@ function rng_login_user() {
                 $msg = '<div class="alet alert-success">شما با موفقیت وارد شدید.</div>';
                 global $current_user_id;
                 $current_user_id = $user->ID;
-                wp_redirect(home_url() . '/login');
+                wp_redirect(get_permalink(get_option('srng_profile_page')));
+                exit();
             }
         }//is_valid_nonce
     }//isset rng_login

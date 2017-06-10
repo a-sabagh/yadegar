@@ -10,7 +10,7 @@ function rng_change_password(){
             $user_id = $current_user->ID;
             $user_pass = $current_user->user_pass;
             $change_pss_error = array();
-            if(wp_check_password($old_pass , $user_pass , $user_id)){
+            if(!wp_check_password($old_pass , $user_pass , $user_id)){
                 global $msg;
                 $msg = '<div class="alet alert-warning">پسوورد فعلی به اشتباه وارد شده است.</div>';
                 $change_pss_error[0] = 'current password false';
@@ -22,10 +22,18 @@ function rng_change_password(){
             }
             if(empty($change_pss_error)){
                 wp_set_password($new_pass , $user_id);
-                global $msg;
-                $msg = '<div class="alet alert-success">تغییر پسوورد با موفقیت انجام شد.</div>';
+                wp_redirect(get_permalink(get_option('srng_profile_page')) . '?change_pass=true');
+                exit();
             }
         }
     }
 }
+function rng_change_pass_result(){
+    if(isset($_GET['change_pass']) && $_GET['change_pass'] == 'true'){
+        global $msg;
+        global $msg;
+        $msg = '<div class="alet alert-success">تغییر پسوورد با موفقیت انجام شد لطفا مجددا با پسوورد جدید وارد شوید.</div>';
+    }
+}
+add_action('template_redirect' , 'rng_change_pass_result' , 2);
 add_action('template_redirect' , 'rng_change_password' , 1);

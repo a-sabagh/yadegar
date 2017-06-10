@@ -955,6 +955,7 @@ search field
     height: 28px;
     margin: auto;
     cursor: pointer;
+    background-color: transparent;
 }
 /*
 category-box
@@ -1292,7 +1293,7 @@ input[type="checkbox"] + label {
 }
 .alet {
     width: 75%;
-    margin: 10px auto;
+    margin: 10px 0;
     height: 40px;
     background: #efefef;
     line-height: 37px;
@@ -1304,3 +1305,27 @@ input[type="checkbox"] + label {
 .alert-warning{
     border-right: 4px solid #cc262c;
 }
+.profile-latest-blog ul li a,
+.profile-qa ul li a{
+    color: black;
+}
+.profile-latest-blog ul li,
+.profile-qa ul li{
+    list-style-type: arabic-indic;
+    margin-right: 20px;
+    line-height: 25px;
+}
+.ticket-header {
+    color: white;
+    background: #1a1a1a;
+    line-height: 40px;
+    font-size: bold;
+    font-weight: bold;
+}
+.ticket-body{
+    line-height: 30px;
+}
+form .col-md-6 {
+    margin: 25px auto;
+}
+select{width: 100%;}

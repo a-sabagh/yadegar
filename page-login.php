@@ -3,9 +3,9 @@ get_header();
 global $user_ID;
 global $msg;
 echo $msg;
-$user_status = get_user_meta($user_ID , 'status' , TRUE);
+$user_status = get_user_meta($user_ID, 'status', TRUE);
 global $current_user_id;
-if(!empty($current_user_id)){
+if (!empty($current_user_id)) {
     global $wpdb;
     $wpdb->update($wpdb->users, array('user_activation_key' => ''), array('ID' => $current_user_id));
 }
@@ -37,6 +37,7 @@ if ($user_ID == 0) {
                         <input type="hidden" name="rng_hidden_login" value="login_true">
                         <?php wp_nonce_field('rng_login_true', 'rng_nonce_login'); ?>
                     </p>
+                    <p>اگر رمز عبور خود را فراموش کرده اید <a title="بازیابی پسوورد" target="_blank" href="<?php echo get_permalink(get_option('srng_reset_password_page')); ?>">اینجا</a> کلیک کنید.</p>
                 </form>
             </div>
         </div>
@@ -70,10 +71,12 @@ if ($user_ID == 0) {
     </div>
 
     <?php
-} elseif($user_ID != 0 && $user_status == '1' ) {
+} elseif ($user_ID != 0 && $user_status == '1') {
     //userlogin
-    $current_user = wp_get_current_user();
-    $user_id = $current_user->ID;
+    global $wpdb;
+    $user = wp_get_current_user();
+    $user_id = $user->ID;
+    $current_user = $wpdb->get_row("SELECT user_login,ID,display_name,user_email,user_url FROM {$wpdb->users} WHERE ID='{$user_id}'");
     $user_login = $current_user->user_login;
     $display_name = $current_user->display_name;
     $email = $current_user->user_email;
@@ -147,36 +150,63 @@ if ($user_ID == 0) {
                         </form>
                     </div><!--.featured-tab-menu-->
                     <div class="tab-menu-content" id="latest-blog">
-                        <p>یک متن نمونه برای تب دوم</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>جدیدترین مقالات</h3>
+                                <div class="profile-latest-blog">
+                                    <ul>
+                                    <?php
+                                    $posts_args = array(
+                                        'post_type' => 'post',
+                                        'posts_per_page' => 5,
+                                    );
+                                    $posts = new WP_Query($posts_args);
+                                    if($posts->have_posts()){
+                                        while($posts->have_posts()){
+                                            $posts->the_post();
+                                            echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >' . get_the_title() . '</a></li>';
+                                        }
+                                    }
+                                    wp_reset_postdata();
+                                    ?>
+                                    </ul>
+
+                                </div><!--.profile-latest-blog-->
+                            </div>
+                            <div class="col-md-6">
+                                <h3>جدیدترین پرسش و پاسخ</h3>
+                                <div class="profile-qa">
+                                    <ul>
+                                    <?php
+                                    $posts_args = array(
+                                        'post_type' => 'qa',
+                                        'posts_per_page' => 5,
+                                    );
+                                    $posts = new WP_Query($posts_args);
+                                    if($posts->have_posts()){
+                                        while($posts->have_posts()){
+                                            $posts->the_post();
+                                            echo '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >' . get_the_title() . '</a></li>';
+                                        }
+                                    }
+                                    wp_reset_postdata();
+                                    ?>
+                                    </ul>
+                                </div><!--.profile-qa-->
+                            </div>
+                        </div>
                     </div><!--.featured-tab-menu-->
                 </div><!--.featured-tab-container-->
             </div><!--.profile-content-->
         </div><!--.row-->
     </div><!--.container-->
     <?php
-    if (isset($_POST['update_user_meta']) && isset($_POST['update_user_meta_hidden']) && $_POST['update_user_meta_hidden'] == 'update_true') {
-        $is_valid_nonce = (isset($_POST['update_meta_nonce']) && wp_verify_nonce($_POST['update_meta_nonce'], 'update_meta_nonce_true')) ? TRUE : FALSE;
-        if ($is_valid_nonce) {
-            $firstname = sanitize_text_field($_POST['profile_fname']);
-            $lname = sanitize_text_field($_POST['profile_lname']);
-            $nicename = sanitize_text_field($_POST['profile_nicname']);
-            $email = sanitize_text_field($_POST['profile_email']);
-            $website = sanitize_text_field($_POST['profile_website']);
-            $job = sanitize_text_field($_POST['profile_job']);
-            $description = sanitize_text_field($_POST['profile_description']);
-            update_user_meta($user_id, 'nickname', $nicename);
-            update_user_meta($user_id, 'last_name', $lname);
-            update_user_meta($user_id, 'first_name', $firstname);
-            update_user_meta($user_id, 'job', $job);
-            update_user_meta($user_id, 'description', $description);
-        }
-    }
-}elseif($user_ID !== 0 && $user_status == '0'){
+} elseif ($user_ID !== 0 && $user_status == '0') {
     ?>
     <div class="alet alert-warning">حساب کاربری شما غیر فعال است لطفا جهت فعال کردن آن به لینک ایمیل بروید.</div>
     <div class="container"><a class="profile-logout" href="<?php echo wp_logout_url(home_url()); ?>">خروج</a></div>
     <?php
-}else{
+} else {
     ?>
     <h1 class="container">شما به عنوان مدیر کل وارد شده اید.</h1>    
     <?php

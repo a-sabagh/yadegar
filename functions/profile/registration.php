@@ -52,7 +52,7 @@ function rng_register_user_first() {
                     );
                     $to = $email;
                     $subject = "ثبت نام در وبسایت یادگار";
-                    $messages = 'برای تایید ثبت نام خود <a href="' . home_url() . '/login?registration=true&user_login=' . $user_login . '&activation_key=' . $user_activation_key . '" >اینجا</a> کلیک کنید.';
+                    $messages = 'برای تایید ثبت نام خود <a href="' . get_permalink(get_option('srng_profile_page')) . '?registration=true&user_login=' . $user_login . '&activation_key=' . $user_activation_key . '" >اینجا</a> کلیک کنید.';
                     wp_mail($to, $subject, $messages);
                 }//is_wp_error
             }//empty register_error

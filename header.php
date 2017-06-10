@@ -82,8 +82,8 @@
                     <div id="icon-button"> 
                         <ul>
                             <li>
-                                <a href="#">
-                                    <span class="top-menu-text">لینک ورود اعضا</span>
+                                <a href="<?php echo get_permalink(get_option('srng_profile_page')); ?>">
+                                    <span class="top-menu-text">حساب کاربری</span>
                                     <i class="icon-sprite w-icon-people"></i>
                                 </a>
                             </li>
