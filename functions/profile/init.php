@@ -1,7 +1,5 @@
 <?php
-require_once 'jdf.php';
 require_once 'login.php';
-require_once 'ticket.php';
 require_once 'user-meta.php';
 require_once 'reset-pass.php';
 require_once 'change-pass.php';
