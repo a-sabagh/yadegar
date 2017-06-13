@@ -1329,3 +1329,12 @@ form .col-md-6 {
     margin: 25px auto;
 }
 select{width: 100%;}
+.row.ticket-body{
+    border-bottom: 1px solid #a5a5a5;
+}
+.col-md-2.ticket-body-subject,
+.col-md-2.ticket-body-date,
+.col-md-2.ticket-body-department,
+.col-md-6.ticket-header-content{
+    font-size: 13px;
+}

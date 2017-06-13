@@ -134,47 +134,67 @@ function rng_shortcode_profile_login() {
                         <div class="tab-menu-content" id="tickets">
                             <div class="row ticket-header">
                                 <div class="col-md-2 ticket-header-subject">موضوع</div>
-                                <div class="col-md-2 ticket-header-date">تاریخ</div>
                                 <div class="col-md-2 ticket-header-department">دپارتمان</div>
+                                <div class="col-md-2 ticket-header-date">تاریخ</div>
                                 <div class="col-md-6 ticket-header-content">متن تیکت</div>
                             </div><!--.ticket-header-->
-                            <div class="row ticket-body">
-                                <div class="col-md-2 ticket-body-subject">خوراک های جانداران</div>
-                                <div class="col-md-2 ticket-body-date">۱۳۹۳-۰۱-۲۳</div>
-                                <div class="col-md-2 ticket-body-department">پشتیبانی</div>
-                                <div class="col-md-6 ticket-header-content">متن تیکت این است که لورم ایپسوم متن ساختگی با مفهوم نامشخص که است   </div>
-                            </div><!--.ticket-body-->
-                            <div class="row ticket-body">
-                                <div class="col-md-2 ticket-body-subject">خوراک های جانداران</div>
-                                <div class="col-md-2 ticket-body-date">۱۳۹۳-۰۱-۲۳</div>
-                                <div class="col-md-2 ticket-body-department">پشتیبانی</div>
-                                <div class="col-md-6 ticket-header-content">متن تیکت این است که لورم ایپسوم متن ساختگی با مفهوم نامشخص که است   </div>
-                            </div><!--.ticket-body-->
-                            <div class="row ticket-body">
-                                <div class="col-md-2 ticket-body-subject">خوراک های جانداران</div>
-                                <div class="col-md-2 ticket-body-date">۱۳۹۳-۰۱-۲۳</div>
-                                <div class="col-md-2 ticket-body-department">پشتیبانی</div>
-                                <div class="col-md-6 ticket-header-content">متن تیکت این است که لورم ایپسوم متن ساختگی با مفهوم نامشخص که است   </div>
-                            </div><!--.ticket-body-->
-                            <br><hr><br>
+                            <?php
+                            $user_tickets = $wpdb->get_results("SELECT meta_value FROM  {$wpdb->usermeta} WHERE user_id={$user_id} AND meta_key = 'ticket'");
+                            if (!empty($user_tickets)):
+
+                                foreach ($user_tickets as $user_ticket): //ticket
+                                    $user_ticket_elements = explode(',', $user_ticket->meta_value);
+                                    $counter = 1;
+                                    echo '<div class="row ticket-body">';
+                                    foreach ($user_ticket_elements as $user_ticket_element):
+                                        if($user_ticket_element == 'finacial'){
+                                            $user_ticket_element = 'امور مالی';
+                                        }elseif($user_ticket_element == 'support'){
+                                            $user_ticket_element = 'پشتیبانی';
+                                        }elseif($user_ticket_element == 'other'){
+                                            $user_ticket_element = 'سایر';
+                                        }
+                                        switch ($counter):
+                                            case 1:
+                                                echo '<div class="col-md-2 ticket-body-subject">' . $user_ticket_element . '</div>';
+                                                break;
+                                            case 2:
+                                                echo '<div class="col-md-2 ticket-body-department">' . $user_ticket_element . '</div>';
+                                                break;
+                                            case 3:
+                                                echo '<div class="col-md-2 ticket-body-date">' . $user_ticket_element . '</div>';
+                                                break;
+                                            case 4:
+                                                echo '<div class="col-md-6 ticket-header-content">' . $user_ticket_element . '</div>';
+                                                break;
+                                        endswitch;
+                                        $counter++;
+                                    endforeach;
+                                    echo '</div>';
+                                endforeach;
+                            endif;
+                            ?>
+                            <br><br>
                             <form method="post" action="">
                                 <div class="row">
                                     <div class="col-md-6"><input type="text" name="ticket_subject" placeholder="موضوع" ></div>
                                     <div class="col-md-6">
-                                        <select>
-                                            <option name="" value="" >امور مالی</option>
-                                            <option name="" value="" >پشتیبانی</option>
-                                            <option name="" value="" >فروش آنلاین مرغ</option>
+                                        <select name="ticket_department">
+                                            <option value="finacial" >امور مالی</option>
+                                            <option value="support" >پشتیبانی</option>
+                                            <option value="other" >سایر</option>
                                         </select>
                                     </div>
                                 </div><!--.row-->
                                 <div class="row" >
                                     <div class="col-md-12">
-                                        <textarea name="ticket-text" placeholder="متن تیکت"></textarea>
+                                        <textarea name="ticket_text" placeholder="متن تیکت"></textarea>
                                     </div>
                                 </div><!--.row-->
                                 <div class="row">
                                     <div class="col-md-12"><input type="submit" name="ticket_send" value="ارسال" ></div>
+                                    <input type="hidden" name="ticket_send_hidden" value="true" >
+                                    <?php wp_nonce_field("nonce_ticket_send_true", "ticket_send_nonce"); ?>
                                 </div>
                             </form>
                         </div><!--#tickets-->

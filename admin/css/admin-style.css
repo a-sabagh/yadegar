@@ -94,3 +94,22 @@ and open the template in the editor.
     height: 33px !important;
     width: 19% !important;
 }
+.ticket-header {
+    color: white;
+    background: #1a1a1a;
+    line-height: 40px;
+    font-size: bold;
+    font-weight: bold;
+}
+.ticket-body{
+    line-height: 30px;
+}
+form .col-md-6 {
+    margin: 25px auto;
+}
+.col-md-2.ticket-body-subject,
+.col-md-2.ticket-body-date,
+.col-md-2.ticket-body-department,
+.col-md-6.ticket-header-content{
+    font-size: 13px;
+}

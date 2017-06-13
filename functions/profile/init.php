@@ -1,10 +1,12 @@
 <?php
-require_once 'mail_configure.php';
+require_once 'jdf.php';
 require_once 'login.php';
-require_once 'registration.php';
-require_once 'change-pass.php';
-require_once 'reset-pass.php';
+require_once 'ticket.php';
 require_once 'user-meta.php';
+require_once 'reset-pass.php';
+require_once 'change-pass.php';
+require_once 'registration.php';
+require_once 'mail_configure.php';
 require_once 'shortcodes/login.php';
 require_once 'shortcodes/reset-password.php';
 
