@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
     margin-top: .2rem;
     text-rendering: optimizeLegibility;
+    text-align: right;
 }
 .red{color: #cc262c;}
 /********************************************
@@ -76,7 +77,7 @@ main nav#main-menu:hover #nav-search form input:focus{
 
 }
 main nav#main-menu .menu-all > ul li{
-    height: 44px;
+    height: 6.5vh;
     border-bottom: 1px solid #b62525;
 }
 main nav#main-menu .menu-all > ul li a{
@@ -90,11 +91,11 @@ main nav#main-menu .menu-all > ul li:hover{
 }
 main nav#main-menu .menu-all > ul li a i{
     vertical-align: bottom;
-    margin: 0px 15px;
+    margin: -2px 15px;
 }
 main nav#main-menu .menu-all > ul li a span.menu-name{
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: top;
     height: 26px;
     color: white;
     font-size: 17px;
@@ -662,7 +663,8 @@ section.product{
     list-style: outside;
 }
 .blog-content ol li {
-    list-style: decimal;
+    list-style-type: persian !important;
+    list-style: -moz-persian !important;
 }
 .blog-content h1,
 .blog-content h2,
@@ -676,10 +678,13 @@ section.product{
     color: #ccc;
     margin: 20px 0;
 }
-table {
+.blog-content table {
     background-color: transparent;
     border: 1px solid #ddd;
-
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px auto;
 }
 caption {
     padding-top: 8px;
