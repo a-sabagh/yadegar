@@ -113,10 +113,10 @@ function register_scat_post_type() {
         'query_var' => true,
         'rewrite' => array('slug' => 'scat'),
         'has_archive' => true,
-        'hierarchical' => false,
+        'hierarchical' => true,
         'menu_position' => 5,
         'menu_icon' => 'dashicons-category',
-        'supports' => array('title', 'editor'),
+        'supports' => array('title', 'editor' , 'page-attributes'),
     );
 
     register_post_type('scat', $args);

@@ -6,6 +6,17 @@ function rng_shortcode_qa_single($atts) {
         'id' => 1
     );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    $post_parent = $array_atts['id'];
+    $parent_arg = array(
+        'post_parent' => $post_parent,
+    );
+    $post_children = get_children($parent_arg);
+    $post_children_id = array();
+    foreach ($post_children as $post) {
+        $post_children_id[] = $post->ID;
+    }
+    array_push($post_children_id, $array_atts['id']);
     ob_start();
     ?>
     <div class="container">

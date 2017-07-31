@@ -28,9 +28,11 @@
     <div class="related-post">
         <div class="table-row">
             <?php
+            echo $single_id;
                 $related_args = array(
                     'post_type' => 'post',
                     'posts_per_page' => 2,
+                    'order_by' => 'rand',
                     'meta_key' => 'rng_scat',
                     'meta_value' => get_post_meta(get_the_ID() , 'rng_scat' , TRUE),
                     'meta_compare' => '=',

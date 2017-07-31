@@ -6,12 +6,16 @@ function rng_metabox_product_input($post) {
     $new_on = ($new == TRUE)? 'checked' : '';
     $best_seller = get_post_meta($post->ID , 'rng_best_seller' , TRUE);
     $best_seller_on = ($best_seller == TRUE) ? 'checked' : '';
+    $product_desc = get_post_meta($post->ID , 'rng_product_desc' , TRUE);
     ?>
     <label for="new-product">محصول جدید</label>
     <input type="checkbox" id="new-product" <?php echo $new_on; ?> name="rng_new_product" />
     <hr>
     <label for="best-seller">پرفروش ترین محصول</label>
     <input type="checkbox" id="best-seller" <?php echo $best_seller_on; ?> name="rng_best_seller" />
+    <hr>
+    <label for="product-desc">توضیحات محصول</label>
+    <textarea id="product-desc" name="rng_product_desc" ><?php echo $product_desc; ?></textarea>
     <?php
 }
 
@@ -30,6 +34,7 @@ function rng_metabox_product_save($post_id) {
     } else {
         update_post_meta($post_id, 'rng_new_product', $_POST['rng_new_product']);
         update_post_meta($post_id, 'rng_best_seller', $_POST['rng_best_seller']);
+        update_post_meta($post_id, 'rng_product_desc', $_POST['rng_product_desc']);
     }
 }
 

@@ -36,8 +36,6 @@ $menu_position = array(
     "side_menu" => "فهرست ساید بار"
 );
 register_nav_menus($menu_position);
-add_filter('manage_posts_columns', 'posts_columns_id', 5);
-add_action('manage_posts_custom_column', 'posts_custom_id_columns', 5, 2);
 
 function posts_columns_id($defaults) {
     $defaults['wps_post_id'] = 'شناسه';
@@ -56,9 +54,13 @@ function posts_custom_id_columns($column_name, $id) {
             $scat_id = get_post_meta($id, 'rng_scat', TRUE);
             $scat_icon = get_post_meta($scat_id, 'rng_scat_icon', TRUE);
             echo '<label class="icon-animals c-' . $scat_icon . '"></label>';
-        } else {
+        } elseif($post_type == 'scat') {
             $icon = get_post_meta($id, 'rng_scat_icon', TRUE);
+            echo $icon;
             echo '<label class="icon-animals c-' . $icon . '"></label>';
         }
     }
 }
+
+add_filter('manage_posts_columns', 'posts_columns_id', 5);
+add_action('manage_posts_custom_column', 'posts_custom_id_columns', 5, 2);

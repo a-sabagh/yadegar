@@ -8,22 +8,21 @@ function rng_shortcode_product_mix($atts) {
         'caption' => ''
     );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    $post_parent = $array_atts['id'];
+    $parent_arg = array(
+        'post_parent' => $post_parent,
+    );
+    $post_children = get_children($parent_arg);
+    $post_children_id = array();
+    foreach ($post_children as $post) {
+        $post_children_id[] = $post->ID;
+    }
+    array_push($post_children_id, $array_atts['id']);
     ob_start();
     ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center banner">
-                <img src="<?php echo RNG_TDU; ?>/img/horse-banner.jpeg" alt="" class="img-responsive">
-            </div><!--.banner-->
-        </div><!--.row-->
-    </div>
     <section class="product">
         <div class="container">
             <div class="row text-center">
-                <?php 
-                    $scat = get_post($array_atts['id']);
-                    $scat_title = $scat->post_title;
-                ?>
                 <h2 class="heading-format1">محصولات ما</h2>
                 <h3 class="large-format"><?php echo $array_atts['title']; ?></h3>
                 <p class="product-caption"><?php echo $array_atts['caption']; ?></p><br>
@@ -35,9 +34,8 @@ function rng_shortcode_product_mix($atts) {
                             'post_type' => 'product',
                             'posts_per_page' => -1,
                             'meta_key' => 'rng_scat',
-                            'meta_value' => $array_atts['id'],
-                            'meta_compare' => '=',
-                            'meta_type' => 'NUMERIC'
+                            'meta_value' => $post_children_id,
+                            'meta_compare' => 'IN',
                         );
                         $product_query = new WP_Query($product_args);
                         if ($product_query->have_posts()):
@@ -61,7 +59,7 @@ function rng_shortcode_product_mix($atts) {
                                 <div class="<?php echo $new_on . ' ' . $best_seller_on; ?> col-lg-3 col-md-4 col-sm-6 col-xs-6">
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="product-item">
                                         <img src="<?php echo $product_img_src; ?>" class="img-responsive product-item-image" alt="<?php echo $product_img_alt; ?>" >
-                                        <span class="product-item-name"><?php the_excerpt(); ?></span>
+                                        <span class="product-item-name"><?php echo get_post_meta(get_the_ID() , 'rng_product_desc' , TRUE); ?></span>
                                     </a><!--product-item-->
                                 </div><!--.mix-->
                                 <?php

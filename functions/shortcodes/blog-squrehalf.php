@@ -6,17 +6,26 @@ function rng_shortcode_blog_squrehalf($atts) {
         'id' => 1,
         'title' => 'مقالات برگزیده',
         'caption' => ''
-        );
+    );
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
+    $post_parent = $array_atts['id'];
+    $parent_arg = array(
+        'post_parent' => $post_parent,
+    );
+    $post_children = get_children($parent_arg);
+    $post_children_id = array();
+    foreach ($post_children as $post) {
+        $post_children_id[] = $post->ID;
+    }
+    array_push($post_children_id, $array_atts['id']);
     ob_start();
     ?>
     <!--#############################################################################################-->
-    <div class="vertical-space-4"></div><!--.vertical-space-4-->
     <div class="container">
         <div class="row text-center">
-            <?php 
-                $scat = get_post($array_atts['id']);
-                $scat_title = $scat->post_title;
+            <?php
+            $scat = get_post($array_atts['id']);
+            $scat_title = $scat->post_title;
             ?>
             <h2 class="heading-format2">مقالات برگزیده </h2>
         </div><!--.row-->
@@ -33,9 +42,8 @@ function rng_shortcode_blog_squrehalf($atts) {
                         'post_type' => 'post',
                         'posts_per_page' => 3,
                         'meta_key' => 'rng_scat',
-                        'meta_value' => $array_atts['id'],
-                        'meta_compare' => '=',
-                        'meta_type' => 'NUMERIC'
+                        'meta_value' => $post_children_id,
+                        'meta_compare' => 'IN'
                     );
                     $halfsqure_query = new WP_Query($halfsqure_args);
                     if ($halfsqure_query->have_posts()):
@@ -80,7 +88,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                                 <div class="square-left-box">
                                                     <div class="author"><?php the_author(); ?></div>
                                                     <h4><?php the_title(); ?></h4>
-                <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
+                                                    <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
                                                     <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
                                                 </div><!--.square-full-box-->                                        
                                             </a>
@@ -124,7 +132,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                                 <div class="square-right-box">
                                                     <div class="author"><?php the_author(); ?></div>
                                                     <h4><?php the_title(); ?></h4>
-                <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
+                                                    <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
                                                     <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
                                                 </div><!--.square-full-box-->
                                             </a>
@@ -148,6 +156,9 @@ function rng_shortcode_blog_squrehalf($atts) {
         </div><!--.button-->
     </div>
     <?php
+    $output = ob_get_clean();
+    return $output;
 }
+
 add_shortcode('blog_squrehalf', 'rng_shortcode_blog_squrehalf');
 //[blog_squrehalf id=]
