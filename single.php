@@ -7,17 +7,17 @@
         the_post();
         $single_id = get_the_ID();
         ?>
-        <div class="blog-head">
+        <header class="blog-head">
             <h1 class="blog-title"><?php the_title(); ?></h1><!--.blog-title-->
             <blockquote class="blog-author"><?php the_author(); ?></blockquote><!--.blog-author-->
             <ul class="blog-meta">
                 <li class="meta-eshare"><a href="javascript:emailCurrentPage()">ارسال از طریق ایمیل</a></li>
                 <li class="meta-print"><a href="javascript:printCurrentPage()">پرینت این برگه</a></li>
             </ul><!--.blog-meta-->
-        </div><!--.blog-head-->
-        <div class="blog-content">
+        </header><!--.blog-head-->
+        <article class="blog-content">
             <?php the_content(); ?>
-        </div><!--.blog-content-->    
+        </article>><!--.blog-content-->    
         <?php
         endwhile;
     endif;
@@ -25,10 +25,9 @@
     <div class="row text-center">
         <h2 class="heading-format2">مطالب مشابه</h2>
     </div><!--.row-->
-    <div class="related-post">
+    <section class="related-post">
         <div class="table-row">
             <?php
-            echo $single_id;
                 $related_args = array(
                     'post_type' => 'post',
                     'posts_per_page' => 2,
@@ -75,7 +74,7 @@
                 endif;
             ?>
         </div><!--.table-row-->
-    </div><!--.related-post-->
+    </section><!--.related-post-->
     <div class="row button text-center">
         <a href="<?php echo get_category_link(1); ?>" class="button-all">مشاهده تمامی مقالات</a>
     </div><!--.button-->
