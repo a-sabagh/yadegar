@@ -1,6 +1,6 @@
 <section class="intro">
     <div class="col-md-12 text-center intro-logo">
-        <img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/Feed-Greatness.png" alt="">
+        <img src="<?php echo get_option("srng_logo2"); ?>" class="img-responsive" alt="<?php echo get_bloginfo("description"); ?>">
     </div>
     <div class="vertical-space-2"></div>
     <div class="video-field">

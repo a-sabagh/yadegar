@@ -5,17 +5,17 @@ if (have_posts()):
         the_post();
         ?>
         <div class="container" >
-            <div class="blog-head product-blog-head">
+            <header class="blog-head product-blog-head">
                 <h1 class="blog-title"><?php the_title(); ?></h1><!--.blog-title-->
                 <blockquote class="blog-author"><?php the_author(); ?></blockquote><!--.blog-author-->
                 <ul class="blog-meta">
                     <li class="meta-eshare"><a href="javascript:emailCurrentPage()">ارسال از طریق ایمیل</a></li>
                     <li class="meta-print"><a href="javascript:printCurrentPage()">پرینت این برگه</a></li>
                 </ul><!--.blog-meta-->
-            </div><!--.blog-head-->
-            <div class="blog-content">
+            </header><!--.blog-head-->
+            <main class="blog-content">
                 <div class="row">   
-                    <div class="single-product-thumb col-md-4">
+                    <aside class="single-product-thumb col-md-4">
                         <?php
                         if (has_post_thumbnail()) {
                             $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
@@ -29,8 +29,8 @@ if (have_posts()):
                         }
                         ?>
                         <img src="<?php echo $product_img_src; ?>" alt="<?php echo $product_img_alt; ?>" />
-                    </div><!--single-product-content-->
-                    <div class="single-product-content col-md-8">
+                    </aside><!--single-product-content-->
+                    <article class="single-product-content col-md-8">
                         <?php the_content(); ?>
                         <?php
                         $product_new = get_post_meta(get_the_ID() , 'rng_new_product' , TRUE);
@@ -42,9 +42,9 @@ if (have_posts()):
                             echo '<strong class="product-tag">پرفروش ترین ها</strong>';
                         }
                         ?>
-                    </div><!--.single-product-content-->
+                    </article><!--.single-product-content-->
                 </div><!--.row-->
-            </div><!--.container-->
+            </main><!--.blog-content-->
             <?php
         endwhile;
     endif;
