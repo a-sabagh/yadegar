@@ -123,6 +123,51 @@
 .r-bird{
     background-position: 40px -480px;
 }
+.w-camel{
+    background-position: 120px -520px;
+}
+.c-camel{
+    background-position: 80px -520px;
+}
+.r-camel{
+    background-position: 40px -520px;
+}
+.w-obird{
+    background-position: 120px -560px;
+}
+.c-obird{
+    background-position: 80px -560px;
+}
+.r-obird{
+    background-position: 40px -560px;
+}
+.w-shome{
+    background-position: 120px -600px;
+}
+.c-shome{
+    background-position: 80px -600px;
+}
+.r-shome{
+    background-position: 40px -600px;
+}
+.w-sheep{
+    background-position: 120px -640px;
+}
+.c-sheep{
+    background-position: 80px -640px;
+}
+.r-sheep{
+    background-position: 40px -640px;
+}
+.w-ghome{
+    background-position: 120px -680px;
+}
+.c-ghome{
+    background-position: 80px -680px;
+}
+.r-ghome{
+    background-position: 40px -680px;
+}
 /********************************** I C O N - S P R I T E **********************************/
 .icon-sprite{
     background: transparent url("../img/sprites.png");

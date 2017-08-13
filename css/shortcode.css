@@ -697,7 +697,7 @@
 }
 .product-tab .tabs .tab-link{
     float: right;
-    width: 220px;
+    width: 200px;
     padding: 7px;
     cursor: pointer;
 }
@@ -711,7 +711,6 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-width: 4px 4px 0 1px;
-    width: 220px;
 }
 .product-tab .tab-container .pt-content-title h3{
     color: #444;
@@ -732,12 +731,13 @@
     font-style: normal;
     text-transform: capitalize;
     font-weight: bold;
+    vertical-align: top;
 }
 .product-tab .tab-container{
     border-top: 1px solid #cc262c;
     background: #E8E8E8;
     position: relative;
-    height: 450px;
+    height: 400px;
     overflow: hidden;
 }
 .product-tab .tab-container .tab-content{
@@ -778,12 +778,12 @@
 .product-tab .tab-container .tab-content .pt-slider .slick-next{
     border-right: 16px solid #cc262c;
     float: left;
-    left: 10px;
+    left: -30px;
 }
 .product-tab .tab-container .tab-content .pt-slider .slick-prev{
     border-left: 16px solid #cc262c;
     float: right;
-    right: 10px;
+    right: -30px;
 }
 /*       toturial-tab
 /*----------------------------

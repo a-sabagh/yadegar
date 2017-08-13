@@ -216,6 +216,11 @@ main #content header #top-menu > ul > li > ul li a .sub-menu-img{
     width: 42px;
     height: 42px;
 }
+main #content header .img-responsive-header{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
 /*
 #icon-button
 */
@@ -1342,4 +1347,9 @@ select{width: 100%;}
 .col-md-2.ticket-body-department,
 .col-md-6.ticket-header-content{
     font-size: 13px;
+}
+.product-tab {
+    border-top: 1px solid #eee;
+    margin: 15px 8px 25px 0;
+    padding: 75px 0 0 0 !important;
 }
