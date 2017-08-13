@@ -73,7 +73,7 @@
                         }
                     endif;
                     ?>
-                    <img src="<?php echo $product_img_src ?>" class="img-responsive" alt="<?php echo $product_img_alt; ?>">
+                    <img src="<?php echo $product_img_src ?>" class="img-responsive-header" alt="<?php echo $product_img_alt; ?>">
                     <div id="top-menu">
                         <?php 
                         wp_nav_menu($top_menu_arg);
