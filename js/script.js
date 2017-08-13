@@ -2,6 +2,11 @@ jQuery(document).ready(function ($) {
 //+------------------------------------------+
 // product-tab HOVER
 //+------------------------------------------+
+    $('.product-tab ul.tabs li.tab-link').removeClass('current');
+    $('.product-tab ul.tabs li.tab-link').first().addClass('current');
+    $('.product-tab .tab-content').removeClass('current');
+    var f_content = $('.product-tab ul.tabs li.tab-link').first().attr('data-tab');
+    $("#" + f_content).addClass('current');
     $('.tabs .tab-link').hover(function () {
         var tab_id = $(this).attr('data-tab');
         $('ul.tabs li').removeClass('current');
