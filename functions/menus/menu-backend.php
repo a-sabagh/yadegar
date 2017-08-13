@@ -209,6 +209,27 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu {
                         <label for="c-bird-<?php echo $item_id; ?>" class="icon-animals c-bird"></label>
                         <input type="radio" id="c-bird-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'bird') echo 'checked=""' ?>  value="bird" />    
                     </div>
+                    <!--new-->
+                    <div class="scat-icon">
+                        <label for="c-camel-<?php echo $item_id; ?>" class="icon-animals c-camel"></label>
+                        <input type="radio" id="c-camel-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'camel') echo 'checked=""' ?>  value="camel" />    
+                    </div>
+                    <div class="scat-icon">
+                        <label for="c-obird-<?php echo $item_id; ?>" class="icon-animals c-obird"></label>
+                        <input type="radio" id="c-obird-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'obird') echo 'checked=""' ?>  value="obird" />    
+                    </div>
+                    <div class="scat-icon">
+                        <label for="c-shome-<?php echo $item_id; ?>" class="icon-animals c-shome"></label>
+                        <input type="radio" id="c-shome-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'shome') echo 'checked=""' ?>  value="shome" />    
+                    </div>
+                    <div class="scat-icon">
+                        <label for="c-sheep-<?php echo $item_id; ?>" class="icon-animals c-sheep"></label>
+                        <input type="radio" id="c-sheep-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'sheep') echo 'checked=""' ?>  value="sheep" />    
+                    </div>
+                    <div class="scat-icon">
+                        <label for="c-ghome-<?php echo $item_id; ?>" class="icon-animals c-ghome"></label>
+                        <input type="radio" id="c-ghome-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'ghome') echo 'checked=""' ?>  value="ghome" />    
+                    </div>
                 </div><!--.menu-icons-wrapper-->
                 <!--#####################################################mega menu#####################################################-->
                 <div class="menu-item-actions description-wide submitbox">
