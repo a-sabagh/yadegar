@@ -52,6 +52,27 @@ function rng_category_metabox_input($post) {
         <label for="c-bird" class="icon-animals c-bird"></label>
         <input type="radio" id="c-bird" name="rng_scat_icon" <?php if($scat_icon == 'bird') echo 'checked=""'; ?> value="bird" />    
     </div>
+    <!--new-->
+    <div class="scat-icon">
+        <label for="c-camel" class="icon-animals c-camel"></label>
+        <input type="radio" id="c-camel" name="rng_scat_icon" <?php if($scat_icon == 'camel') echo 'checked=""'; ?> value="camel" />    
+    </div>
+    <div class="scat-icon">
+        <label for="c-obird" class="icon-animals c-obird"></label>
+        <input type="radio" id="c-obird" name="rng_scat_icon" <?php if($scat_icon == 'obird') echo 'checked=""'; ?> value="obird" />    
+    </div>
+    <div class="scat-icon">
+        <label for="c-shome" class="icon-animals c-shome"></label>
+        <input type="radio" id="c-shome" name="rng_scat_icon" <?php if($scat_icon == 'shome') echo 'checked=""'; ?> value="shome" />    
+    </div>
+    <div class="scat-icon">
+        <label for="c-sheep" class="icon-animals c-sheep"></label>
+        <input type="radio" id="c-sheep" name="rng_scat_icon" <?php if($scat_icon == 'sheep') echo 'checked=""'; ?> value="sheep" />    
+    </div>
+    <div class="scat-icon">
+        <label for="c-ghome" class="icon-animals c-ghome"></label>
+        <input type="radio" id="c-ghome" name="rng_scat_icon" <?php if($scat_icon == 'ghome') echo 'checked=""'; ?> value="ghome" />    
+    </div>
     <?php
 }
 
