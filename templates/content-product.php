@@ -1,6 +1,6 @@
 <div class="container">
     <h3 class="section-title"> محصولات</h3>
-    <p class="section-caption">جدیدترین محصولات از دسته بندی های اسب و خرگوش</p>
+    <!--<p class="section-caption">جدیدترین محصولات از دسته بندی های اسب و خرگوش</p>-->
     <div class="product-tab">
         <ul class="tabs">
             <?php

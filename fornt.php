@@ -10,7 +10,10 @@ get_header();
         <?php get_template_part('templates/content', 'intro'); ?>
         <div class="vertical-space-4"></div><!--.vertical-space-4-->
         <!--#############################################################################################-->
-        <?php get_template_part('templates/blog', 'squre'); ?>
+        <?php // get_template_part('templates/blog', 'squre'); ?>
+        <div class="vertical-space-4"></div><!--.vertical-space-4-->
+        <!--#############################################################################################-->
+        <?php  get_template_part('templates/blog', 'squreToggle'); ?>
         <div class="vertical-space-4"></div><!--.vertical-space-4-->
         <!--#############################################################################################-->
         <?php get_template_part('templates/content', 'product'); ?>

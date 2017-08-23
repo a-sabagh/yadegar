@@ -36,6 +36,8 @@ function rng_shortcode_product_mix($atts) {
                             'meta_key' => 'rng_scat',
                             'meta_value' => $post_children_id,
                             'meta_compare' => 'IN',
+                            'order_by' => 'date',
+                            'order' => 'ASC'
                         );
                         $product_query = new WP_Query($product_args);
                         if ($product_query->have_posts()):

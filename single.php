@@ -9,7 +9,6 @@
         ?>
         <header class="blog-head">
             <h1 class="blog-title"><?php the_title(); ?></h1><!--.blog-title-->
-            <blockquote class="blog-author"><?php the_author(); ?></blockquote><!--.blog-author-->
             <ul class="blog-meta">
                 <li class="meta-eshare"><a href="javascript:emailCurrentPage()">ارسال از طریق ایمیل</a></li>
                 <li class="meta-print"><a href="javascript:printCurrentPage()">پرینت این برگه</a></li>
@@ -47,7 +46,6 @@
                 <div class="blog-square-in">
                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                         <div class="square-left-box">
-                            <div class="author"><?php the_author(); ?></div>
                             <h4><?php the_title(); ?></h4>
                             <?php $scat_icon = get_post_meta(get_post_meta(get_the_ID() , 'rng_scat' , TRUE) , 'rng_scat_icon' , TRUE); ?>
                             <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
@@ -75,9 +73,7 @@
             ?>
         </div><!--.table-row-->
     </section><!--.related-post-->
-    <div class="row button text-center">
-        <a href="<?php echo get_category_link(1); ?>" class="button-all">مشاهده تمامی مقالات</a>
-    </div><!--.button-->
+
 </div><!--.container-->
 <!--#############################################################################################-->
 <div class="container">

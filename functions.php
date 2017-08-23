@@ -20,6 +20,7 @@ require_once 'functions/post-type.php';
 require_once 'functions/scripts.php';
 require_once 'functions/menus/init.php';
 require_once 'functions/profile/init.php';
+require_once 'functions/pagination.php';
 if (is_admin()) {
     require_once 'admin/srng-option2.php';
 }

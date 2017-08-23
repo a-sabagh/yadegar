@@ -144,12 +144,12 @@ jQuery(document).ready(function ($) {
 //+------------------------------------------+
 // jquery archive toggler
 //+------------------------------------------+
-    var test = $(".category .row-post:odd").each(function () {
-        var before = $(this).find(".row-post-item .blog-square-in:last-child");
-        $(this).find(".row-post-item .blog-square-in:first-child").before(before);
-        $(this).find(".row-post-item:first-child .blog-square-in:first-child").remove();
-        $(this).find(".row-post-item:last-child .blog-square-in:first-child").remove();
-    });
+//    $(".toggle .row-post:odd").each(function () {
+//        var before = $(this).find(".row-post-item .blog-square-in:last-child");
+//        $(this).find(".row-post-item .blog-square-in:first-child").before(before);
+//        $(this).find(".row-post-item:first-child .blog-square-in:first-child").remove();
+//        $(this).find(".row-post-item:last-child .blog-square-in:last-child").remove();
+//    });
 //+------------------------------------------+
 // load-more-post
 //+------------------------------------------+
@@ -248,15 +248,15 @@ jQuery(document).ready(function ($) {
             , slidesToShow: 4
             , responsive: [
                 {breakpoint: 1200,
-                    settings: {slidesToShow: 3, dots: true}
+                    settings: {slidesToShow: 3, dots: false}
                 }
                 , {
                     breakpoint: 992,
-                    settings: {slidesToShow: 2, dots: true}
+                    settings: {slidesToShow: 2, dots: false}
                 }
                 , {
                     breakpoint: 600,
-                    settings: {slidesToShow: 1, dots: true}
+                    settings: {slidesToShow: 1, dots: false}
                 }
             ]
         });

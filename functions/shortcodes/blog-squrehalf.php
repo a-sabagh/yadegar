@@ -27,134 +27,107 @@ function rng_shortcode_blog_squrehalf($atts) {
             $scat = get_post($array_atts['id']);
             $scat_title = $scat->post_title;
             ?>
-            <h2 class="heading-format2">مقالات برگزیده </h2>
+        <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
+        <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
         </div><!--.row-->
     </div><!--.container-->
     <!--#############################################################################################-->
-    <div class="container">
-        <section class="latest-blog">
-            <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
-            <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
-            <div class="blog-content">
-                <div class="table-row">
-                    <?php
-                    $halfsqure_args = array(
-                        'post_type' => 'post',
-                        'posts_per_page' => 3,
-                        'meta_key' => 'rng_scat',
-                        'meta_value' => $post_children_id,
-                        'meta_compare' => 'IN'
-                    );
-                    $halfsqure_query = new WP_Query($halfsqure_args);
-                    if ($halfsqure_query->have_posts()):
-                        $counter = 0;
-                        $post_count = $halfsqure_query->post_count;
-                        while ($halfsqure_query->have_posts()):
-                            $halfsqure_query->the_post();
-                            if ($counter == 0) {
-                                ?>
-                                <div class="blog-square square-full">
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                                        $thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', TRUE);
-                                        $thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'full', FALSE);
-                                        $post_img_src = $thumbnail_url[0];
-                                        $post_img_alt = $thumbnail_alt;
-                                    } else {
-                                        $post_img_src = get_option('srng_default_post_thumbnail');
-                                        $post_img_alt = get_the_excerpt();
-                                    }
+    <div class="blog-content toggle">
+        <?php
+        $post_squrehalf_args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 4,
+            'meta_key' => 'rng_scat',
+            'meta_value' => $post_children_id,
+            'meta_compare' => 'IN'
+        );
+        $post_squrehalf = new WP_Query($post_squrehalf_args);
+        if ($post_squrehalf->have_posts()):
+            $post_count = $post_squrehalf->post_count;
+            $post_counter = 0;
+            $row_counter = 0;
+            echo '<div class="container"><div class="category-box">';
+            while ($post_squrehalf->have_posts()):
+                $post_squrehalf->the_post();
+                if ($post_counter % 2 == 0) {
+                    $row_counter++;
+                    ?>
+                    <div class=row-post>
+                        <div class="table-row">    
+                        <?php } ?>
+                        <div class="row-post-item">
+
+                            <?php
+                            if ($row_counter % 2 == 0) {
+
+                                if (has_post_thumbnail()) {
+                                    $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
+                                    $thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', TRUE);
+                                    $thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'large-blog', FALSE);
+                                    echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
+                                } else {
                                     ?>
-                                    <img class="img-responsive img-square-full" src="<?php echo $post_img_src; ?>" alt="<?php echo $post_img_alt; ?>">
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" >
-                                        <div class="square-full-box">
-                                            <div class="author"><?php the_author(); ?></div>
-                                            <h4><?php the_title(); ?></h4>
-                                            <?php
-                                            $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE);
-                                            ?>
-                                            <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
-                                        </div><!--.square-full-box-->
-                                    </a>
-                                </div><!--.blog-square-->
+                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                                    <?php
+                                }
+                                ?>
+                                <div class="blog-square-in">
+                                    <a href="<?php the_permalink(); ?>" class="square-left-box">
+                                        <h4><?php the_title(); ?></h4>
+                                        <?php
+                                        $scat_id = get_post_meta(get_the_ID(), 'rng_scat', TRUE);
+                                        $scat_icon = get_post_meta($scat_id, 'rng_scat_icon', TRUE);
+                                        ?>
+                                        <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
+                                    </a><!--.square-full-box-->
+                                </div><!--.blog-square-in-->
                                 <?php
-                            } elseif ($counter == 1) {
+                            } else {
                                 ?>
-                                <div class="blog-square">
-                                    <div class="table-row">
-                                        <div class="blog-square-in">
-                                            <a href="<?php the_permalink(); ?>" title="<?php the_permalink(); ?>" >
-                                                <div class="square-left-box">
-                                                    <div class="author"><?php the_author(); ?></div>
-                                                    <h4><?php the_title(); ?></h4>
-                                                    <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
-                                                    <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
-                                                </div><!--.square-full-box-->                                        
-                                            </a>
-                                        </div><!--.blog-square-in-->
+                                <div class="blog-square-in">
+                                    <a href="<?php the_permalink(); ?>" class="square-left-box">
+                                        <h4><?php the_title(); ?></h4>
                                         <?php
-                                        if (has_post_thumbnail()) {
-                                            $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                                            $thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', TRUE);
-                                            $thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'full', FALSE);
-                                            $post_img_src = $thumbnail_url[0];
-                                            $post_img_alt = $thumbnail_alt;
-                                        } else {
-                                            $post_img_src = get_option('srng_default_post_thumbnail');
-                                            $post_img_alt = get_the_excerpt();
-                                        }
+                                        $scat_id = get_post_meta(get_the_ID(), 'rng_scat', TRUE);
+                                        $scat_icon = get_post_meta($scat_id, 'rng_scat_icon', TRUE);
                                         ?>
-                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo $post_img_src; ?>" alt="<?php echo $post_img_alt; ?>"></div><!--.blog-square-in-->
-                                    </div><!--.table-row-->
-                                    <?php
-                                    if ($post_count == 2)
-                                        echo '</div>';
-                                } elseif ($counter == 2) {
+                                        <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
+                                    </a><!--.square-full-box-->
+                                </div><!--.blog-square-in-->
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
+                                    $thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', TRUE);
+                                    $thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'large-blog', FALSE);
+                                    echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
+                                } else {
                                     ?>
-
-                                    <div class="table-row">
-                                        <?php
-                                        if (has_post_thumbnail()) {
-                                            $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
-                                            $thumbnail_alt = get_post_meta($post_thumbnail_id, '_wp_attachment_image_alt', TRUE);
-                                            $thumbnail_url = wp_get_attachment_image_src($post_thumbnail_id, 'full', FALSE);
-                                            $post_img_src = $thumbnail_url[0];
-                                            $post_img_alt = $thumbnail_alt;
-                                        } else {
-                                            $post_img_src = get_option('srng_default_post_thumbnail');
-                                            $post_img_alt = get_the_excerpt();
-                                        }
-                                        ?>
-                                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo $post_img_src; ?>" alt="<?php echo $post_img_alt; ?>"></div><!--.blog-square-->
-                                        <div class="blog-square-in">
-                                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                                <div class="square-right-box">
-                                                    <div class="author"><?php the_author(); ?></div>
-                                                    <h4><?php the_title(); ?></h4>
-                                                    <?php $cat_icon = get_post_meta($array_atts['id'], 'rng_scat_icon', TRUE); ?>
-                                                    <span class="category"><i class="icon-animals r-<?php echo $cat_icon; ?>"></i></span>
-                                                </div><!--.square-full-box-->
-                                            </a>
-                                        </div><!--.blog-square-in-->
-                                    </div><!--table-row-->
-                                </div><!--.blog-square-->
-
+                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                                    <?php
+                                }
+                                ?>
                                 <?php
                             }
-                            $counter++;
-                        endwhile;
-                    endif;
-                    wp_reset_postdata();
-                    ?>
-                </div><!--.table-row-->
-            </div><!--.blog-content-->
-        </section><!--.latest-blog-->
-        <div class="vertical-space-1"></div>
-        <div class="row button text-center">
-            <a href="<?php echo get_category_link(1); ?>" class="button-all">مشاهده تمامی مقالات</a>
-        </div><!--.button-->
-    </div>
+                            ?>
+                        </div><!--.row-post-item-->
+                        <?php
+                        $post_counter++;
+                        if ($post_counter % 2 == 0 || $post_counter == $post_count) {
+                            ?>
+                        </div><!--.table-row-->
+                    </div><!--.related-post-->                    
+                    <?php
+                }
+                wp_reset_postdata();
+            endwhile;
+            echo '</div></div>';
+        endif;
+        ?>
+    </div><!--.blog-content-->
+    <div class="vertical-space-1"></div>
+    <div class="row button text-center">
+        <a href="<?php echo get_category_link(1); ?>" class="button-all">مشاهده تمامی مقالات</a>
+    </div><!--.button-->
     <?php
     $output = ob_get_clean();
     return $output;

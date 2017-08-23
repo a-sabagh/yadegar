@@ -25,12 +25,12 @@
                         </form><!--.mobile-nav-search-->
                     </div><!--.mobile-search-wrapper-->
                     <div class="mobile-menu-toggler"><a href="#">منو سایدبار</a></div><!--.mobile-menu-toggler-->
-                    <div id="nav-search">
+                    <?php /* ?><div id="nav-search">
                         <span class="icon-sprite s-search"></span>
                         <form method="get" action="<?php echo home_url(); ?>">
                             <input type="text" name="s" placeholder="جستجو">
                         </form>
-                    </div><!--#nav-search-->
+                    </div><!--#nav-search--><?php */ ?>
                     <div id="mobile-top-menu" class="hide">
                         <?php 
                         $top_menu_arg = array(
