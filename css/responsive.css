@@ -119,6 +119,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
     main #content header #icon-button ul li a .top-menu-text{
         font-size: 11px;
     }
+    .row-post .square-left-box h4,
     .latest-blog .blog-content .blog-square .square-left-box h4,
     .latest-blog .blog-content .blog-square .square-right-box h4,
     .latest-blog .blog-content .blog-square .square-full-box h4,
@@ -454,6 +455,12 @@ screen (1200px) and (992px) and (768px) and (480px)|
     #nav-logo img{
         width: 125px;
         margin-bottom: 5px;
+    }
+    main nav#main-menu .menu-all > ul li a span.menu-name{
+        font-size: 11px;
+    }
+    main nav#main-menu .menu-all > ul li a i{
+        margin: -2px 7px;
     }
 }
 /****************@ N A V L O G O  *****************/

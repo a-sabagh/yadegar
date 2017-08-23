@@ -815,8 +815,7 @@ table > tbody > tr:hover {
     padding: 7px;
 }
 .related-post .square-right-box .category,
-.related-post .square-left-box .category,
-.category{
+.related-post .square-left-box .category{
     display: block;
     border-top: 1px solid #eee;
     padding-top: 5px;
@@ -900,8 +899,7 @@ h4{
     padding: 7px;
 }
 .row-post .square-right-box .category,
-.row-post .square-left-box .category,
-.category{
+.row-post .square-left-box .category{
     display: block;
     border-top: 1px solid #eee;
     padding-top: 5px;
@@ -1352,4 +1350,30 @@ select{width: 100%;}
     border-top: 1px solid #eee;
     margin: 15px 8px 25px 0;
     padding: 75px 0 0 0 !important;
+}
+.rng-pagination{
+    text-align: center;
+    direction: ltr;
+    font-family: yekan-number !important;
+}
+.rng-pagination .page-numbers{
+    color: black;
+    font-family: yekan-number !important;
+    font-size: 15px;
+    margin: 5px;
+}
+.page-numbers.current {
+    color: #cc262c;
+    font-family: yekan-number !important;
+    margin: 5px;
+}
+.next.page-numbers,
+.prev.page-numbers {
+    font-size: 25px;
+}
+.wpcf7-form-control-wrap textarea{
+    height: 180px;
+}
+.wpgmp_map_container {
+    margin: 25px auto;
 }
