@@ -1,11 +1,20 @@
 @font-face {
-	font-family:'yekan';
-	src: url('../fonts/font.woff');
-	src: url('../fonts/yekan.eot?#iefix') format('eot'), 
-	     url('../fonts/yekan.woff') format('woff'), 
-	     url('../fonts/yekan.ttf') format('truetype');
-	 font-weight: normal;
-	 font-style: normal;
+    font-family:'yekan';
+    src: url('../fonts/font.woff');
+    src: url('../fonts/yekan.eot?#iefix') format('eot'), 
+        url('../fonts/yekan.woff') format('woff'), 
+        url('../fonts/yekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'yekan-number';
+    src: url('../fonts/Yekan-number.woff');
+    src: url('../fonts/Yekan-number.eot?#iefix') format('eot'), 
+        url('../fonts/Yekan-number.woff') format('woff'), 
+        url('../fonts/Yekan-number.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 *:not([class*='icon']):not(.fa):not(i) {
     font-family: yekan;
