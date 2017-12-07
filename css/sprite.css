@@ -168,6 +168,15 @@
 .r-ghome{
     background-position: 40px -680px;
 }
+.w-mhen{
+    background-position: 120px 35px;
+}
+.c-mhen{
+    background-position: 80px 35px;
+}
+.r-mhen{
+    background-position: 40px 35px;
+}
 /********************************** I C O N - S P R I T E **********************************/
 .icon-sprite{
     background: transparent url("../img/sprites.png");
@@ -201,18 +210,21 @@
 .social {
     background: transparent url("../img/social-icons.png") no-repeat;
     display: inline-block;
-    width: 47px;
+    width: 40px;
     height: 43px;
 }
-.facebook{
+.instagram{
+    background-position: -22px -11px;
+}
+.instagram:hover
+{
     background-position: -122px -11px;
 }
-.twitter{
-    background-position: -20px -11px;
+.telegram{
+    background-position: -222px -11px;
 }
-.youtube{
-    background-position: -409px -8px;
+
+.telegram:hover{
+    background-position: -409px -11px;
 }
-.google-plus{
-    background-position: -224px -11px;
-}
+

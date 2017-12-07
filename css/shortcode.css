@@ -697,7 +697,7 @@
 }
 .product-tab .tabs .tab-link{
     float: right;
-    width: 200px;
+    width: 230px;
     padding: 7px;
     cursor: pointer;
 }
@@ -749,7 +749,7 @@
     overflow: hidden;
     padding-bottom: 30px;
 }
-.product-tab .tab-container .tab-content .pt-slider{direction: ltr;}
+.product-tab .tab-container .tab-content .pt-slider{direction: rtl;}
 .product-tab .tab-container .tab-content .pt-slider .slider-item .pt-item-image{
     padding: 0 15px;
 }

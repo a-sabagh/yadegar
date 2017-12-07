@@ -169,7 +169,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         right: 0;
         top: 0;
     }
-   .logged-in.admin-bar main nav#main-menu{
+    .logged-in.admin-bar main nav#main-menu{
         top: 32px;
     }
 }
@@ -198,7 +198,7 @@ screen (1200px) and (992px) and (768px) and (480px)|
         background-color: #cc262c;
         color: #fff;
         cursor: pointer;
-        font-family: arial,san-serif;
+        font-family: yekan,arial,san-serif;
         font-size: 21px;
         font-weight: normal;
         border: 3px solid #cc262c;
@@ -438,7 +438,14 @@ screen (1200px) and (992px) and (768px) and (480px)|
     main nav#main-menu .btn-login i.w-icon-people{
         height: 26px;
     }
-    
+    .footer-social {
+        position: absolute;
+        top: 30px;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
 }
 /**************** L A T E S T B L O G  *****************/
 @media screen and (max-width: 600px){
@@ -637,8 +644,29 @@ screen (1200px) and (992px) and (768px) and (480px)|
     .banner img {
         margin: 20px 0px; 
         width: 100%;
-   }
-   .qa-accordian .accordian .accordian-panel .ac-answer-content{
-    padding: 10px 30px 10px 0px;
-   }
+    }
+    .qa-accordian .accordian .accordian-panel .ac-answer-content{
+        padding: 10px 30px 10px 0px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .product-tab .tab-container{
+        min-height: 440px;
+    }
+}
+@media screen and (max-width: 992px){
+    .product-tab .tab-container{
+        min-height: 460px;
+    }
+}
+
+@media screen and (max-width: 622px){
+    footer .footer-social{
+        float: right;
+        width: 100%;
+        padding-top: 0;
+    }
+    footer {
+        margin: 10px 0;
+    }
 }
