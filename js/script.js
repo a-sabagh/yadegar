@@ -205,9 +205,9 @@ jQuery(document).ready(function ($) {
 // mobile-top-menu has-child-class
 //+------------------------------------------+
     $("#mobile-top-menu > ul > li").has("ul").addClass("has-child");
-    $("#mobile-top-menu > ul > li.has-child").click(function (e) {
+    $("#mobile-top-menu > ul > li.has-child > a").click(function (e) {
         e.preventDefault();
-        $(this).children("ul").slideToggle();
+        $(this).next("ul").slideToggle();
         return false;
     });
 //+------------------------------------------+
@@ -246,6 +246,7 @@ jQuery(document).ready(function ($) {
         $('.pt-slider').slick({
             dots: false
             , slidesToShow: 4
+            , rtl: true
             , responsive: [
                 {breakpoint: 1200,
                     settings: {slidesToShow: 3, dots: false}
@@ -290,3 +291,19 @@ function emailCurrentPage() {
 function printCurrentPage() {
     window.print();
 }
+
+var _paq = _paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function () {
+    var u = "//a.ariazdevs.com/";
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+    _paq.push(['setSiteId', '66']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = u + 'piwik.js';
+    s.parentNode.insertBefore(g, s);
+})();
