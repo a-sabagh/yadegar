@@ -3,14 +3,17 @@
 function rng_metabox_page_input($post) {
     wp_nonce_field(basename(__FILE__), 'rng_page_nonce');
     $header_text = get_post_meta($post->ID , 'rng_header_text' , TRUE);
+    $show_title = (get_post_meta($post->ID , 'rng_show_title' , TRUE) == 'on')? 'checked' : '';
     ?>
     <p>متن هدر را وارد کنید</p>
     <textarea class="input-full" name="rng_header_text"><?php echo $header_text; ?></textarea>
+    <br><br>
+    <label>نمایش تیتر برگه : <input type="checkbox" name="rng_show_title" <?php echo $show_title; ?> ></label>
     <?php
 }
 
 function rng_metabx_page_init() {
-    add_meta_box('rng_page_meta', 'متن هدر', 'rng_metabox_page_input', 'page', 'side', 'low');
+    add_meta_box('rng_page_meta', 'تنظیمات برگه', 'rng_metabox_page_input', 'page', 'side', 'low');
 }
 
 add_action('add_meta_boxes', 'rng_metabx_page_init');
@@ -23,6 +26,7 @@ function rng_metabox_page_save($post_id) {
         return;
     } else {
         update_post_meta($post_id , 'rng_header_text' , $_POST['rng_header_text']);
+        update_post_meta($post_id , 'rng_show_title' , $_POST['rng_show_title']);
     }
 }
 
