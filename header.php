@@ -13,7 +13,7 @@
                     <div class="nav-btn-meta">
                         <div class="btn-menu"><a href="#">منو</a></div><!--.btn-menu-->
                         <div class="btn-search"><i class="icon-sprite s-search"></i></div><!--.btn-search-->
-                        <div class="btn-login"><i class="icon-sprite w-icon-people"></i></div>    
+                        <a href="<?php echo get_permalink(get_option('srng_profile_page')); ?>" class="btn-login"><i class="icon-sprite w-icon-people"></i></a>    
                     </div><!--.nav-btn-meta-->
                 </div><!--.nav-logo-->
                 <div class="menu-all">
@@ -75,10 +75,6 @@
                             $product_img_alt = get_the_excerpt();
                         }
                     endif;
-                    if (is_front_page()) {
-                        $product_img_src = get_option('srng_default_page_thumbnail');
-                        $product_img_alt = get_the_excerpt();
-                    }
                     ?>
                     <img src="<?php echo $product_img_src ?>" class="img-responsive-header" alt="<?php echo $product_img_alt; ?>">
                     <div id="top-menu">
@@ -92,14 +88,12 @@
                             <li><a href="" title="اینستاگرام"><img src="<?php echo RNG_TDU; ?>/img/instagram.png" alt="yadegar.co-instagram"></a></li>
                              */  ?>
                             <li>
-                                <a href="<?php echo get_permalink(get_option('srng_profile_page')); ?>">
-                                    <span class="top-menu-text">حساب کاربری</span>
+                                <a href="<?php echo get_permalink(get_option('srng_profile_page')); ?>" title="حساب کاربری">
                                     <i class="icon-sprite w-icon-people"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.google.com/maps/place/36%C2%B021'50.5%22N+59%C2%B032'21.1%22E/@36.3640415,59.5370122,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d36.3640372!4d59.5392009" target="_blank">
-                                    <span class="top-menu-text">مکان ما روی نقشه</span>
+                                <a href="https://www.google.com/maps/place/%DA%AF%D8%B1%D9%88%D9%87+%D8%AA%D9%88%D9%84%DB%8C%D8%AF%DB%8C+%DB%8C%D8%A7%D8%AF%DA%AF%D8%A7%D8%B1%E2%80%AD/@36.3639109,59.5389661,21z/data=!4m5!3m4!1s0x0:0x9271f3af67726cf6!8m2!3d36.3639!4d59.539004" title="نقشه گوگل" target="_blank">
                                     <i class="icon-sprite w-icon-map"></i>
                                 </a>
                             </li>
