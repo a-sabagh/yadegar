@@ -29,6 +29,10 @@ function rng_category_metabox_input($post) {
         <input type="radio" id="c-cock" name="rng_scat_icon" <?php if($scat_icon == 'cock') echo 'checked=""'; ?> value="cock" />  
     </div>
     <div class="scat-icon">
+        <label for="c-mhen" class="icon-animals c-mhen"></label>
+        <input type="radio" id="c-mhen" name="rng_scat_icon" <?php if($scat_icon == 'mhen') echo 'checked=""'; ?> value="mhen" />    
+    </div>
+    <div class="scat-icon">
         <label for="c-horse" class="icon-animals c-horse"></label>
         <input type="radio" id="c-horse" name="rng_scat_icon" <?php if($scat_icon == 'horse') echo 'checked=""'; ?> value="horse" />    
     </div>
