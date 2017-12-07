@@ -84,7 +84,7 @@
                                 <span class="category"><i class="icon-animals r-<?php echo $scat_icon; ?>"></i></span>
                             </a><!--.square-full-box-->
                         </div><!--.blog-square-in-->
-                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                        <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt="<?php echo get_bloginfo("description"); ?>"></div><!--.blog-square-in-->
                     </div><!--.row-post-item-->
                     <?php
                     $post_counter++;
