@@ -32,7 +32,7 @@
                                     echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
                                 } else {
                                     ?>
-                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt="<?php echo get_bloginfo("description"); ?>"></div><!--.blog-square-in-->
                                     <?php
                                 }
                                 ?>
@@ -67,7 +67,7 @@
                                     echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
                                 } else {
                                     ?>
-                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt="<?php echo get_bloginfo("description"); ?>"></div><!--.blog-square-in-->
                                     <?php
                                 }
                                 ?>
