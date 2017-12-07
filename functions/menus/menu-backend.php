@@ -186,6 +186,10 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu {
                         <input type="radio" id="c-cock-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]" <?php if($select_icon == 'cock') echo 'checked=""' ?> value="cock" />  
                     </div>
                     <div class="scat-icon">
+                        <label for="c-mhen-<?php echo $item_id; ?>" class="icon-animals c-mhen"></label>
+                        <input type="radio" id="c-mhen-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'mhen') echo 'checked=""' ?>  value="mhen" />    
+                    </div>
+                    <div class="scat-icon">
                         <label for="c-horse-<?php echo $item_id; ?>" class="icon-animals c-horse"></label>
                         <input type="radio" id="c-horse-<?php echo $item_id; ?>" name="icon[<?php echo $item_id; ?>]"  <?php if($select_icon == 'horse') echo 'checked=""' ?>  value="horse" />    
                     </div>
