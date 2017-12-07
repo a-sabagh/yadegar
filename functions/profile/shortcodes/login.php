@@ -153,7 +153,7 @@ function rng_shortcode_profile_login() {
                         </div><!--.featured-tab-menu-->
                         <div class="tab-menu-content" id="latest-blog">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <h3>جدیدترین مقالات</h3>
                                     <div class="profile-latest-blog">
                                         <ul>
@@ -175,6 +175,7 @@ function rng_shortcode_profile_login() {
 
                                     </div><!--.profile-latest-blog-->
                                 </div>
+                                <?php /* ?>
                                 <div class="col-md-6">
                                     <h3>جدیدترین پرسش و پاسخ</h3>
                                     <div class="profile-qa">
@@ -196,6 +197,7 @@ function rng_shortcode_profile_login() {
                                         </ul>
                                     </div><!--.profile-qa-->
                                 </div>
+                                <?php */ ?>
                             </div>
                         </div><!--.featured-tab-menu-->
                     </div><!--.featured-tab-container-->
