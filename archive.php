@@ -24,7 +24,7 @@ if (have_posts()):
                             echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
                         } else {
                             ?>
-                            <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                            <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div><!--.blog-square-in-->
                             <?php
                         }
                         ?>
@@ -59,7 +59,7 @@ if (have_posts()):
                             echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
                         } else {
                             ?>
-                            <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                            <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt=""></div><!--.blog-square-in-->
                             <?php
                         }
                         ?>
@@ -75,14 +75,14 @@ if (have_posts()):
                 </div><!--.table-row-->
             </div><!--.related-post-->     
             <?php
-            
         }
         wp_reset_postdata();
     endwhile;
-    echo '</div></div>';
+    echo '</div></div></div>';
     rng_pagination();
 endif;
 ?>
 
 <div class="container">
     <?php get_footer(); ?>
+</div>
