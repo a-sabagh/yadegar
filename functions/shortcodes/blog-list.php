@@ -4,7 +4,7 @@ function rng_shortcode_blog_list() {
     ob_start();
     ?>
     <div class="container">
-        <div class="row text-center">
+        <div class="text-center">
             <h2 class="heading-format2">مقالات برگزیده </h2>
         </div>
         <div class="grid">

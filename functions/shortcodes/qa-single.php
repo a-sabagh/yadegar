@@ -3,9 +3,10 @@
 function rng_shortcode_qa_single($atts) {
     $shortcode = 'qa_single';
     $pairs = array(
-        'id' => 1
+        'id' => 1,
+        'title' => 'پرسش و پاسخ',
+        'caption' => ''
     );
-    $array_atts = shortcode_atts($pairs, $atts, $shortcode);
     $array_atts = shortcode_atts($pairs, $atts, $shortcode);
     $post_parent = $array_atts['id'];
     $parent_arg = array(
@@ -20,13 +21,8 @@ function rng_shortcode_qa_single($atts) {
     ob_start();
     ?>
     <div class="container">
-        <div class="row text-center">
-            <h2 class="heading-format2">پرسش ها و پاسخ ها</h2>
-        </div><!--.row-->
-    </div><!--.container-->
-    <div class="container">
-        <h3 class="section-title">پاسخ پرسش شما</h3>
-        <p class="section-caption">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>                    
+        <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
+        <p class="section-caption"><?php echo $array_atts['caption']; ?></p>                    
     </div><!--.container-->
     <div class="container">
         <div class="tab-menu-content" id="featured-tab1">

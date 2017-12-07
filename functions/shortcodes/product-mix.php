@@ -22,7 +22,7 @@ function rng_shortcode_product_mix($atts) {
     ?>
     <section class="product">
         <div class="container">
-            <div class="row text-center">
+            <div class="text-center">
                 <h2 class="heading-format1">محصولات ما</h2>
                 <h3 class="large-format"><?php echo $array_atts['title']; ?></h3>
                 <p class="product-caption"><?php echo $array_atts['caption']; ?></p><br>
@@ -54,7 +54,7 @@ function rng_shortcode_product_mix($atts) {
                                     $product_img_src = $thumbnail_url[0];
                                     $product_img_alt = $thumbnail_alt;
                                 } else {
-                                    $product_img_src = RNG_TDU . '/img/product1.png';
+                                    $product_img_src = get_option('srng_default_product_img');
                                     $product_img_alt = get_the_excerpt();
                                 }
                                 ?>

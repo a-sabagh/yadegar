@@ -8,3 +8,6 @@ require_once 'qa-vtab.php';
 require_once 'vertical-space.php';
 require_once 'blog-list.php';
 require_once 'subcat-banner.php';
+require_once 'intro.php';
+require_once 'product-tab.php';
+require_once 'grid.php';

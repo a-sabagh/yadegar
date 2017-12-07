@@ -22,13 +22,13 @@ function rng_shortcode_blog_squrehalf($atts) {
     ?>
     <!--#############################################################################################-->
     <div class="container">
-        <div class="row text-center">
+        <div class="text-center">
             <?php
             $scat = get_post($array_atts['id']);
             $scat_title = $scat->post_title;
             ?>
-        <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
-        <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
+            <h3 class="section-title"><?php echo $array_atts['title']; ?></h3>
+            <p class="section-caption"><?php echo $array_atts['caption']; ?></p>
         </div><!--.row-->
     </div><!--.container-->
     <!--#############################################################################################-->
@@ -67,7 +67,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                     echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
                                 } else {
                                     ?>
-                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt="<?php echo get_bloginfo("description"); ?>"></div><!--.blog-square-in-->
                                     <?php
                                 }
                                 ?>
@@ -102,7 +102,7 @@ function rng_shortcode_blog_squrehalf($atts) {
                                     echo '<div class="blog-square-in"><img class="img-responsive" src="' . $thumbnail_url[0] . '" alt="' . $thumbnail_alt . '"></div><!--.blog-square-in-->';
                                 } else {
                                     ?>
-                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo RNG_TDU; ?>/img/article5.png" alt=""></div><!--.blog-square-in-->
+                                    <div class="blog-square-in"><img class="img-responsive" src="<?php echo get_option('srng_default_post_thumbnail'); ?>" alt="<?php echo get_bloginfo("description"); ?>"></div><!--.blog-square-in-->
                                     <?php
                                 }
                                 ?>
