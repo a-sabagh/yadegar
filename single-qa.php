@@ -6,7 +6,6 @@ if(have_posts()):
 <div class="container" >
         <div class="blog-head qa-blog-head">
             <h1 class="blog-title"><?php the_title(); ?></h1><!--.blog-title-->
-            <blockquote class="blog-author"><?php the_author(); ?></blockquote><!--.blog-author-->
             <ul class="blog-meta">
                 <li class="meta-eshare"><a href="javascript:emailCurrentPage()">ارسال از طریق ایمیل</a></li>
                 <li class="meta-print"><a href="javascript:printCurrentPage()">پرینت این برگه</a></li>
