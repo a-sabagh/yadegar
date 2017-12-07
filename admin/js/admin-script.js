@@ -13,6 +13,14 @@ jQuery(document).ready(function ($) {
         $(".rng-shortcode-creator-wrapper .rng-shortcode").hide();
         $(".rng-shortcode-creator-wrapper div." + select_shortcode).slideDown();
     });
+    //intro
+    $(".create-shortcode-about-intro").click(function () {
+        var logo = $(".about-intro-logo").val();
+        var header = $(".about-intro-header").val();
+        var content = $(".about-intro-caption").val();
+        var output = '[intro logo="' + logo + '" header="' + header + '" content= "' + content + '"]';
+        $(".about-intro-output").val(output);
+    });
     //blog-squre
     $(".create-shortcode-blog-squre").click(function () {
         var title = $(".blog-squre-title").val();
@@ -36,6 +44,20 @@ jQuery(document).ready(function ($) {
         var output = '[product_mix id="' + id + '" title="' + title + '" caption= "' + caption + '"]';
         $(".product-mix-output").val(output);
     });
+    //product-tab
+    $(".create-shortcode-product-feature").click(function () {
+        var cat = [];
+        $(".product-feature-cat option:selected").each(function(){
+            cat.push(this.value);
+        });
+        console.log(cat);
+        $(".product-feature-cat option:selected").val();
+        console.log(cat);
+        var title = $(".product-feature-title").val();
+        var caption = $(".product-feature-caption").val();
+        var output = '[product_tab category="' + cat + '" title="' + title + '" description= "' + caption + '"]';
+        $(".product-feature-output").val(output);
+    });
     //qa-single
     $(".create-shortcode-qa-single").click(function () {
         var id = $(".qa-single-id option:selected").val();
@@ -43,6 +65,13 @@ jQuery(document).ready(function ($) {
         var caption = $(".qa-single-caption").val();
         var output = '[qa_single id="' + id + '" title="' + title + '" caption= "' + caption + '"]';
         $(".qa-single-output").val(output);
+    });
+    //qa-tab
+    $(".create-shortcode-qa-tab").click(function () {
+        var title = $(".qa-tab-title").val();
+        var caption = $(".qa-tab-caption").val();
+        var output = '[qa_tab title="' + title + '" caption= "' + caption + '"]';
+        $(".qa-tab-output").val(output);
     });
     //qa-vtab
     $(".create-shortcode-qa-vtab").click(function () {
