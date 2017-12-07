@@ -58,20 +58,4 @@
                     <div id="top-menu">
                         <?php wp_nav_menu($top_menu_arg); ?>
                     </div><!--#top-menu-->
-                   <!--<div id="icon-button"> 
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span class="top-menu-text">Bussiness Link login</span>
-                                    <i class="icon-sprite w-icon-people"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="top-menu-text">Retallers Nearby</span>
-                                    <i class="icon-sprite w-icon-map"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>#icon-button-->
                 </header>
