@@ -16,12 +16,12 @@
         </header><!--.blog-head-->
         <article class="blog-content">
             <?php the_content(); ?>
-        </article>><!--.blog-content-->    
+        </article><!--.blog-content-->    
         <?php
         endwhile;
     endif;
     ?>
-    <div class="row text-center">
+    <div class="text-center">
         <h2 class="heading-format2">مطالب مشابه</h2>
     </div><!--.row-->
     <section class="related-post">
